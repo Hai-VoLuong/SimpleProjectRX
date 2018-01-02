@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  MVVMViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/2/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class MVVMViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Search"
+        title = "MVVM"
     }
 }

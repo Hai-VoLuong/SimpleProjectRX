@@ -15,8 +15,24 @@
 		9C55D88E1FFB439B00F29453 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D88C1FFB439B00F29453 /* FavoriteViewController.xib */; };
 		9C55D8931FFB43C200F29453 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8911FFB43C200F29453 /* ProfileViewController.swift */; };
 		9C55D8941FFB43C200F29453 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8921FFB43C200F29453 /* ProfileViewController.xib */; };
-		9C55D8971FFB43CF00F29453 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8951FFB43CF00F29453 /* SearchViewController.swift */; };
-		9C55D8981FFB43CF00F29453 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8961FFB43CF00F29453 /* SearchViewController.xib */; };
+		9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8951FFB43CF00F29453 /* SettingViewController.swift */; };
+		9C55D8981FFB43CF00F29453 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8961FFB43CF00F29453 /* SettingViewController.xib */; };
+		9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8A21FFB6DFD00F29453 /* CalculatorViewController.swift */; };
+		9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8A31FFB6DFD00F29453 /* CalculatorViewController.xib */; };
+		9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8A61FFB6E3800F29453 /* ValidateLoginViewController.swift */; };
+		9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8A71FFB6E3800F29453 /* ValidateLoginViewController.xib */; };
+		9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8AA1FFB6EEB00F29453 /* SearchViewController.swift */; };
+		9C55D8AD1FFB6EEB00F29453 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8AB1FFB6EEB00F29453 /* SearchViewController.xib */; };
+		9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8AE1FFB6F1E00F29453 /* GalleryImageViewController.swift */; };
+		9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8AF1FFB6F1E00F29453 /* GalleryImageViewController.xib */; };
+		9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8B21FFB6F4F00F29453 /* MultipleCellViewController.swift */; };
+		9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8B31FFB6F4F00F29453 /* MultipleCellViewController.xib */; };
+		9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8B61FFB6F9200F29453 /* CustomObservableViewController.swift */; };
+		9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8B71FFB6F9200F29453 /* CustomObservableViewController.xib */; };
+		9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BA1FFB6FCD00F29453 /* FetchingDataViewController.swift */; };
+		9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */; };
+		9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */; };
+		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
@@ -32,8 +48,24 @@
 		9C55D88C1FFB439B00F29453 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		9C55D8911FFB43C200F29453 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9C55D8921FFB43C200F29453 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		9C55D8951FFB43CF00F29453 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		9C55D8961FFB43CF00F29453 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		9C55D8951FFB43CF00F29453 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9C55D8961FFB43CF00F29453 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		9C55D8A21FFB6DFD00F29453 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		9C55D8A31FFB6DFD00F29453 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
+		9C55D8A61FFB6E3800F29453 /* ValidateLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateLoginViewController.swift; sourceTree = "<group>"; };
+		9C55D8A71FFB6E3800F29453 /* ValidateLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidateLoginViewController.xib; sourceTree = "<group>"; };
+		9C55D8AA1FFB6EEB00F29453 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9C55D8AB1FFB6EEB00F29453 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		9C55D8AE1FFB6F1E00F29453 /* GalleryImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageViewController.swift; sourceTree = "<group>"; };
+		9C55D8AF1FFB6F1E00F29453 /* GalleryImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryImageViewController.xib; sourceTree = "<group>"; };
+		9C55D8B21FFB6F4F00F29453 /* MultipleCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCellViewController.swift; sourceTree = "<group>"; };
+		9C55D8B31FFB6F4F00F29453 /* MultipleCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleCellViewController.xib; sourceTree = "<group>"; };
+		9C55D8B61FFB6F9200F29453 /* CustomObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObservableViewController.swift; sourceTree = "<group>"; };
+		9C55D8B71FFB6F9200F29453 /* CustomObservableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomObservableViewController.xib; sourceTree = "<group>"; };
+		9C55D8BA1FFB6FCD00F29453 /* FetchingDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchingDataViewController.swift; sourceTree = "<group>"; };
+		9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingDataViewController.xib; sourceTree = "<group>"; };
+		9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
@@ -67,7 +99,7 @@
 		9C55D87D1FFB2C0B00F29453 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D88A1FFB435900F29453 /* Search */,
+				9C55D88A1FFB435900F29453 /* Setting */,
 				9C55D8891FFB434C00F29453 /* Profile */,
 				9C55D8881FFB433E00F29453 /* Favorite */,
 				9C55D8871FFB431D00F29453 /* Home */,
@@ -90,6 +122,14 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C55D8A11FFB6DC100F29453 /* MVVM */,
+				9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */,
+				9C55D89F1FFB6D9A00F29453 /* Custom Observable */,
+				9C55D89E1FFB6D7B00F29453 /* Multiple Cell Custom types */,
+				9C55D89D1FFB6D4600F29453 /* Gallery Image */,
+				9C55D89C1FFB6D3400F29453 /* Search */,
+				9C55D89A1FFB6D1A00F29453 /* Validate Login */,
+				9C55D8991FFB6CBC00F29453 /* Calculator */,
 				9C55D8821FFB2C9400F29453 /* HomeViewController.swift */,
 				9C55D8831FFB2C9400F29453 /* HomeViewController.xib */,
 			);
@@ -114,13 +154,85 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		9C55D88A1FFB435900F29453 /* Search */ = {
+		9C55D88A1FFB435900F29453 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D8951FFB43CF00F29453 /* SearchViewController.swift */,
-				9C55D8961FFB43CF00F29453 /* SearchViewController.xib */,
+				9C55D8951FFB43CF00F29453 /* SettingViewController.swift */,
+				9C55D8961FFB43CF00F29453 /* SettingViewController.xib */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		9C55D8991FFB6CBC00F29453 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8A21FFB6DFD00F29453 /* CalculatorViewController.swift */,
+				9C55D8A31FFB6DFD00F29453 /* CalculatorViewController.xib */,
+			);
+			name = Calculator;
+			sourceTree = "<group>";
+		};
+		9C55D89A1FFB6D1A00F29453 /* Validate Login */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8A61FFB6E3800F29453 /* ValidateLoginViewController.swift */,
+				9C55D8A71FFB6E3800F29453 /* ValidateLoginViewController.xib */,
+			);
+			name = "Validate Login";
+			sourceTree = "<group>";
+		};
+		9C55D89C1FFB6D3400F29453 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8AA1FFB6EEB00F29453 /* SearchViewController.swift */,
+				9C55D8AB1FFB6EEB00F29453 /* SearchViewController.xib */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		9C55D89D1FFB6D4600F29453 /* Gallery Image */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8AE1FFB6F1E00F29453 /* GalleryImageViewController.swift */,
+				9C55D8AF1FFB6F1E00F29453 /* GalleryImageViewController.xib */,
+			);
+			name = "Gallery Image";
+			sourceTree = "<group>";
+		};
+		9C55D89E1FFB6D7B00F29453 /* Multiple Cell Custom types */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8B21FFB6F4F00F29453 /* MultipleCellViewController.swift */,
+				9C55D8B31FFB6F4F00F29453 /* MultipleCellViewController.xib */,
+			);
+			name = "Multiple Cell Custom types";
+			sourceTree = "<group>";
+		};
+		9C55D89F1FFB6D9A00F29453 /* Custom Observable */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8B61FFB6F9200F29453 /* CustomObservableViewController.swift */,
+				9C55D8B71FFB6F9200F29453 /* CustomObservableViewController.xib */,
+			);
+			name = "Custom Observable";
+			sourceTree = "<group>";
+		};
+		9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8BA1FFB6FCD00F29453 /* FetchingDataViewController.swift */,
+				9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */,
+			);
+			name = "Fetching Data from the web";
+			sourceTree = "<group>";
+		};
+		9C55D8A11FFB6DC100F29453 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */,
+				9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */,
+			);
+			name = MVVM;
 			sourceTree = "<group>";
 		};
 		9CD6813A1FFB1E080077729C = {
@@ -231,12 +343,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
+				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
+				9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
-				9C55D8981FFB43CF00F29453 /* SearchViewController.xib in Resources */,
+				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9C55D8981FFB43CF00F29453 /* SettingViewController.xib in Resources */,
 				9C55D88E1FFB439B00F29453 /* FavoriteViewController.xib in Resources */,
+				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
+				9C55D8AD1FFB6EEB00F29453 /* SearchViewController.xib in Resources */,
 				9C55D8941FFB43C200F29453 /* ProfileViewController.xib in Resources */,
+				9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
+				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
+				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
+				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
+				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
+				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* ProfileViewController.swift in Sources */,
-				9C55D8971FFB43CF00F29453 /* SearchViewController.swift in Sources */,
+				9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */,
+				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
+				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
+				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */,
 				9C55D88D1FFB439B00F29453 /* FavoriteViewController.swift in Sources */,

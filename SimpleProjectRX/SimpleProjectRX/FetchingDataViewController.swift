@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  FetchingDataViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/2/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class FetchingDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Search"
+        title = "fetching data"
     }
 }

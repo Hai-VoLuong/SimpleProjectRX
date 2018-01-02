@@ -8,11 +8,12 @@
 
 import UIKit
 
-final class SearchViewController: UIViewController {
+final class SettingViewController: UIViewController {
 
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Search"
+        title = "Setting"
     }
 }

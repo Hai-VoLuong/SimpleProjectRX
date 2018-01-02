@@ -19,13 +19,6 @@ final class TabbarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
     private func setupUI() {
        // tabBar.tintColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
 
@@ -41,10 +34,10 @@ final class TabbarController: UITabBarController {
         profileController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
         let profileNavigation = UINavigationController(rootViewController: profileController)
 
-        let searchController = SearchViewController()
-        searchController.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_1"))
-        let searchNavigation = UINavigationController(rootViewController: searchController)
+        let settingController = SettingViewController()
+        settingController.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_1"))
+        let settingNavigation = UINavigationController(rootViewController: settingController)
 
-        viewControllers = [homeNavigation, favoriteNavigation, profileNavigation, searchNavigation]
+        viewControllers = [homeNavigation, favoriteNavigation, profileNavigation, settingNavigation]
     }
 }
