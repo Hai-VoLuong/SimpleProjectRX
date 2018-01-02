@@ -1,0 +1,32 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def shared_pods
+    pod 'RxSwift', '3.6.1'
+    pod 'RxCocoa', '3.6.1'
+    pod 'RxAlamofire', '3.0.2'
+end
+
+def test_pods
+    pod 'RxTest', '3.6.1'
+    pod 'RxBlocking', '3.6.1'
+end
+
+target 'SimpleProjectRX' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SimpleProjectRX
+  shared_pods
+
+  pod 'SVProgressHUD',     '2.2.2'
+  pod 'SAMKeychain', '~> 1.5.1'
+  pod 'Alamofire', '~> 4.3.0'
+  pod 'Kingfisher', '~> 3.5.2'
+  pod 'SwiftLint', '~> 0.16.1'
+  pod 'RealmSwift',       '~> 3.0'
+  pod 'ObjectMapper', '2.2.6'
+  pod 'MVVM-Swift', '~> 1.1.0'
+  pod 'RxMapKit', '~> 1.1.0'
+
+end
