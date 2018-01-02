@@ -11,6 +11,12 @@
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* HomeViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* HomeViewController.xib */; };
+		9C55D88D1FFB439B00F29453 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D88B1FFB439B00F29453 /* FavoriteViewController.swift */; };
+		9C55D88E1FFB439B00F29453 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D88C1FFB439B00F29453 /* FavoriteViewController.xib */; };
+		9C55D8931FFB43C200F29453 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8911FFB43C200F29453 /* ProfileViewController.swift */; };
+		9C55D8941FFB43C200F29453 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8921FFB43C200F29453 /* ProfileViewController.xib */; };
+		9C55D8971FFB43CF00F29453 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8951FFB43CF00F29453 /* SearchViewController.swift */; };
+		9C55D8981FFB43CF00F29453 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8961FFB43CF00F29453 /* SearchViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
@@ -22,6 +28,12 @@
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		9C55D88B1FFB439B00F29453 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		9C55D88C1FFB439B00F29453 /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		9C55D8911FFB43C200F29453 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9C55D8921FFB43C200F29453 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		9C55D8951FFB43CF00F29453 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9C55D8961FFB43CF00F29453 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
@@ -55,8 +67,10 @@
 		9C55D87D1FFB2C0B00F29453 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D8821FFB2C9400F29453 /* HomeViewController.swift */,
-				9C55D8831FFB2C9400F29453 /* HomeViewController.xib */,
+				9C55D88A1FFB435900F29453 /* Search */,
+				9C55D8891FFB434C00F29453 /* Profile */,
+				9C55D8881FFB433E00F29453 /* Favorite */,
+				9C55D8871FFB431D00F29453 /* Home */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -71,6 +85,42 @@
 				9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */,
 			);
 			name = Resoure;
+			sourceTree = "<group>";
+		};
+		9C55D8871FFB431D00F29453 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8821FFB2C9400F29453 /* HomeViewController.swift */,
+				9C55D8831FFB2C9400F29453 /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		9C55D8881FFB433E00F29453 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D88B1FFB439B00F29453 /* FavoriteViewController.swift */,
+				9C55D88C1FFB439B00F29453 /* FavoriteViewController.xib */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		9C55D8891FFB434C00F29453 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8911FFB43C200F29453 /* ProfileViewController.swift */,
+				9C55D8921FFB43C200F29453 /* ProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		9C55D88A1FFB435900F29453 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8951FFB43CF00F29453 /* SearchViewController.swift */,
+				9C55D8961FFB43CF00F29453 /* SearchViewController.xib */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		9CD6813A1FFB1E080077729C = {
@@ -183,6 +233,9 @@
 			files = (
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
+				9C55D8981FFB43CF00F29453 /* SearchViewController.xib in Resources */,
+				9C55D88E1FFB439B00F29453 /* FavoriteViewController.xib in Resources */,
+				9C55D8941FFB43C200F29453 /* ProfileViewController.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C55D8931FFB43C200F29453 /* ProfileViewController.swift in Sources */,
+				9C55D8971FFB43CF00F29453 /* SearchViewController.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */,
+				9C55D88D1FFB439B00F29453 /* FavoriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

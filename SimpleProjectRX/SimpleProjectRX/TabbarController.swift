@@ -27,12 +27,24 @@ final class TabbarController: UITabBarController {
     }
 
     private func setupUI() {
-//        tabBar.tintColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
+       // tabBar.tintColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
 
         let homeController = HomeViewController()
         homeController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home_1"))
         let homeNavigation = UINavigationController(rootViewController: homeController)
 
-        viewControllers = [homeNavigation]
+        let favoriteController = FavoriteViewController()
+        favoriteController.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favor"), selectedImage: #imageLiteral(resourceName: "favor_1"))
+        let favoriteNavigation = UINavigationController(rootViewController: favoriteController)
+
+        let profileController = ProfileViewController()
+        profileController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
+        let profileNavigation = UINavigationController(rootViewController: profileController)
+
+        let searchController = SearchViewController()
+        searchController.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_1"))
+        let searchNavigation = UINavigationController(rootViewController: searchController)
+
+        viewControllers = [homeNavigation, favoriteNavigation, profileNavigation, searchNavigation]
     }
 }
