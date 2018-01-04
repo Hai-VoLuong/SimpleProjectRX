@@ -1,5 +1,5 @@
 //
-//  VibloViewController.swift
+//  SwitchEnumsAndTableViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/4/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class VibloViewController: UIViewController {
+final class SwitchEnumsAndTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Viblo"
+        title = "Switch Enums And Table View"
     }
 }

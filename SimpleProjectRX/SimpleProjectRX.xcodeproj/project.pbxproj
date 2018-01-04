@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		81BF9C38E8B32CC671FDDDAA /* Pods_SimpleProjectRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */; };
+		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
+		9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */; };
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */; };
-		9C55D88D1FFB439B00F29453 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D88B1FFB439B00F29453 /* VibloViewController.swift */; };
-		9C55D88E1FFB439B00F29453 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D88C1FFB439B00F29453 /* VibloViewController.xib */; };
 		9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8911FFB43C200F29453 /* MediumViewController.swift */; };
-		9C55D8941FFB43C200F29453 /* MediumfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8921FFB43C200F29453 /* MediumfileViewController.xib */; };
+		9C55D8941FFB43C200F29453 /* MediumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8921FFB43C200F29453 /* MediumViewController.xib */; };
 		9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8951FFB43CF00F29453 /* SettingViewController.swift */; };
 		9C55D8981FFB43CF00F29453 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8961FFB43CF00F29453 /* SettingViewController.xib */; };
 		9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8A21FFB6DFD00F29453 /* CalculatorViewController.swift */; };
@@ -33,6 +33,8 @@
 		9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */; };
 		9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */; };
 		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
+		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
+		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
@@ -42,13 +44,13 @@
 
 /* Begin PBXFileReference section */
 		79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
+		9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchEnumsAndTableViewController.xib; sourceTree = "<group>"; };
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtyViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongtyViewController.xib; sourceTree = "<group>"; };
-		9C55D88B1FFB439B00F29453 /* VibloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
-		9C55D88C1FFB439B00F29453 /* VibloViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9C55D8911FFB43C200F29453 /* MediumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumViewController.swift; sourceTree = "<group>"; };
-		9C55D8921FFB43C200F29453 /* MediumfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumfileViewController.xib; sourceTree = "<group>"; };
+		9C55D8921FFB43C200F29453 /* MediumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumViewController.xib; sourceTree = "<group>"; };
 		9C55D8951FFB43CF00F29453 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9C55D8961FFB43CF00F29453 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		9C55D8A21FFB6DFD00F29453 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingDataViewController.xib; sourceTree = "<group>"; };
 		9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
+		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
+		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4CEA991FFE08AC004F6E74 /* SwitchEnumsAndTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */,
+				9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */,
+			);
+			name = SwitchEnumsAndTableView;
+			sourceTree = "<group>";
+		};
 		9C55D8791FFB2A5200F29453 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9C55D88A1FFB435900F29453 /* Setting */,
-				9C55D8891FFB434C00F29453 /* Profile */,
+				9C55D8891FFB434C00F29453 /* Medium */,
 				9C55D8881FFB433E00F29453 /* Viblo */,
 				9C55D8871FFB431D00F29453 /* Congty */,
 			);
@@ -141,19 +154,20 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D88B1FFB439B00F29453 /* VibloViewController.swift */,
-				9C55D88C1FFB439B00F29453 /* VibloViewController.xib */,
+				9CCE900A1FFE121900B30561 /* VibloViewController.swift */,
+				9CCE900B1FFE121900B30561 /* VibloViewController.xib */,
 			);
 			name = Viblo;
 			sourceTree = "<group>";
 		};
-		9C55D8891FFB434C00F29453 /* Profile */ = {
+		9C55D8891FFB434C00F29453 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				9C4CEA991FFE08AC004F6E74 /* SwitchEnumsAndTableView */,
 				9C55D8911FFB43C200F29453 /* MediumViewController.swift */,
-				9C55D8921FFB43C200F29453 /* MediumfileViewController.xib */,
+				9C55D8921FFB43C200F29453 /* MediumViewController.xib */,
 			);
-			name = Profile;
+			name = Medium;
 			sourceTree = "<group>";
 		};
 		9C55D88A1FFB435900F29453 /* Setting */ = {
@@ -347,18 +361,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
+				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* SettingViewController.xib in Resources */,
-				9C55D88E1FFB439B00F29453 /* VibloViewController.xib in Resources */,
 				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
 				9C55D8AD1FFB6EEB00F29453 /* SearchViewController.xib in Resources */,
-				9C55D8941FFB43C200F29453 /* MediumfileViewController.xib in Resources */,
+				9C55D8941FFB43C200F29453 /* MediumViewController.xib in Resources */,
 				9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */,
+				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,19 +464,20 @@
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
+				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */,
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
+				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
-				9C55D88D1FFB439B00F29453 /* VibloViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
