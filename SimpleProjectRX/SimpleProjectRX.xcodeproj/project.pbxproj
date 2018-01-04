@@ -37,6 +37,7 @@
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
 		9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681521FFB1E080077729C /* LaunchScreen.storyboard */; };
+		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		9CD681501FFB1E080077729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD681531FFB1E080077729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD681551FFB1E080077729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B25B0835144814C419636DDF /* Pods-SimpleProjectRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.release.xcconfig"; sourceTree = "<group>"; };
 		F1F183623372135E3E0C317A /* Pods-SimpleProjectRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 			children = (
 				9C55D8A61FFB6E3800F29453 /* ValidateLoginViewController.swift */,
 				9C55D8A71FFB6E3800F29453 /* ValidateLoginViewController.xib */,
+				9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */,
 			);
 			name = "Validate Login";
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
+				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* ProfileViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */,
