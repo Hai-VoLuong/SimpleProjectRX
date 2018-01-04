@@ -10,9 +10,16 @@ import UIKit
 
 final class SearchViewController: UIViewController {
 
+    // MARK: - IBoutlets
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Search"
     }
+
+    // MARK: - Dummy data
+    var datas = String()
 }

@@ -1,5 +1,5 @@
 //
-//  FavoriteViewController.swift
+//  MediumViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/2/18.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-final class FavoriteViewController: UIViewController {
+final class MediumViewController: UIViewController {
 
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Favorite"
+
+        title = "Medium"
     }
 }

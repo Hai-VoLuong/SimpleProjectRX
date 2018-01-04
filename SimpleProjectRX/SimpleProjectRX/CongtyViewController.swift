@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class CongtyViewController: UIViewController {
 
     // MARK: - IBoutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -82,7 +82,7 @@ final class HomeViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension HomeViewController: UITableViewDataSource {
+extension CongtyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dummyDatas.count
     }
@@ -95,7 +95,7 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension HomeViewController: UITableViewDelegate {
+extension CongtyViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let demo = Demo(rawValue: indexPath.row) else { return }
         let controller = controllerDemo(demo: demo)

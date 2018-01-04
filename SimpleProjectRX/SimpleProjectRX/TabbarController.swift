@@ -22,22 +22,22 @@ final class TabbarController: UITabBarController {
     private func setupUI() {
        // tabBar.tintColor = UIColor(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
 
-        let homeController = HomeViewController()
-        homeController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home_1"))
-        let homeNavigation = UINavigationController(rootViewController: homeController)
+        let congtyController = CongtyViewController()
+        congtyController.tabBarItem = UITabBarItem(title: "Côngty", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home_1"))
+        let congtyNavigation = UINavigationController(rootViewController: congtyController)
 
-        let favoriteController = FavoriteViewController()
-        favoriteController.tabBarItem = UITabBarItem(title: "Favorite", image: #imageLiteral(resourceName: "favor"), selectedImage: #imageLiteral(resourceName: "favor_1"))
-        let favoriteNavigation = UINavigationController(rootViewController: favoriteController)
+        let vibloController = VibloViewController()
+        vibloController.tabBarItem = UITabBarItem(title: "Viblo", image: #imageLiteral(resourceName: "favor"), selectedImage: #imageLiteral(resourceName: "favor_1"))
+        let vibloNavigation = UINavigationController(rootViewController: vibloController)
 
-        let profileController = ProfileViewController()
-        profileController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
-        let profileNavigation = UINavigationController(rootViewController: profileController)
+        let mediumController = MediumViewController()
+        mediumController.tabBarItem = UITabBarItem(title: "Medium", image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
+        let mediumNavigation = UINavigationController(rootViewController: mediumController)
 
         let settingController = SettingViewController()
-        settingController.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_1"))
+        settingController.tabBarItem = UITabBarItem(title: "Setting", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_1"))
         let settingNavigation = UINavigationController(rootViewController: settingController)
 
-        viewControllers = [homeNavigation, favoriteNavigation, profileNavigation, settingNavigation]
+        viewControllers = [congtyNavigation, vibloNavigation, mediumNavigation, settingNavigation]
     }
 }

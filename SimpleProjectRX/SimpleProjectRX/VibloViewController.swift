@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  FavoriteViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/2/18.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class VibloViewController: UIViewController {
 
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Profile"
+        title = "Viblo"
     }
 }
