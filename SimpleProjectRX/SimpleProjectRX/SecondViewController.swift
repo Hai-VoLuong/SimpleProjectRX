@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  passDataBackUsingProtocolViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/5/18.
@@ -7,44 +7,36 @@
 //
 
 import UIKit
-import RxCocoa
 import RxSwift
+import RxCocoa
 
-final class SecondViewController: UIViewController, SendBackData {
+protocol SendBackData {
+    func senDataToBack(value: String)
+}
 
-    // MARK: - IBoutlets
-    @IBOutlet private weak var titleLabel: UILabel!
+final class SecondViewController: UIViewController {
+
+    //MARK: - IBoutlets
     @IBOutlet private weak var button: UIButton!
 
-    // MARK: - Properties
+    //MARK: - Properties
     var disposeBag = DisposeBag()
-    var valueSendFromPassDataViewController: String?
+    var delegate: SendBackData?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Second view controller"
+        title = "Second"
         buttonClick()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if let value = valueSendFromPassDataViewController {
-            titleLabel.text = value
-        }
-    }
-
-    // MARK: - Private Func
+    //MARK: - Private Func
     private func buttonClick() {
         button.rx.tap
-            .subscribe(onNext: { data in
-                let passDataViewController = PassDataBackUsingProtocolViewController()
-                    passDataViewController.delegate = self
-                    self.navigationController?.pushViewController(passDataViewController, animated: true)
-            }).disposed(by: disposeBag)
-    }
-
-    // MARK: - Public Func
-    func senDataToBack(value: String) {
-        valueSendFromPassDataViewController = value
+            .subscribe(onNext: {
+                self.delegate?.senDataToBack(value: "Send data t back")
+                self.navigationController?.popViewController(animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 }

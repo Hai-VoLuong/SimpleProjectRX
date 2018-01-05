@@ -14,7 +14,7 @@ protocol SendBackData {
     func senDataToBack(value: String)
 }
 
-final class PassDataBackUsingProtocolViewController: UIViewController {
+final class SecondViewController: UIViewController {
 
     //MARK: - IBoutlets
     @IBOutlet private weak var button: UIButton!

@@ -36,7 +36,7 @@ final class VibloViewController: UIViewController {
         let vc: UIViewController!
         switch view {
         case .passDataBackUsingProtocol:
-            vc = SecondViewController()
+            vc = OneViewController()
             return vc
         }
     }
