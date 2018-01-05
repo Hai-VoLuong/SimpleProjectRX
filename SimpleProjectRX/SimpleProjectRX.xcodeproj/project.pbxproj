@@ -10,6 +10,10 @@
 		81BF9C38E8B32CC671FDDDAA /* Pods_SimpleProjectRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */; };
 		9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C21FFF3AED00335F3A /* DetailB_ViewController.swift */; };
 		9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C31FFF3AED00335F3A /* DetailB_ViewController.xib */; };
+		9C0BD0C91FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C71FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.swift */; };
+		9C0BD0CA1FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C81FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.xib */; };
+		9C0BD0CD1FFF662400335F3A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CB1FFF662400335F3A /* SecondViewController.swift */; };
+		9C0BD0CE1FFF662400335F3A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CC1FFF662400335F3A /* SecondViewController.xib */; };
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
 		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
@@ -50,6 +54,10 @@
 		79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0BD0C21FFF3AED00335F3A /* DetailB_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailB_ViewController.swift; sourceTree = "<group>"; };
 		9C0BD0C31FFF3AED00335F3A /* DetailB_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailB_ViewController.xib; sourceTree = "<group>"; };
+		9C0BD0C71FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDataBackUsingProtocolViewController.swift; sourceTree = "<group>"; };
+		9C0BD0C81FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassDataBackUsingProtocolViewController.xib; sourceTree = "<group>"; };
+		9C0BD0CB1FFF662400335F3A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9C0BD0CC1FFF662400335F3A /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
 		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0BD0C61FFF5A7B00335F3A /* PassDataBackUsingProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BD0C71FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.swift */,
+				9C0BD0C81FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.xib */,
+				9C0BD0CB1FFF662400335F3A /* SecondViewController.swift */,
+				9C0BD0CC1FFF662400335F3A /* SecondViewController.xib */,
+			);
+			name = PassDataBackUsingProtocol;
+			sourceTree = "<group>";
+		};
 		9C37E6131FFF29E400D9A7E6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +193,7 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
+				9C0BD0C61FFF5A7B00335F3A /* PassDataBackUsingProtocol */,
 				9CCE900A1FFE121900B30561 /* VibloViewController.swift */,
 				9CCE900B1FFE121900B30561 /* VibloViewController.xib */,
 			);
@@ -396,7 +416,9 @@
 				9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
+				9C0BD0CE1FFF662400335F3A /* SecondViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
+				9C0BD0CA1FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +510,7 @@
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
+				9C0BD0C91FFF5A9B00335F3A /* PassDataBackUsingProtocolViewController.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
@@ -500,6 +523,7 @@
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
+				9C0BD0CD1FFF662400335F3A /* SecondViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
 			);

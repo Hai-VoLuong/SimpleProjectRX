@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum Demo: Int {
-    case SwitchEnumAndTableView
-}
-
 final class MediumViewController: UIViewController {
 
     // MARK: - IBoutlets
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Dummy Data
-
     fileprivate let dummyDatas: [String] = [
         "Switch Enum And TableView",
         ]
+
+    enum Demo: Int {
+        case SwitchEnumAndTableView
+    }
+
 
     // MARK: - private func
     fileprivate func controllerDemo(view: Demo) -> UIViewController {
