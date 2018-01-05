@@ -24,9 +24,9 @@ final class MediumViewController: UIViewController {
         ]
 
     // MARK: - private func
-    fileprivate func controllerDemo(demo: Demo) -> UIViewController {
+    fileprivate func controllerDemo(view: Demo) -> UIViewController {
         let vc: UIViewController!
-        switch demo {
+        switch view {
         case .SwitchEnumAndTableView:
             vc = SwitchEnumsAndTableViewController()
             return vc
@@ -63,7 +63,7 @@ extension MediumViewController: UITableViewDataSource {
 extension MediumViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let demo = Demo(rawValue: indexPath.row) else { return }
-        let controller = controllerDemo(demo: demo)
+        let controller = controllerDemo(view: demo)
         navigationController?.pushViewController(controller, animated: true)
     }
 }
