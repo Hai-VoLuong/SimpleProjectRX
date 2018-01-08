@@ -45,6 +45,8 @@
 		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
 		9C5B4D8420035FAC00C0514C /* GitHupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */; };
 		9C5B4D8520035FAC00C0514C /* GitHupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */; };
+		9C5B4D882003608A00C0514C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D872003608A00C0514C /* Repo.swift */; };
+		9C5B4D8A2003609700C0514C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D892003609700C0514C /* Event.swift */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -96,6 +98,8 @@
 		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
 		9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHupViewController.swift; sourceTree = "<group>"; };
 		9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHupViewController.xib; sourceTree = "<group>"; };
+		9C5B4D872003608A00C0514C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		9C5B4D892003609700C0514C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,10 +325,20 @@
 		9C5B4D8120035F5900C0514C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9C5B4D862003607000C0514C /* Models */,
 				9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */,
 				9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */,
 			);
 			name = MVVM;
+			sourceTree = "<group>";
+		};
+		9C5B4D862003607000C0514C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B4D872003608A00C0514C /* Repo.swift */,
+				9C5B4D892003609700C0514C /* Event.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		9CD6813A1FFB1E080077729C = {
@@ -556,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
+				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
@@ -564,6 +579,7 @@
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
+				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */,
