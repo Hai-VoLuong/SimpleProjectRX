@@ -18,12 +18,14 @@ final class VibloViewController: UIViewController {
         case passDataBackUsingProtocol = 0
         case Search
         case CircleView
+        case MVVM
     }
 
     var dummyData: [String] = [
         "Passing data back using protocol",
         "Search",
-        "Circle View"
+        "Circle View",
+        "MVVM"
     ]
 
     // MARK: - Life Cycle
@@ -47,6 +49,9 @@ final class VibloViewController: UIViewController {
             return vc
         case .CircleView:
             vc = CircleViewViewController()
+            return vc
+        case .MVVM:
+            vc = GitHupViewController()
             return vc
         }
     }

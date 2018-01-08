@@ -43,6 +43,8 @@
 		9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */; };
 		9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */; };
 		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
+		9C5B4D8420035FAC00C0514C /* GitHupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */; };
+		9C5B4D8520035FAC00C0514C /* GitHupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -92,6 +94,8 @@
 		9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingDataViewController.xib; sourceTree = "<group>"; };
 		9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
+		9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHupViewController.swift; sourceTree = "<group>"; };
+		9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHupViewController.xib; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +216,7 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
+				9C5B4D8120035F5900C0514C /* MVVM */,
 				9CDE9ADA20031D00001E3FCE /* Circle View */,
 				9C4B0DE71FFF825D007F0817 /* Search */,
 				9C0BD0C61FFF5A7B00335F3A /* PassDataBackUsingProtocol */,
@@ -309,6 +314,15 @@
 			children = (
 				9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */,
 				9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */,
+			);
+			name = MVVM;
+			sourceTree = "<group>";
+		};
+		9C5B4D8120035F5900C0514C /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */,
+				9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */,
 			);
 			name = MVVM;
 			sourceTree = "<group>";
@@ -452,6 +466,7 @@
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 				9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */,
+				9C5B4D8520035FAC00C0514C /* GitHupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +578,7 @@
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
+				9C5B4D8420035FAC00C0514C /* GitHupViewController.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
