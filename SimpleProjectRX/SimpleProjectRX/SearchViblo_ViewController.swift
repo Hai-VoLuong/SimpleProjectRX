@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class SearchViblo_ViewController: UIViewController {
 
@@ -16,6 +18,7 @@ final class SearchViblo_ViewController: UIViewController {
 
     // MARK: - Properties
     var shownCities = [String]()
+    let disaposeBag = DisposeBag()
     let allCities: [String] = ["Oklahoma", "Chicago", "Moscow", "Danang", "Vancouver", "Praga"]
 
     // MARK: - Life Cycle
@@ -24,11 +27,20 @@ final class SearchViblo_ViewController: UIViewController {
         title = "Search"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
-        shownCities = allCities
+        searchData()
     }
 
-    func searchData() {
-
+    // MARK: - Private Func
+    private func searchData() {
+        searchBar.rx.text.orEmpty
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter { !$0.isEmpty }
+            .subscribe(onNext: { [weak self] query in
+                guard let this = self else { return }
+                this.shownCities = this.allCities.filter { $0.hasPrefix(query)}
+                this.tableView.reloadData()
+            }).addDisposableTo(disaposeBag)
     }
 
 }

@@ -17,11 +17,13 @@ final class VibloViewController: UIViewController {
     enum Demo: Int {
         case passDataBackUsingProtocol = 0
         case Search
+        case CircleView
     }
 
     var dummyData: [String] = [
         "Passing data back using protocol",
-        "Search"
+        "Search",
+        "Circle View"
     ]
 
     // MARK: - Life Cycle
@@ -42,6 +44,9 @@ final class VibloViewController: UIViewController {
             return vc
         case .Search:
             vc = SearchViblo_ViewController()
+            return vc
+        case .CircleView:
+            vc = CircleViewViewController()
             return vc
         }
     }

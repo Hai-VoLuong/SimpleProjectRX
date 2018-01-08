@@ -29,4 +29,6 @@ target 'SimpleProjectRX' do
   pod 'MVVM-Swift', '~> 1.1.0'
   pod 'RxMapKit', '~> 1.1.0'
 
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
 end

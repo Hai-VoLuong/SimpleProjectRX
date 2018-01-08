@@ -49,6 +49,9 @@
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
 		9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681521FFB1E080077729C /* LaunchScreen.storyboard */; };
+		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
+		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
+		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,9 @@
 		9CD681501FFB1E080077729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD681531FFB1E080077729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD681551FFB1E080077729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
+		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
+		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B25B0835144814C419636DDF /* Pods-SimpleProjectRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.release.xcconfig"; sourceTree = "<group>"; };
 		F1F183623372135E3E0C317A /* Pods-SimpleProjectRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
+				9CDE9ADA20031D00001E3FCE /* Circle View */,
 				9C4B0DE71FFF825D007F0817 /* Search */,
 				9C0BD0C61FFF5A7B00335F3A /* PassDataBackUsingProtocol */,
 				9CCE900A1FFE121900B30561 /* VibloViewController.swift */,
@@ -334,6 +341,16 @@
 			path = SimpleProjectRX;
 			sourceTree = "<group>";
 		};
+		9CDE9ADA20031D00001E3FCE /* Circle View */ = {
+			isa = PBXGroup;
+			children = (
+				9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */,
+				9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */,
+				9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */,
+			);
+			name = "Circle View";
+			sourceTree = "<group>";
+		};
 		B3BB9E409BD5E636252B7D88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +436,7 @@
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */,
+				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* SettingViewController.xib in Resources */,
@@ -448,6 +466,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MVVM-Swift/MVVM.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
@@ -463,6 +482,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MVVM.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
@@ -526,6 +546,7 @@
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
+				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
@@ -540,6 +561,7 @@
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
+				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
 			);
