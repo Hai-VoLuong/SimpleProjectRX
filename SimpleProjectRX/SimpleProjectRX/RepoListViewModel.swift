@@ -12,7 +12,6 @@ import Action
 
 final class RepoListViewModel {
 
-    // MARK: - Properties
     let repoService: RepoServiceProtocol
     let bag = DisposeBag()
 
@@ -21,11 +20,14 @@ final class RepoListViewModel {
     // MARK: - Output
     private(set) var repoList: Variable<[Repo]>
     private(set) var isLoadingData = Variable(false)
+
     private(set) var loadDataAction: Action<String, [Repo]>!
 
     init(repoService: RepoServiceProtocol) {
         self.repoService = repoService
+
         self.repoList = Variable<[Repo]>([])
+
         bindOutput()
     }
 
@@ -41,20 +43,20 @@ final class RepoListViewModel {
         }
 
         loadDataAction
-        .elements
-        .subscribe(onNext: { [weak self] (repoList) in
-            self?.repoList.value = repoList
-            self?.isLoadingData.value = false
-        })
-        .disposed(by: bag)
+            .elements
+            .subscribe(onNext: { [weak self] (repoList) in
+                self?.repoList.value = repoList
+                self?.isLoadingData.value = false
+            })
+            .disposed(by: bag)
 
         loadDataAction
-        .errors
-        .subscribe(onError: { [weak self] (error) in
-            self?.isLoadingData.value = false
-            print(error)
-        })
-        .disposed(by: bag)
+            .errors
+            .subscribe(onError: { [weak self](error) in
+                self?.isLoadingData.value = false
+                print(error)
+            })
+            .disposed(by: bag)
     }
 }
 

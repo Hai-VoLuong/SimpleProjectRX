@@ -98,7 +98,7 @@ class APIService {
         return _request(input)
             .map { data -> [T] in
                 if let jsonArray = data as? [[String:Any]] {
-                    return Mapper<T>().mapArray(JSONArray: jsonArray)!
+                    return Mapper<T>().mapArray(JSONArray: jsonArray) ?? []
                 } else {
                     throw APIError.invalidResponseData(data: data)
                 }
