@@ -28,6 +28,7 @@
 		9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F120047FF200BDE993 /* RepoList.swift */; };
 		9C4F69F42004801B00BDE993 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F32004801B00BDE993 /* EventList.swift */; };
 		9C4F69F62004802600BDE993 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F52004802600BDE993 /* RepoService.swift */; };
+		9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */; };
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */; };
@@ -89,6 +90,7 @@
 		9C4F69F120047FF200BDE993 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
 		9C4F69F32004801B00BDE993 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		9C4F69F52004802600BDE993 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
+		9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtyViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongtyViewController.xib; sourceTree = "<group>"; };
@@ -214,6 +216,14 @@
 				9C4F69F52004802600BDE993 /* RepoService.swift */,
 			);
 			name = Repo;
+			sourceTree = "<group>";
+		};
+		9C4F69F720049E3B00BDE993 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		9C55D8791FFB2A5200F29453 /* Tabbar */ = {
@@ -372,6 +382,7 @@
 		9C5B4D8120035F5900C0514C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9C4F69F720049E3B00BDE993 /* ViewModels */,
 				9C4F69E420047EF900BDE993 /* Services */,
 				9C5B4D862003607000C0514C /* Models */,
 				9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */,
@@ -627,6 +638,7 @@
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
+				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
