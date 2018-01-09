@@ -25,6 +25,9 @@
 		9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EA20047F4100BDE993 /* URLs.swift */; };
 		9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EC20047F5300BDE993 /* ResponseError.swift */; };
 		9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EE20047F7800BDE993 /* APIService.swift */; };
+		9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F120047FF200BDE993 /* RepoList.swift */; };
+		9C4F69F42004801B00BDE993 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F32004801B00BDE993 /* EventList.swift */; };
+		9C4F69F62004802600BDE993 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F52004802600BDE993 /* RepoService.swift */; };
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */; };
@@ -83,6 +86,9 @@
 		9C4F69EA20047F4100BDE993 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		9C4F69EC20047F5300BDE993 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		9C4F69EE20047F7800BDE993 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9C4F69F120047FF200BDE993 /* RepoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoList.swift; sourceTree = "<group>"; };
+		9C4F69F32004801B00BDE993 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		9C4F69F52004802600BDE993 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtyViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongtyViewController.xib; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 		9C4F69E520047F0500BDE993 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9C4F69F020047FE600BDE993 /* Repo */,
 				9C4F69E620047F1C00BDE993 /* APIInputBase.swift */,
 				9C4F69E820047F3100BDE993 /* APIOutputBase.swift */,
 				9C4F69EA20047F4100BDE993 /* URLs.swift */,
@@ -197,6 +204,16 @@
 				9C4F69EE20047F7800BDE993 /* APIService.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		9C4F69F020047FE600BDE993 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				9C4F69F120047FF200BDE993 /* RepoList.swift */,
+				9C4F69F32004801B00BDE993 /* EventList.swift */,
+				9C4F69F52004802600BDE993 /* RepoService.swift */,
+			);
+			name = Repo;
 			sourceTree = "<group>";
 		};
 		9C55D8791FFB2A5200F29453 /* Tabbar */ = {
@@ -626,7 +643,9 @@
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
+				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
+				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
@@ -634,6 +653,7 @@
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C5B4D8420035FAC00C0514C /* GitHupViewController.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
+				9C4F69F62004802600BDE993 /* RepoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
