@@ -20,6 +20,11 @@
 		9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */; };
 		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
 		9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */; };
+		9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69E620047F1C00BDE993 /* APIInputBase.swift */; };
+		9C4F69E920047F3100BDE993 /* APIOutputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69E820047F3100BDE993 /* APIOutputBase.swift */; };
+		9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EA20047F4100BDE993 /* URLs.swift */; };
+		9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EC20047F5300BDE993 /* ResponseError.swift */; };
+		9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EE20047F7800BDE993 /* APIService.swift */; };
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */; };
@@ -73,6 +78,11 @@
 		9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViblo_ViewController.xib; sourceTree = "<group>"; };
 		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
 		9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchEnumsAndTableViewController.xib; sourceTree = "<group>"; };
+		9C4F69E620047F1C00BDE993 /* APIInputBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInputBase.swift; sourceTree = "<group>"; };
+		9C4F69E820047F3100BDE993 /* APIOutputBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOutputBase.swift; sourceTree = "<group>"; };
+		9C4F69EA20047F4100BDE993 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		9C4F69EC20047F5300BDE993 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		9C4F69EE20047F7800BDE993 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* CongtyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtyViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* CongtyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongtyViewController.xib; sourceTree = "<group>"; };
@@ -167,6 +177,26 @@
 				9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */,
 			);
 			name = SwitchEnumsAndTableView;
+			sourceTree = "<group>";
+		};
+		9C4F69E420047EF900BDE993 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C4F69E520047F0500BDE993 /* API */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9C4F69E520047F0500BDE993 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9C4F69E620047F1C00BDE993 /* APIInputBase.swift */,
+				9C4F69E820047F3100BDE993 /* APIOutputBase.swift */,
+				9C4F69EA20047F4100BDE993 /* URLs.swift */,
+				9C4F69EC20047F5300BDE993 /* ResponseError.swift */,
+				9C4F69EE20047F7800BDE993 /* APIService.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		9C55D8791FFB2A5200F29453 /* Tabbar */ = {
@@ -325,6 +355,7 @@
 		9C5B4D8120035F5900C0514C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9C4F69E420047EF900BDE993 /* Services */,
 				9C5B4D862003607000C0514C /* Models */,
 				9C5B4D8220035FAC00C0514C /* GitHupViewController.swift */,
 				9C5B4D8320035FAC00C0514C /* GitHupViewController.xib */,
@@ -571,7 +602,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */,
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
+				9C4F69E920047F3100BDE993 /* APIOutputBase.swift in Sources */,
 				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
@@ -589,11 +622,14 @@
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
 				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
+				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
+				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
+				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C5B4D8420035FAC00C0514C /* GitHupViewController.swift in Sources */,
