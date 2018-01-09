@@ -28,7 +28,7 @@ struct Repo: Mappable {
         self.name = name
     }
 
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         fullName <- map["full_name"]
