@@ -14,6 +14,7 @@
 		9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C81FFF5A9B00335F3A /* SecondViewController.xib */; };
 		9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CB1FFF662400335F3A /* OneViewController.swift */; };
 		9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CC1FFF662400335F3A /* OneViewController.xib */; };
+		9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC912004A8D800374517 /* EventListViewModel.swift */; };
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
 		9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */; };
@@ -76,6 +77,7 @@
 		9C0BD0C81FFF5A9B00335F3A /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		9C0BD0CB1FFF662400335F3A /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		9C0BD0CC1FFF662400335F3A /* OneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneViewController.xib; sourceTree = "<group>"; };
+		9C24BC912004A8D800374517 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
 		9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViblo_ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */,
+				9C24BC912004A8D800374517 /* EventListViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */,
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
 				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
+				9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,

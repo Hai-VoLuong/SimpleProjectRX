@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Action
 
-final class EventListViewModel {
+final class RepoListViewModel {
 
     // MARK: - Properties
     let repoService: RepoServiceProtocol
