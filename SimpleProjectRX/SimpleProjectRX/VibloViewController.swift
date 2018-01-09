@@ -25,7 +25,7 @@ final class VibloViewController: UIViewController {
         "Passing data back using protocol",
         "Search",
         "Circle View",
-        "MVVM"
+        "MVVM Chưa Xong"
     ]
 
     // MARK: - Life Cycle
@@ -51,7 +51,7 @@ final class VibloViewController: UIViewController {
             vc = CircleViewViewController()
             return vc
         case .MVVM:
-            vc = GitHupViewController()
+            vc = RepoListViewController()
             return vc
         }
     }
