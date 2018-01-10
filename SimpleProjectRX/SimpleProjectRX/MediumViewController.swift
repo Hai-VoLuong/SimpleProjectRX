@@ -16,10 +16,12 @@ final class MediumViewController: UIViewController {
     // MARK: - Dummy Data
     fileprivate let dummyDatas: [String] = [
         "Switch Enum And TableView",
+        "Repository Design Pattern in Swift"
         ]
 
     enum Demo: Int {
         case SwitchEnumAndTableView
+        case RepositoryDesignPattern
     }
 
 
@@ -29,6 +31,9 @@ final class MediumViewController: UIViewController {
         switch view {
         case .SwitchEnumAndTableView:
             vc = SwitchEnumsAndTableViewController()
+            return vc
+        case .RepositoryDesignPattern:
+            vc = RepositoryDesignPatternViewController()
             return vc
         }
     }

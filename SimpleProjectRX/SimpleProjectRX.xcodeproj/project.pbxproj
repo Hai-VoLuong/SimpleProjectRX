@@ -71,6 +71,9 @@
 		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
 		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
 		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
+		9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B202006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift */; };
+		9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBE4B212006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib */; };
+		9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -148,6 +151,9 @@
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		9CBE4B202006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDesignPatternViewController.swift; sourceTree = "<group>"; };
+		9CBE4B212006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDesignPatternViewController.xib; sourceTree = "<group>"; };
+		9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,6 +377,7 @@
 		9C55D8891FFB434C00F29453 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				9CBE4B1F2006111000C1FFB6 /* Repository Design Pattern in Swift */,
 				9C4CEA991FFE08AC004F6E74 /* SwitchEnumsAndTableView */,
 				9C55D8911FFB43C200F29453 /* MediumViewController.swift */,
 				9C55D8921FFB43C200F29453 /* MediumViewController.xib */,
@@ -501,6 +508,16 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		9CBE4B1F2006111000C1FFB6 /* Repository Design Pattern in Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9CBE4B202006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift */,
+				9CBE4B212006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib */,
+				9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */,
+			);
+			name = "Repository Design Pattern in Swift";
+			sourceTree = "<group>";
+		};
 		9CD6813A1FFB1E080077729C = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
+				9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */,
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
@@ -752,9 +770,11 @@
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
+				9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
+				9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
