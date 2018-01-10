@@ -29,7 +29,7 @@ final class VibloViewController: UIViewController {
         "Circle View",
         "MVVM Chưa Xong",
         "Lazy Closures",
-        "API theo phong cách reactive với RxSwift"
+        "API theo phong cách reactive với RxSwift Moya"
     ]
 
     // MARK: - Life Cycle

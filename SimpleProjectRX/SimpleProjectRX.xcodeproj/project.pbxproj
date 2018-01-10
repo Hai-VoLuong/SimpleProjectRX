@@ -68,6 +68,9 @@
 		9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */; };
 		9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8D2004C82C0095D64A /* TableView+.swift */; };
 		9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8F2004C8400095D64A /* Storyboard+.swift */; };
+		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
+		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
+		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -142,6 +145,9 @@
 		9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		9C5F9F8D2004C82C0095D64A /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		9C5F9F8F2004C8400095D64A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,20 +196,22 @@
 			name = "Lazy Closures";
 			sourceTree = "<group>";
 		};
-		9C0EB79E2005C9A700721A06 /* APIReactiveRxSwift */ = {
+		9C0EB79E2005C9A700721A06 /* APIReactiveRxSwiftMoya */ = {
 			isa = PBXGroup;
 			children = (
+				9CBE4B1A2005CD9900C1FFB6 /* Services */,
 				9C0EB7A32005C9EE00721A06 /* API */,
 				9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */,
 				9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */,
 			);
-			name = APIReactiveRxSwift;
+			name = APIReactiveRxSwiftMoya;
 			sourceTree = "<group>";
 		};
 		9C0EB7A32005C9EE00721A06 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				9C0EB7A42005CA0000721A06 /* API.swift */,
+				9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -348,7 +356,7 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
-				9C0EB79E2005C9A700721A06 /* APIReactiveRxSwift */,
+				9C0EB79E2005C9A700721A06 /* APIReactiveRxSwiftMoya */,
 				9C0EB7992005B24D00721A06 /* Lazy Closures */,
 				9C5B4D8120035F5900C0514C /* MVVM */,
 				9CDE9ADA20031D00001E3FCE /* Circle View */,
@@ -482,6 +490,15 @@
 				9C5F9F8F2004C8400095D64A /* Storyboard+.swift */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		9CBE4B1A2005CD9900C1FFB6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */,
+				9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		9CD6813A1FFB1E080077729C = {
@@ -645,9 +662,11 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MVVM-Swift/MVVM.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxMapKit/RxMapKit.framework",
@@ -664,9 +683,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MVVM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMapKit.framework",
@@ -729,8 +750,10 @@
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
+				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
+				9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
@@ -764,6 +787,7 @@
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9C5B4D8420035FAC00C0514C /* RepoListViewController.swift in Sources */,
+				9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* CongtyViewController.swift in Sources */,
 				9C4F69F62004802600BDE993 /* RepoService.swift in Sources */,
 			);
