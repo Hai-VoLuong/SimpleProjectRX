@@ -19,13 +19,17 @@ final class VibloViewController: UIViewController {
         case Search
         case CircleView
         case MVVM
+        case LazyClosures
+        case APIReactiveRxSwift
     }
 
     var dummyData: [String] = [
         "Passing data back using protocol",
         "Search",
         "Circle View",
-        "MVVM Chưa Xong"
+        "MVVM Chưa Xong",
+        "Lazy Closures",
+        "API theo phong cách reactive với RxSwift"
     ]
 
     // MARK: - Life Cycle
@@ -52,6 +56,12 @@ final class VibloViewController: UIViewController {
             return vc
         case .MVVM:
             vc = RepoListViewController()
+            return vc
+        case .LazyClosures:
+            vc = LazyClosureViewController()
+            return vc
+        case .APIReactiveRxSwift:
+            vc = APIReactiveRxSwiftViewController()
             return vc
         }
     }

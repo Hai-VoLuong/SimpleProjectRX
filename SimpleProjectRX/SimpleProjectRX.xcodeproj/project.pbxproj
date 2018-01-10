@@ -14,6 +14,11 @@
 		9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C81FFF5A9B00335F3A /* SecondViewController.xib */; };
 		9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CB1FFF662400335F3A /* OneViewController.swift */; };
 		9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0CC1FFF662400335F3A /* OneViewController.xib */; };
+		9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB79A2005B26500721A06 /* LazyClosureViewController.swift */; };
+		9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EB79B2005B26500721A06 /* LazyClosureViewController.xib */; };
+		9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */; };
+		9C0EB7A22005C9B400721A06 /* APIReactiveRxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */; };
+		9C0EB7A52005CA0000721A06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB7A42005CA0000721A06 /* API.swift */; };
 		9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC912004A8D800374517 /* EventListViewModel.swift */; };
 		9C24BC972004B0D000374517 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC952004B0D000374517 /* RepoCell.swift */; };
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
@@ -83,6 +88,11 @@
 		9C0BD0C81FFF5A9B00335F3A /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		9C0BD0CB1FFF662400335F3A /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		9C0BD0CC1FFF662400335F3A /* OneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneViewController.xib; sourceTree = "<group>"; };
+		9C0EB79A2005B26500721A06 /* LazyClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyClosureViewController.swift; sourceTree = "<group>"; };
+		9C0EB79B2005B26500721A06 /* LazyClosureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LazyClosureViewController.xib; sourceTree = "<group>"; };
+		9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIReactiveRxSwiftViewController.swift; sourceTree = "<group>"; };
+		9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = APIReactiveRxSwiftViewController.xib; sourceTree = "<group>"; };
+		9C0EB7A42005CA0000721A06 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9C24BC912004A8D800374517 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		9C24BC952004B0D000374517 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
@@ -169,6 +179,33 @@
 				9C0BD0CC1FFF662400335F3A /* OneViewController.xib */,
 			);
 			name = PassDataBackUsingProtocol;
+			sourceTree = "<group>";
+		};
+		9C0EB7992005B24D00721A06 /* Lazy Closures */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EB79A2005B26500721A06 /* LazyClosureViewController.swift */,
+				9C0EB79B2005B26500721A06 /* LazyClosureViewController.xib */,
+			);
+			name = "Lazy Closures";
+			sourceTree = "<group>";
+		};
+		9C0EB79E2005C9A700721A06 /* APIReactiveRxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EB7A32005C9EE00721A06 /* API */,
+				9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */,
+				9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */,
+			);
+			name = APIReactiveRxSwift;
+			sourceTree = "<group>";
+		};
+		9C0EB7A32005C9EE00721A06 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EB7A42005CA0000721A06 /* API.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		9C24BC932004AE6400374517 /* ViewController */ = {
@@ -311,6 +348,8 @@
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
+				9C0EB79E2005C9A700721A06 /* APIReactiveRxSwift */,
+				9C0EB7992005B24D00721A06 /* Lazy Closures */,
 				9C5B4D8120035F5900C0514C /* MVVM */,
 				9CDE9ADA20031D00001E3FCE /* Circle View */,
 				9C4B0DE71FFF825D007F0817 /* Search */,
@@ -576,11 +615,13 @@
 				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
 				9C55D8AD1FFB6EEB00F29453 /* SearchViewController.xib in Resources */,
 				9C55D8941FFB43C200F29453 /* MediumViewController.xib in Resources */,
+				9C0EB7A22005C9B400721A06 /* APIReactiveRxSwiftViewController.xib in Resources */,
 				9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */,
 				9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* CongtyViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
+				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
@@ -688,6 +729,7 @@
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
+				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
@@ -696,6 +738,7 @@
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* SettingViewController.swift in Sources */,
 				9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */,
@@ -712,6 +755,7 @@
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
+				9C0EB7A52005CA0000721A06 /* API.swift in Sources */,
 				9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */,
 				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
