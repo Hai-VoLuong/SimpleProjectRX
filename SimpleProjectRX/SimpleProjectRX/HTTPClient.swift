@@ -8,6 +8,8 @@
 
 import UIKit
 
+// handle the remote communication
+
 class HTTPClient {
 
     @discardableResult func getRequest(_ url: String) -> AnyObject {
