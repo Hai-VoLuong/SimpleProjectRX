@@ -524,8 +524,8 @@
 		9C8D137420070A2A00C1BE5E /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9C8D137520070CDA00C1BE5E /* HTTPClient.swift */,
 				9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */,
+				9C8D137520070CDA00C1BE5E /* HTTPClient.swift */,
 				9C8D13802007129B00C1BE5E /* PersistencyManager.swift */,
 			);
 			name = API;
