@@ -19,6 +19,8 @@ final class DesignPatternViewController: UIViewController {
     @IBOutlet private var undoBarButtonItem: UIBarButtonItem!
     @IBOutlet private var trashBarButtonItem: UIBarButtonItem!
 
+    @IBOutlet private var horizontalScrollerView: HorizontalScrollerView!
+
     // MARK: - Properties
     fileprivate var currentAlbumIndex = 0
     fileprivate var currentAlbumData: [AlbumData]?
@@ -40,7 +42,7 @@ final class DesignPatternViewController: UIViewController {
         showDataForAlbum(at: currentAlbumIndex)
     }
 
-    private func showDataForAlbum(at index: Int) {
+    fileprivate func showDataForAlbum(at index: Int) {
         if (index < allAlbums.count && index > -1) {
             let album = allAlbums[index]
             currentAlbumData = album.tableRepresentation
@@ -48,6 +50,9 @@ final class DesignPatternViewController: UIViewController {
             currentAlbumData = nil
         }
         tableView.reloadData()
+        horizontalScrollerView.delegate = self
+        horizontalScrollerView.dataSource = self
+        horizontalScrollerView.reload()
     }
 }
 
@@ -68,6 +73,41 @@ extension DesignPatternViewController: UITableViewDataSource {
             cell.detailTextLabel?.text = albumData[row].value
         }
         return cell
+    }
+}
+
+// MARK: - HorizontalScrollerViewDelegate
+extension DesignPatternViewController: HorizontalScrollerViewDelegate {
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int) {
+
+        let previousAlbumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
+        previousAlbumView.highlightAlbum(false)
+
+        currentAlbumIndex = index
+
+        let albumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
+        albumView.highlightAlbum(true)
+
+        showDataForAlbum(at: index)
+    }
+}
+
+// MARK: - HorizontalScrollerViewDataSource
+extension DesignPatternViewController: HorizontalScrollerViewDataSource {
+
+    func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int {
+        return allAlbums.count
+    }
+
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView {
+        let album = allAlbums[index]
+        let albumView = AlbumView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), coverUrl: album.coverUrl)
+        if currentAlbumIndex == index {
+            albumView.highlightAlbum(true)
+        } else {
+            albumView.highlightAlbum(false)
+        }
+        return albumView
     }
 }
 

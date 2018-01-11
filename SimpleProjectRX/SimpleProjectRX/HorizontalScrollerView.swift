@@ -9,16 +9,16 @@
 import UIKit
 
 protocol HorizontalScrollerViewDataSource: class {
-
     func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int
-
     func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView
 }
 
 protocol HorizontalScrollerViewDelegate: class {
-
-    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int) -> UIView
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int)
 }
+
+// Adapter Design Pattern: An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object.
+// Apple uses protocols to do the job. You may be familiar with protocols like UITableViewDelegate, UIScrollViewDelegate, NSCoding and NSCopying. As an example, with the NSCopying protocol, any class can provide a standard copy method.
 
 class HorizontalScrollerView: UIView {
 
