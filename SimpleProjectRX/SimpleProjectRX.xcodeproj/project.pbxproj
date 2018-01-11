@@ -73,6 +73,8 @@
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
 		9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137220070A0500C1BE5E /* AlbumView.swift */; };
 		9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137520070CDA00C1BE5E /* HTTPClient.swift */; };
+		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
+		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
 		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
 		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
 		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
@@ -158,6 +160,8 @@
 		9C8D1370200709D800C1BE5E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		9C8D137220070A0500C1BE5E /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		9C8D137520070CDA00C1BE5E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
@@ -332,10 +336,10 @@
 		9C55D87D1FFB2C0B00F29453 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D88A1FFB435900F29453 /* Setting */,
+				9C55D88A1FFB435900F29453 /* Raywender */,
 				9C55D8891FFB434C00F29453 /* Medium */,
 				9C55D8881FFB433E00F29453 /* Viblo */,
-				9C55D8871FFB431D00F29453 /* Congty */,
+				9C55D8871FFB431D00F29453 /* Home */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -352,9 +356,10 @@
 			name = Resoure;
 			sourceTree = "<group>";
 		};
-		9C55D8871FFB431D00F29453 /* Congty */ = {
+		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D13772007100200C1BE5E /* Home */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
 				9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */,
 				9C55D89F1FFB6D9A00F29453 /* Custom Observable */,
@@ -363,23 +368,20 @@
 				9C55D89C1FFB6D3400F29453 /* Search */,
 				9C55D89A1FFB6D1A00F29453 /* Validate Login */,
 				9C55D8991FFB6CBC00F29453 /* Calculator */,
-				9C55D8821FFB2C9400F29453 /* HomeViewController.swift */,
-				9C55D8831FFB2C9400F29453 /* HomeViewController.xib */,
 			);
-			name = Congty;
+			name = Home;
 			sourceTree = "<group>";
 		};
 		9C55D8881FFB433E00F29453 /* Viblo */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D13782007102400C1BE5E /* Viblo */,
 				9C0EB79E2005C9A700721A06 /* APIReactiveRxSwiftMoya */,
 				9C0EB7992005B24D00721A06 /* Lazy Closures */,
 				9C5B4D8120035F5900C0514C /* MVVM */,
 				9CDE9ADA20031D00001E3FCE /* Circle View */,
 				9C4B0DE71FFF825D007F0817 /* Search */,
 				9C0BD0C61FFF5A7B00335F3A /* PassDataBackUsingProtocol */,
-				9CCE900A1FFE121900B30561 /* VibloViewController.swift */,
-				9CCE900B1FFE121900B30561 /* VibloViewController.xib */,
 			);
 			name = Viblo;
 			sourceTree = "<group>";
@@ -387,22 +389,20 @@
 		9C55D8891FFB434C00F29453 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D13792007103500C1BE5E /* Medium */,
 				9CBE4B1F2006111000C1FFB6 /* Repository Design Pattern in Swift */,
 				9C4CEA991FFE08AC004F6E74 /* SwitchEnumsAndTableView */,
-				9C55D8911FFB43C200F29453 /* MediumViewController.swift */,
-				9C55D8921FFB43C200F29453 /* MediumViewController.xib */,
 			);
 			name = Medium;
 			sourceTree = "<group>";
 		};
-		9C55D88A1FFB435900F29453 /* Setting */ = {
+		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D137A2007104F00C1BE5E /* Raywender */,
 				9C8D136B200708F200C1BE5E /* Design Patterns */,
-				9C55D8951FFB43CF00F29453 /* RaywenderViewController.swift */,
-				9C55D8961FFB43CF00F29453 /* RaywenderViewController.xib */,
 			);
-			name = Setting;
+			name = Raywender;
 			sourceTree = "<group>";
 		};
 		9C55D8991FFB6CBC00F29453 /* Calculator */ = {
@@ -513,11 +513,10 @@
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D137D200710B900C1BE5E /* Views */,
+				9C8D137C2007109900C1BE5E /* Controllers */,
+				9C8D137B2007108B00C1BE5E /* Models */,
 				9C8D137420070A2A00C1BE5E /* API */,
-				9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */,
-				9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */,
-				9C8D1370200709D800C1BE5E /* Album.swift */,
-				9C8D137220070A0500C1BE5E /* AlbumView.swift */,
 			);
 			name = "Design Patterns";
 			sourceTree = "<group>";
@@ -526,8 +525,71 @@
 			isa = PBXGroup;
 			children = (
 				9C8D137520070CDA00C1BE5E /* HTTPClient.swift */,
+				9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */,
+				9C8D13802007129B00C1BE5E /* PersistencyManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		9C8D13772007100200C1BE5E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8821FFB2C9400F29453 /* HomeViewController.swift */,
+				9C55D8831FFB2C9400F29453 /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		9C8D13782007102400C1BE5E /* Viblo */ = {
+			isa = PBXGroup;
+			children = (
+				9CCE900A1FFE121900B30561 /* VibloViewController.swift */,
+				9CCE900B1FFE121900B30561 /* VibloViewController.xib */,
+			);
+			name = Viblo;
+			sourceTree = "<group>";
+		};
+		9C8D13792007103500C1BE5E /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8911FFB43C200F29453 /* MediumViewController.swift */,
+				9C55D8921FFB43C200F29453 /* MediumViewController.xib */,
+			);
+			name = Medium;
+			sourceTree = "<group>";
+		};
+		9C8D137A2007104F00C1BE5E /* Raywender */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8951FFB43CF00F29453 /* RaywenderViewController.swift */,
+				9C55D8961FFB43CF00F29453 /* RaywenderViewController.xib */,
+			);
+			name = Raywender;
+			sourceTree = "<group>";
+		};
+		9C8D137B2007108B00C1BE5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C8D1370200709D800C1BE5E /* Album.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C8D137C2007109900C1BE5E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */,
+				9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C8D137D200710B900C1BE5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C8D137220070A0500C1BE5E /* AlbumView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9CBE4B1A2005CD9900C1FFB6 /* Services */ = {
@@ -838,6 +900,7 @@
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
+				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
@@ -846,6 +909,7 @@
 				9C8D1371200709D800C1BE5E /* Album.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */,
 				9C4F69F62004802600BDE993 /* RepoService.swift in Sources */,
+				9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
