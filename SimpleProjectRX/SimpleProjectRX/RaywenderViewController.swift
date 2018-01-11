@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  SearchViewController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/2/18.
@@ -8,61 +8,26 @@
 
 import UIKit
 
-final class CongtyViewController: UIViewController {
+final class RaywenderViewController: UIViewController {
 
     // MARK: - IBoutlets
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Dummy Data
     fileprivate enum Demo: Int {
-        case calculator
-        case validateLogin
-        case search
-        case galleryImage
-        case mutipCell
-        case customObservable
-        case fetchDataNetwork
-        case mvvm
+        case DesignPattern
     }
 
     fileprivate let dummyDatas: [String] = [
-        "Calculator",
-        "Validate Login",
-        "Search",
-        "Gallery Image",
-        "Multiple Cell Custom Types",
-        "Custom Observable",
-        "Fetching Data From the Web",
-        "MVVM - Demo",
+        "Design Patterns"
         ]
 
     // MARK: - private func
     fileprivate func controllerDemo(demo: Demo) -> UIViewController {
         let vc: UIViewController!
         switch demo {
-        case .calculator:
-            vc = CalculatorViewController()
-            return vc
-        case .validateLogin:
-            vc = ValidateLoginViewController()
-            return vc
-        case .search:
-            vc = SearchViewController()
-            return vc
-        case .galleryImage:
-            vc = GalleryImageViewController()
-            return vc
-        case .mutipCell:
-            vc = MultipleCellViewController()
-            return vc
-        case .customObservable:
-            vc = CustomObservableViewController()
-            return vc
-        case .fetchDataNetwork:
-            vc = FetchingDataViewController()
-            return vc
-        case .mvvm:
-            vc = MVVMViewController()
+        case .DesignPattern:
+            vc = DesignPatternViewController()
             return vc
         }
     }
@@ -82,7 +47,7 @@ final class CongtyViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension CongtyViewController: UITableViewDataSource {
+extension RaywenderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dummyDatas.count
     }
@@ -95,11 +60,10 @@ extension CongtyViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension CongtyViewController: UITableViewDelegate {
+extension RaywenderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let demo = Demo(rawValue: indexPath.row) else { return }
         let controller = controllerDemo(demo: demo)
         navigationController?.pushViewController(controller, animated: true)
     }
 }
-
