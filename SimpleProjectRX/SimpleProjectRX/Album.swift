@@ -25,3 +25,20 @@ extension Album: CustomStringConvertible {
         " year: \(year)"
     }
 }
+
+// 3. Decorator Design Pattern :  dynamically adds behaviors and responsibilities to an object without modifying its code.
+// In Swift there are two very common implementations of this pattern: Extensions and Delegation
+
+ // Will define a new method that returns a data structure which can be used easily with UITableView.
+typealias AlbumData = (title: String, value: String)
+
+extension Album {
+    var tableRepresentation: [AlbumData] {
+        return [
+            ("Artist", artist),
+            ("Album", title),
+            ("Genre", genre),
+            ("Year", year)
+        ]
+    }
+}
