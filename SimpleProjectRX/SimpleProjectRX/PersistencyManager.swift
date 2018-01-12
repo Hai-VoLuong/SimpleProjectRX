@@ -76,6 +76,19 @@ final class PersistencyManager: Repository {
                            year: "2000")
 
         albums = [album1, album2, album3, album4, album5]
+
+
+//        let savedURL = documents.appendingPathComponent(Filenames.Albums)
+//        var data = try? Data(contentsOf: savedURL)
+//        if data == nil, let bundleURL = Bundle.main.url(forResource: Filenames.Albums, withExtension: nil) {
+//            data = try? Data(contentsOf: bundleURL)
+//        }
+//
+//        if let albumData = data,
+//            let decodedAlbums = try? JSONDecoder().decode([Album].self, from: albumData) {
+//            albums = decodedAlbums
+//            saveAlbums()
+//        }
     }
 
 
