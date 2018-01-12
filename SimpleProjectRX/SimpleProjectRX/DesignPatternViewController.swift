@@ -10,6 +10,8 @@ import UIKit
 
 private enum Constants {
     static let CellIdentifier = "Cell"
+    // This key will be used to save and restore the current album index
+    static let IndexRestorationKey = "currentAlbumIndex"
 }
 
 final class DesignPatternViewController: UIViewController {
@@ -32,8 +34,12 @@ final class DesignPatternViewController: UIViewController {
         title = "Design Patterns"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIdentifier)
         tableView.dataSource = self
-
         getAPI()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        horizontalScrollerView.scrollToView(at: currentAlbumIndex, animated: false)
     }
 
     // MARK: - Private Func
@@ -52,6 +58,19 @@ final class DesignPatternViewController: UIViewController {
         tableView.reloadData()
         horizontalScrollerView.delegate = self
         horizontalScrollerView.dataSource = self
+        horizontalScrollerView.reload()
+    }
+
+    // MARK: - Public Func
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(currentAlbumIndex, forKey: Constants.IndexRestorationKey)
+        super.encodeRestorableState(with: coder)
+    }
+
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        currentAlbumIndex = coder.decodeInteger(forKey: Constants.IndexRestorationKey)
+        showDataForAlbum(at: currentAlbumIndex)
         horizontalScrollerView.reload()
     }
 }

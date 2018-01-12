@@ -50,6 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    // 7. Design Pattern Memento Pattern : essentially it stores and re-applies your application's state so the user is back where they left things.
+
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+
      //MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
