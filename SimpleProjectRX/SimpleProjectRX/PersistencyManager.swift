@@ -35,6 +35,14 @@ final class PersistencyManager: Repository {
         return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
     }
 
+    private var documents: URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+
+    private enum Filenames {
+        static let Albums = "albums.json"
+    }
+
     init() {
         //Dummy list of albums
         let album1 = Album(title: "Best of Bowie",
@@ -101,6 +109,13 @@ final class PersistencyManager: Repository {
             return nil
         }
         return UIImage(data: data)
+    }
+
+    func saveAlbums() {
+        let url = documents.appendingPathComponent(Filenames.Albums)
+        let encoder = JSONEncoder()
+        guard let encodedData = try? encoder.encode(albums) else { return }
+        try? encodedData.write(to: url)
     }
 
 }

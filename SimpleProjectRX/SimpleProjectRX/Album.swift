@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Album {
+// 8. Design Memento Pattern : can be achieved through archiving and serialization
+// Before Swift 4 : Value types like struct and enum required a sub object that can extend NSObject and conform to NSCoding
+
+// Swift 4 use Codable. This protocol is the only thing required to make a Swift type Encodable and Decodable
+struct Album: Codable {
     let title : String
     let artist : String
     let genre : String
