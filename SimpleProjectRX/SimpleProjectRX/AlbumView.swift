@@ -21,6 +21,8 @@ class AlbumView: UIView {
     init(frame: CGRect, coverUrl: String) {
         super.init(frame: frame)
         commonInit()
+        // 1. This line sends a notification through the NotificationCenter singleton
+        NotificationCenter.default.post(name: .BLDownloadImage, object: self, userInfo: ["imageView": coverImageView, "coverUrl": coverUrl])
     }
 
     private func commonInit() {
