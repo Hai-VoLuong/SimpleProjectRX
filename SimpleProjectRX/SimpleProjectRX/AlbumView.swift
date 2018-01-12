@@ -13,6 +13,9 @@ class AlbumView: UIView {
     private var coverImageView: UIImageView!
     private var indicatorView: UIActivityIndicatorView!
 
+    // 6 Deisgn Pattern KVO Observing mechanism allows an object to observe changes to a property
+    private var valueObservation: NSKeyValueObservation!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -32,6 +35,14 @@ class AlbumView: UIView {
         // Create the cover image view
         coverImageView = UIImageView()
         coverImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        // \.image a key path expression
+        valueObservation = coverImageView.observe(\.image, options: [.new]) { [unowned self] observed, change in
+            if change.newValue is UIImage {
+                self.indicatorView.stopAnimating()
+            }
+        }
+
         addSubview(coverImageView)
 
         // Create the indicator view
