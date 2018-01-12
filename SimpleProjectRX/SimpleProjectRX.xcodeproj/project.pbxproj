@@ -22,6 +22,7 @@
 		9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC912004A8D800374517 /* EventListViewModel.swift */; };
 		9C24BC972004B0D000374517 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC952004B0D000374517 /* RepoCell.swift */; };
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
+		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
 		9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */; };
@@ -110,6 +111,7 @@
 		9C24BC912004A8D800374517 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		9C24BC952004B0D000374517 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
 		9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViblo_ViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,14 @@
 				9C24BC962004B0D000374517 /* RepoCell.xib */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		9C2511A22008494800A4995D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C2511A32008496800A4995D /*  NotificationExtension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		9C37E6131FFF29E400D9A7E6 /* Detail */ = {
@@ -515,6 +525,7 @@
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				9C2511A22008494800A4995D /* Extension */,
 				9C8D137D200710B900C1BE5E /* Views */,
 				9C8D137C2007109900C1BE5E /* Controllers */,
 				9C8D137B2007108B00C1BE5E /* Models */,
@@ -894,6 +905,7 @@
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
+				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,

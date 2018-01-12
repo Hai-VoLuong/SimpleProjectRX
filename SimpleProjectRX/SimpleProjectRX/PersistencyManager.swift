@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 //  save the album data locally
-
 protocol Repository {
 
     associatedtype T
@@ -27,7 +27,13 @@ protocol Repository {
 
 final class PersistencyManager: Repository {
 
+    // MARK: - Private Properties
     private var albums = [Album]()
+
+    // save the downloaded covers locally so the app won't need to download the same covers over and over again
+    private var cache: URL {
+        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+    }
 
     init() {
         //Dummy list of albums
@@ -79,6 +85,22 @@ final class PersistencyManager: Repository {
 
     func delete(at index: Int) {
         albums.remove(at: index)
+    }
+
+    func saveImage(_ image: UIImage, filename: String) {
+        let url = cache.appendingPathComponent(filename)
+        guard let data = UIImagePNGRepresentation(image) else {
+            return
+        }
+        try? data.write(to: url)
+    }
+
+    func getImage(with filename: String) -> UIImage? {
+        let url = cache.appendingPathComponent(filename)
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        return UIImage(data: data)
     }
 
 }
