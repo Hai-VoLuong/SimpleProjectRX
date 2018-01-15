@@ -200,6 +200,7 @@
 		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		9CBA95F8200C8A1A00ABA54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9CBA95FA200C8A1A00ABA54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CBA9602200C92CE00ABA54D /* SimpleProjectRX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleProjectRX.entitlements; sourceTree = "<group>"; };
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
@@ -701,6 +702,7 @@
 		9CD681451FFB1E080077729C /* SimpleProjectRX */ = {
 			isa = PBXGroup;
 			children = (
+				9CBA9602200C92CE00ABA54D /* SimpleProjectRX.entitlements */,
 				9C55D8861FFB379C00F29453 /* Resoure */,
 				9C55D87D1FFB2C0B00F29453 /* View */,
 				9C55D8791FFB2A5200F29453 /* Tabbar */,
@@ -797,6 +799,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 68855R4HVL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1209,6 +1216,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleProjectRX/SimpleProjectRX.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68855R4HVL;
 				INFOPLIST_FILE = SimpleProjectRX/Info.plist;
@@ -1226,6 +1234,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleProjectRX/SimpleProjectRX.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68855R4HVL;
 				INFOPLIST_FILE = SimpleProjectRX/Info.plist;

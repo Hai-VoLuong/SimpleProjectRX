@@ -10,25 +10,36 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
+
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        title = "hello"
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        animateTextLabels()
+        if activeDisplayMode == .compact {
+            self.preferredContentSize = maxSize
+        } else {
+            self.preferredContentSize = CGSize(width: view.frame.width, height: 150)
+        }
     }
-    
-    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
-        completionHandler(NCUpdateResult.newData)
+
+    private func animateTextLabels() {
+        let isExpandedMode = self.extensionContext?.widgetLargestAvailableDisplayMode == .expanded
+        let scaleText: CGFloat = isExpandedMode ? 3 : 0.3
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
+            guard let this = self else { return }
+            this.textLabel.transform = .init(scaleX: scaleText, y: scaleText)
+            this.dateLabel.transform = isExpandedMode ? .init(translationX: 0, y: 20) : .identity
+            }, completion: { finished in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.textLabel.transform = .identity
+                })
+            })
     }
-    
 }
