@@ -77,6 +77,10 @@
 		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
 		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
 		9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */; };
+		9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */; };
+		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
+		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
+		9CBA95FD200C8A1A00ABA54D /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
 		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
 		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
@@ -94,6 +98,30 @@
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CBA95FB200C8A1A00ABA54D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CD6813B1FFB1E080077729C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CBA95F0200C8A1A00ABA54D;
+			remoteInfo = TodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9CBA9601200C8A1A00ABA54D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9CBA95FD200C8A1A00ABA54D /* TodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +195,11 @@
 		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9C9374E52008B121008D2FC9 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
 		9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
+		9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9CBA95F8200C8A1A00ABA54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9CBA95FA200C8A1A00ABA54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
@@ -190,6 +223,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9CBA95EE200C8A1A00ABA54D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CD681401FFB1E080077729C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,6 +649,16 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CBA95F4200C8A1A00ABA54D /* TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */,
+				9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */,
+				9CBA95FA200C8A1A00ABA54D /* Info.plist */,
+			);
+			path = TodayExtension;
+			sourceTree = "<group>";
+		};
 		9CBE4B1A2005CD9900C1FFB6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +682,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD681451FFB1E080077729C /* SimpleProjectRX */,
+				9CBA95F4200C8A1A00ABA54D /* TodayExtension */,
 				9CD681441FFB1E080077729C /* Products */,
 				FDE5D97CF3DC9B6F7904A027 /* Pods */,
 				B3BB9E409BD5E636252B7D88 /* Frameworks */,
@@ -641,6 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD681431FFB1E080077729C /* SimpleProjectRX.app */,
+				9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -669,6 +722,7 @@
 			isa = PBXGroup;
 			children = (
 				79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */,
+				9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -685,6 +739,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9CBA95F0200C8A1A00ABA54D /* TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CBA9600200C8A1A00ABA54D /* Build configuration list for PBXNativeTarget "TodayExtension" */;
+			buildPhases = (
+				9CBA95ED200C8A1A00ABA54D /* Sources */,
+				9CBA95EE200C8A1A00ABA54D /* Frameworks */,
+				9CBA95EF200C8A1A00ABA54D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtension;
+			productName = TodayExtension;
+			productReference = 9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9CD681421FFB1E080077729C /* SimpleProjectRX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD681581FFB1E080077729C /* Build configuration list for PBXNativeTarget "SimpleProjectRX" */;
@@ -695,10 +766,12 @@
 				9CD681411FFB1E080077729C /* Resources */,
 				270B44D82C480EBA5D1F39A7 /* [CP] Embed Pods Frameworks */,
 				2908D7B5028678C32E7B6B72 /* [CP] Copy Pods Resources */,
+				9CBA9601200C8A1A00ABA54D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9CBA95FC200C8A1A00ABA54D /* PBXTargetDependency */,
 			);
 			name = SimpleProjectRX;
 			productName = SimpleProjectRX;
@@ -711,10 +784,15 @@
 		9CD6813B1FFB1E080077729C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Hai Vo L.";
 				TargetAttributes = {
+					9CBA95F0200C8A1A00ABA54D = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 68855R4HVL;
+						ProvisioningStyle = Automatic;
+					};
 					9CD681421FFB1E080077729C = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 68855R4HVL;
@@ -736,11 +814,20 @@
 			projectRoot = "";
 			targets = (
 				9CD681421FFB1E080077729C /* SimpleProjectRX */,
+				9CBA95F0200C8A1A00ABA54D /* TodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9CBA95EF200C8A1A00ABA54D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CD681411FFB1E080077729C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -866,6 +953,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9CBA95ED200C8A1A00ABA54D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CD6813F1FFB1E080077729C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -933,7 +1028,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9CBA95FC200C8A1A00ABA54D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CBA95F0200C8A1A00ABA54D /* TodayExtension */;
+			targetProxy = 9CBA95FB200C8A1A00ABA54D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CBA95F8200C8A1A00ABA54D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		9CD681521FFB1E080077729C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -945,6 +1056,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9CBA95FE200C8A1A00ABA54D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68855R4HVL;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.SimpleProjectRX.TodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CBA95FF200C8A1A00ABA54D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68855R4HVL;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.asiantech.dev.SimpleProjectRX.TodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9CD681561FFB1E080077729C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1044,7 +1207,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1F183623372135E3E0C317A /* Pods-SimpleProjectRX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68855R4HVL;
 				INFOPLIST_FILE = SimpleProjectRX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1059,7 +1224,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B25B0835144814C419636DDF /* Pods-SimpleProjectRX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68855R4HVL;
 				INFOPLIST_FILE = SimpleProjectRX/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1073,6 +1240,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9CBA9600200C8A1A00ABA54D /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CBA95FE200C8A1A00ABA54D /* Debug */,
+				9CBA95FF200C8A1A00ABA54D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CD6813E1FFB1E080077729C /* Build configuration list for PBXProject "SimpleProjectRX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
