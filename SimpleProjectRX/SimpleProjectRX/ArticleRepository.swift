@@ -12,6 +12,9 @@ class Article {
 
 }
 protocol ArticleRepository {
+
+    // associatedtype T
+
     func getAll() -> [Article]
     func get( identifier:Int ) -> Article?
     func create( article:Article ) -> Bool
