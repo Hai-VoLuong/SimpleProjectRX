@@ -98,6 +98,8 @@
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
 		9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */; };
 		9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */; };
+		9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */; };
+		9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF9200DE1BB006766A3 /* GithubService.swift */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +225,8 @@
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListMVCViewController.swift; sourceTree = "<group>"; };
 		9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageListMVCViewController.xib; sourceTree = "<group>"; };
+		9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMedium.swift; sourceTree = "<group>"; };
+		9CE9FEF9200DE1BB006766A3 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B25B0835144814C419636DDF /* Pods-SimpleProjectRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.release.xcconfig"; sourceTree = "<group>"; };
 		F1F183623372135E3E0C317A /* Pods-SimpleProjectRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -730,10 +734,44 @@
 		9CE9FEEE200DDD9E006766A3 /* LanguageListMVC */ = {
 			isa = PBXGroup;
 			children = (
+				9CE9FEF6200DE0D8006766A3 /* Views */,
+				9CE9FEF5200DE0A7006766A3 /* Controllers */,
+				9CE9FEF4200DE07D006766A3 /* NetWorking */,
+				9CE9FEF3200DE071006766A3 /* Models */,
+			);
+			name = LanguageListMVC;
+			sourceTree = "<group>";
+		};
+		9CE9FEF3200DE071006766A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9CE9FEF4200DE07D006766A3 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEF9200DE1BB006766A3 /* GithubService.swift */,
+			);
+			name = NetWorking;
+			sourceTree = "<group>";
+		};
+		9CE9FEF5200DE0A7006766A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */,
 				9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */,
 			);
-			name = LanguageListMVC;
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CE9FEF6200DE0D8006766A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B3BB9E409BD5E636252B7D88 /* Frameworks */ = {
@@ -1036,6 +1074,8 @@
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
+				9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */,
+				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
