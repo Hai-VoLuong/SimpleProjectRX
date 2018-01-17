@@ -38,7 +38,7 @@ final class MediumViewController: UIViewController {
             vc = RepositoryDesignPatternViewController()
             return vc
         case .LanguageListMVC:
-            vc = LanguageListMVCViewController()
+            vc = RepositoryListViewController()
             return vc
         }
     }
