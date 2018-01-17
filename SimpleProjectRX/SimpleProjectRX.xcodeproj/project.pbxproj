@@ -96,6 +96,14 @@
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
+		9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */; };
+		9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */; };
+		9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */; };
+		9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF9200DE1BB006766A3 /* GithubService.swift */; };
+		9CE9FEFD200DF5A5006766A3 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEFB200DF5A5006766A3 /* RepositoryListViewController.swift */; };
+		9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEFC200DF5A5006766A3 /* RepositoryListViewController.xib */; };
+		9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */; };
+		9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +194,7 @@
 		9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		9C5F9F8D2004C82C0095D64A /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		9C5F9F8F2004C8400095D64A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		9C7D108B200D9F62003D4A62 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
 		9C8D1370200709D800C1BE5E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -218,6 +227,14 @@
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListMVCViewController.swift; sourceTree = "<group>"; };
+		9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageListMVCViewController.xib; sourceTree = "<group>"; };
+		9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMedium.swift; sourceTree = "<group>"; };
+		9CE9FEF9200DE1BB006766A3 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		9CE9FEFB200DF5A5006766A3 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		9CE9FEFC200DF5A5006766A3 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
+		9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
 		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B25B0835144814C419636DDF /* Pods-SimpleProjectRX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.release.xcconfig"; sourceTree = "<group>"; };
 		F1F183623372135E3E0C317A /* Pods-SimpleProjectRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProjectRX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProjectRX/Pods-SimpleProjectRX.debug.xcconfig"; sourceTree = "<group>"; };
@@ -444,6 +461,7 @@
 		9C55D8891FFB434C00F29453 /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				9CE9FEEE200DDD9E006766A3 /* LanguageListMVC */,
 				9C8D13792007103500C1BE5E /* Medium */,
 				9CBE4B1F2006111000C1FFB6 /* Repository Design Pattern in Swift */,
 				9C4CEA991FFE08AC004F6E74 /* SwitchEnumsAndTableView */,
@@ -682,6 +700,7 @@
 		9CD6813A1FFB1E080077729C = {
 			isa = PBXGroup;
 			children = (
+				9C7D108B200D9F62003D4A62 /* test.playground */,
 				9CD681451FFB1E080077729C /* SimpleProjectRX */,
 				9CBA95F4200C8A1A00ABA54D /* TodayExtension */,
 				9CD681441FFB1E080077729C /* Products */,
@@ -718,6 +737,53 @@
 				9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */,
 			);
 			name = "Circle View";
+			sourceTree = "<group>";
+		};
+		9CE9FEEE200DDD9E006766A3 /* LanguageListMVC */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEF6200DE0D8006766A3 /* Views */,
+				9CE9FEF5200DE0A7006766A3 /* Controllers */,
+				9CE9FEF4200DE07D006766A3 /* NetWorking */,
+				9CE9FEF3200DE071006766A3 /* Models */,
+			);
+			name = LanguageListMVC;
+			sourceTree = "<group>";
+		};
+		9CE9FEF3200DE071006766A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9CE9FEF4200DE07D006766A3 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEF9200DE1BB006766A3 /* GithubService.swift */,
+			);
+			name = NetWorking;
+			sourceTree = "<group>";
+		};
+		9CE9FEF5200DE0A7006766A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */,
+				9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */,
+				9CE9FEFB200DF5A5006766A3 /* RepositoryListViewController.swift */,
+				9CE9FEFC200DF5A5006766A3 /* RepositoryListViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CE9FEF6200DE0D8006766A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */,
+				9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B3BB9E409BD5E636252B7D88 /* Frameworks */ = {
@@ -842,6 +908,7 @@
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
 				9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */,
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
+				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C24BC982004B0D000374517 /* RepoCell.xib in Resources */,
@@ -850,6 +917,7 @@
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* RaywenderViewController.xib in Resources */,
 				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
 				9C55D8AD1FFB6EEB00F29453 /* SearchViewController.xib in Resources */,
@@ -860,6 +928,7 @@
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
+				9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
@@ -1019,15 +1088,20 @@
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
+				9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */,
+				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
+				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
+				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
 				9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */,
 				9C5B4D8420035FAC00C0514C /* RepoListViewController.swift in Sources */,
 				9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */,
 				9C8D1371200709D800C1BE5E /* Album.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */,
+				9CE9FEFD200DF5A5006766A3 /* RepositoryListViewController.swift in Sources */,
 				9C4F69F62004802600BDE993 /* RepoService.swift in Sources */,
 				9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */,
 			);

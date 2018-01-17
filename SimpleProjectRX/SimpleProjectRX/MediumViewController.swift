@@ -16,12 +16,14 @@ final class MediumViewController: UIViewController {
     // MARK: - Dummy Data
     fileprivate let dummyDatas: [String] = [
         "Switch Enum And TableView",
-        "Repository Design Pattern in Swift"
+        "Repository Design Pattern in Swift",
+        "Language List Git Hup MVC"
         ]
 
     enum Demo: Int {
         case SwitchEnumAndTableView
         case RepositoryDesignPattern
+        case LanguageListMVC
     }
 
 
@@ -34,6 +36,9 @@ final class MediumViewController: UIViewController {
             return vc
         case .RepositoryDesignPattern:
             vc = RepositoryDesignPatternViewController()
+            return vc
+        case .LanguageListMVC:
+            vc = RepositoryListViewController()
             return vc
         }
     }
