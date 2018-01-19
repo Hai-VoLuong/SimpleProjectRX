@@ -21,6 +21,7 @@ final class VibloViewController: UIViewController {
         case MVVM
         case LazyClosures
         case APIReactiveRxSwift
+        case ClosuresGenericsPOP
     }
 
     var dummyData: [String] = [
@@ -29,7 +30,8 @@ final class VibloViewController: UIViewController {
         "Circle View",
         "MVVM Chưa Xong",
         "Lazy Closures",
-        "API theo phong cách reactive với RxSwift Moya"
+        "API theo phong cách reactive với RxSwift Moya",
+        "Sử dụng Closures, Generics, POP"
     ]
 
     // MARK: - Life Cycle
@@ -62,6 +64,9 @@ final class VibloViewController: UIViewController {
             return vc
         case .APIReactiveRxSwift:
             vc = APIReactiveRxSwiftViewController()
+            return vc
+        case .ClosuresGenericsPOP:
+            vc = ClosuresGenericsPOPViewController()
             return vc
         }
     }

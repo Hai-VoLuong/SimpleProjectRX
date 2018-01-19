@@ -69,6 +69,8 @@
 		9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */; };
 		9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8D2004C82C0095D64A /* TableView+.swift */; };
 		9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8F2004C8400095D64A /* Storyboard+.swift */; };
+		9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */; };
+		9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -194,6 +196,8 @@
 		9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		9C5F9F8D2004C82C0095D64A /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		9C5F9F8F2004C8400095D64A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresGenericsPOPViewController.swift; sourceTree = "<group>"; };
+		9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosuresGenericsPOPViewController.xib; sourceTree = "<group>"; };
 		9C7D108B200D9F62003D4A62 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
@@ -448,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8D13782007102400C1BE5E /* Viblo */,
+				9C727A612011A04F006CFB25 /* ClosuresGenericsPOP */,
 				9C0EB79E2005C9A700721A06 /* APIReactiveRxSwiftMoya */,
 				9C0EB7992005B24D00721A06 /* Lazy Closures */,
 				9C5B4D8120035F5900C0514C /* MVVM */,
@@ -581,6 +586,15 @@
 				9C5F9F8F2004C8400095D64A /* Storyboard+.swift */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		9C727A612011A04F006CFB25 /* ClosuresGenericsPOP */ = {
+			isa = PBXGroup;
+			children = (
+				9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */,
+				9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */,
+			);
+			name = ClosuresGenericsPOP;
 			sourceTree = "<group>";
 		};
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
@@ -906,6 +920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
+				9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */,
 				9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */,
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
@@ -1089,6 +1104,7 @@
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
 				9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */,
+				9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */,
 				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
