@@ -71,6 +71,8 @@
 		9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8F2004C8400095D64A /* Storyboard+.swift */; };
 		9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */; };
 		9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */; };
+		9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A6A2011A34E006CFB25 /* MoVieCell.swift */; };
+		9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A6E2011A4EE006CFB25 /* Movie.swift */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -198,6 +200,8 @@
 		9C5F9F8F2004C8400095D64A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresGenericsPOPViewController.swift; sourceTree = "<group>"; };
 		9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosuresGenericsPOPViewController.xib; sourceTree = "<group>"; };
+		9C727A6A2011A34E006CFB25 /* MoVieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoVieCell.swift; sourceTree = "<group>"; };
+		9C727A6E2011A4EE006CFB25 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9C7D108B200D9F62003D4A62 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
@@ -591,10 +595,44 @@
 		9C727A612011A04F006CFB25 /* ClosuresGenericsPOP */ = {
 			isa = PBXGroup;
 			children = (
+				9C727A692011A2CC006CFB25 /* Views */,
+				9C727A682011A2C1006CFB25 /* ModelViews */,
+				9C727A672011A2B7006CFB25 /* Models */,
+				9C727A662011A2A4006CFB25 /* Controllers */,
 				9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */,
 				9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */,
 			);
 			name = ClosuresGenericsPOP;
+			sourceTree = "<group>";
+		};
+		9C727A662011A2A4006CFB25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C727A672011A2B7006CFB25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C727A6E2011A4EE006CFB25 /* Movie.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C727A682011A2C1006CFB25 /* ModelViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelViews;
+			sourceTree = "<group>";
+		};
+		9C727A692011A2CC006CFB25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C727A6A2011A34E006CFB25 /* MoVieCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
@@ -1076,6 +1114,7 @@
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
 				9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */,
 				9C55D8A81FFB6E3800F29453 /* ValidateLoginViewController.swift in Sources */,
+				9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
 				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
@@ -1093,6 +1132,7 @@
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
+				9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */,
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
