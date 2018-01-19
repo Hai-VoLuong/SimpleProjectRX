@@ -74,6 +74,7 @@
 		9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A6A2011A34E006CFB25 /* MoVieCell.swift */; };
 		9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A6E2011A4EE006CFB25 /* Movie.swift */; };
 		9C727A712011CC4E006CFB25 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A702011CC4E006CFB25 /* MovieViewModel.swift */; };
+		9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A732011DAB9006CFB25 /* JSONDownloader.swift */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -204,6 +205,7 @@
 		9C727A6A2011A34E006CFB25 /* MoVieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoVieCell.swift; sourceTree = "<group>"; };
 		9C727A6E2011A4EE006CFB25 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9C727A702011CC4E006CFB25 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		9C727A732011DAB9006CFB25 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
 		9C7D108B200D9F62003D4A62 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 		9C727A612011A04F006CFB25 /* ClosuresGenericsPOP */ = {
 			isa = PBXGroup;
 			children = (
+				9C727A722011DAA8006CFB25 /* Services */,
 				9C727A692011A2CC006CFB25 /* Views */,
 				9C727A682011A2C1006CFB25 /* ModelViews */,
 				9C727A672011A2B7006CFB25 /* Models */,
@@ -636,6 +639,14 @@
 				9C727A6A2011A34E006CFB25 /* MoVieCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		9C727A722011DAA8006CFB25 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C727A732011DAB9006CFB25 /* JSONDownloader.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
@@ -1153,6 +1164,7 @@
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
+				9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
