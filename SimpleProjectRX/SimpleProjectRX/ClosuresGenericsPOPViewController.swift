@@ -16,26 +16,32 @@ class ClosuresGenericsPOPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sử dụng Closures, Generics, POP"
+        setupUI()
+    }
+
+    private func setupUI() {
         tableView.register(MovieCell.self, forCellReuseIdentifier: "Cell")
+        tableView.contentInset = UIEdgeInsets(top: 22, left: 0, bottom: 0, right: 0)
+        tableView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         tableView.dataSource = self
-        tableView.delegate = self
     }
 }
 
 extension ClosuresGenericsPOPViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return movies.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MovieCell
-        cell.priceLabel.text = "afsdfads"
+        let movie = movies[indexPath.row]
+        let movieViewModel = MovieViewModel(model: movie)
+        cell.displayMovieInCell(using: movieViewModel)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
-extension ClosuresGenericsPOPViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-}

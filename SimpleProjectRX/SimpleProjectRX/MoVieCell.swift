@@ -60,6 +60,12 @@ class MovieCell: UITableViewCell {
         return l
     }()
 
+    func displayMovieInCell(using viewModel: MovieViewModel) {
+        movieTitleLabel.text = viewModel.title
+        dateLabel.text = viewModel.releaseDate
+        priceLabel.text = viewModel.purchasePrice
+    }
+
     private func setUpViews() {
         backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         addSubview(movieImage)
