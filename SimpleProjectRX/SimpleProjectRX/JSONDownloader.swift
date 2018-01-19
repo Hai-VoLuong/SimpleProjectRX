@@ -24,8 +24,12 @@ struct JSONDownloader {
 
     let session: URLSession
 
-    private init(configuration: URLSessionConfiguration) {
+    init(configuration: URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
+    }
+
+    init() {
+        self.init(configuration: .default)
     }
 
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
