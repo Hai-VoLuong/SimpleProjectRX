@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomObservableViewController" customModule="SimpleProjectRX" customModuleProvider="target">
             <connections>
                 <outlet property="chooseImageLabel" destination="Gpe-OP-jkJ" id="QxC-rc-dFg"/>
-                <outlet property="clearImageLabel" destination="uQh-11-xCQ" id="YOd-EG-f8V"/>
+                <outlet property="clearImageButton" destination="prc-xG-Mui" id="7rp-tE-Cum"/>
                 <outlet property="imageView" destination="huS-Xl-u4J" id="Qho-z2-5o4"/>
-                <outlet property="saveImageLabel" destination="K6V-0K-l3L" id="VnC-0e-PCR"/>
+                <outlet property="saveImageButton" destination="zb9-lV-RtG" id="Lng-Vo-tTT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,37 +38,33 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-11-xCQ">
-                    <rect key="frame" x="273" y="333" width="42" height="21"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-lV-RtG">
+                    <rect key="frame" x="60" y="328" width="34" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="8GM-be-Qit"/>
-                        <constraint firstAttribute="width" constant="42" id="bym-fF-Xj3"/>
+                        <constraint firstAttribute="height" constant="30" id="PYB-5C-QI6"/>
+                        <constraint firstAttribute="width" constant="34" id="XCH-RB-Om7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6V-0K-l3L">
-                    <rect key="frame" x="66" y="332" width="42" height="21"/>
+                    <state key="normal" title="Save"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prc-xG-Mui">
+                    <rect key="frame" x="279" y="328" width="36" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="42" id="7Ff-P7-7DA"/>
-                        <constraint firstAttribute="height" constant="21" id="Yec-OC-N0a"/>
+                        <constraint firstAttribute="height" constant="30" id="jLb-o4-BsF"/>
+                        <constraint firstAttribute="width" constant="36" id="nKQ-vp-7pl"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <state key="normal" title="Clear"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="K6V-0K-l3L" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="54" id="18h-wK-bgO"/>
-                <constraint firstItem="K6V-0K-l3L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="66" id="1ur-hq-nvP"/>
                 <constraint firstAttribute="trailing" secondItem="Gpe-OP-jkJ" secondAttribute="trailing" constant="60" id="68c-eM-mS5"/>
-                <constraint firstAttribute="trailing" secondItem="uQh-11-xCQ" secondAttribute="trailing" constant="60" id="PhV-xA-BFD"/>
+                <constraint firstItem="zb9-lV-RtG" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="50" id="F12-Gq-bsW"/>
                 <constraint firstItem="huS-Xl-u4J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="QFu-6E-CJ3"/>
-                <constraint firstItem="uQh-11-xCQ" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="55" id="UXf-L6-uIx"/>
                 <constraint firstItem="Gpe-OP-jkJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="ZxN-wO-baJ"/>
+                <constraint firstAttribute="trailing" secondItem="prc-xG-Mui" secondAttribute="trailing" constant="60" id="aaR-FP-O9N"/>
+                <constraint firstItem="zb9-lV-RtG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="drK-Hv-gkP"/>
                 <constraint firstItem="huS-Xl-u4J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="e4P-lF-bdo"/>
+                <constraint firstItem="prc-xG-Mui" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="50" id="gY3-zE-hZw"/>
                 <constraint firstItem="Gpe-OP-jkJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="hv1-rL-mEH"/>
                 <constraint firstAttribute="trailing" secondItem="huS-Xl-u4J" secondAttribute="trailing" constant="60" id="jBQ-KA-SUA"/>
             </constraints>
