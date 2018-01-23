@@ -29,7 +29,7 @@ class EventService {
             .addDisposableTo(bag)
     }
 
-    func processEvents(_ newEvents: [Events]) {
+    private func processEvents(_ newEvents: [Events]) {
         // grab the last 50 events from the repository’s event list
         var updateEvents = newEvents + events.value
         if updateEvents.count > 50 {
