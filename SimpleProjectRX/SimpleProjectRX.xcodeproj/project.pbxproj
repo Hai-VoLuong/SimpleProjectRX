@@ -29,6 +29,7 @@
 		9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */; };
 		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
 		9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */; };
+		9C4DB9792016F17A00B4023E /* RxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB9782016F17A00B4023E /* RxAPI.swift */; };
 		9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69E620047F1C00BDE993 /* APIInputBase.swift */; };
 		9C4F69E920047F3100BDE993 /* APIOutputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69E820047F3100BDE993 /* APIOutputBase.swift */; };
 		9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69EA20047F4100BDE993 /* URLs.swift */; };
@@ -164,6 +165,7 @@
 		9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViblo_ViewController.xib; sourceTree = "<group>"; };
 		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
 		9C4CEA9F1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchEnumsAndTableViewController.xib; sourceTree = "<group>"; };
+		9C4DB9782016F17A00B4023E /* RxAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAPI.swift; sourceTree = "<group>"; };
 		9C4F69E620047F1C00BDE993 /* APIInputBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInputBase.swift; sourceTree = "<group>"; };
 		9C4F69E820047F3100BDE993 /* APIOutputBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOutputBase.swift; sourceTree = "<group>"; };
 		9C4F69EA20047F4100BDE993 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 			children = (
 				9C55D8BA1FFB6FCD00F29453 /* FetchingDataViewController.swift */,
 				9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */,
+				9C4DB9782016F17A00B4023E /* RxAPI.swift */,
 			);
 			name = "Fetching Data from the web";
 			sourceTree = "<group>";
@@ -1147,6 +1150,7 @@
 				9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9C4DB9792016F17A00B4023E /* RxAPI.swift in Sources */,
 				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* RaywenderViewController.swift in Sources */,
