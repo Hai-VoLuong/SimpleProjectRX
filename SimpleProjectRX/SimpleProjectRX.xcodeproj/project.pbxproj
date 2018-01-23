@@ -69,6 +69,7 @@
 		9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */; };
 		9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8D2004C82C0095D64A /* TableView+.swift */; };
 		9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8F2004C8400095D64A /* Storyboard+.swift */; };
+		9C6AA3F82016DCE9002F681A /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AA3F72016DCE9002F681A /* PhotoWriter.swift */; };
 		9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */; };
 		9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */; };
 		9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A6A2011A34E006CFB25 /* MoVieCell.swift */; };
@@ -203,6 +204,7 @@
 		9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		9C5F9F8D2004C82C0095D64A /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
 		9C5F9F8F2004C8400095D64A /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		9C6AA3F72016DCE9002F681A /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		9C727A622011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresGenericsPOPViewController.swift; sourceTree = "<group>"; };
 		9C727A632011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosuresGenericsPOPViewController.xib; sourceTree = "<group>"; };
 		9C727A6A2011A34E006CFB25 /* MoVieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoVieCell.swift; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 				9C55D8B71FFB6F9200F29453 /* CustomObservableViewController.xib */,
 				9CFDCFB02015E7E2009875CB /* AlbumViewController.swift */,
 				9CFDCFB12015E7E2009875CB /* AlbumViewController.xib */,
+				9C6AA3F72016DCE9002F681A /* PhotoWriter.swift */,
 			);
 			name = "Custom Observable";
 			sourceTree = "<group>";
@@ -1160,6 +1163,7 @@
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */,
+				9C6AA3F82016DCE9002F681A /* PhotoWriter.swift in Sources */,
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
