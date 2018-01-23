@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomObservableViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomObservableViewController" customModule="SimpleProjectRX" customModuleProvider="target">
             <connections>
+                <outlet property="chooseImageLabel" destination="Gpe-OP-jkJ" id="QxC-rc-dFg"/>
+                <outlet property="clearImageButton" destination="prc-xG-Mui" id="7rp-tE-Cum"/>
+                <outlet property="imageView" destination="huS-Xl-u4J" id="Qho-z2-5o4"/>
+                <outlet property="saveImageButton" destination="zb9-lV-RtG" id="Lng-Vo-tTT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +22,52 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huS-Xl-u4J">
+                    <rect key="frame" x="60" y="150" width="255" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="bSi-TA-sZo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose photo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-OP-jkJ">
+                    <rect key="frame" x="60" y="100" width="255" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ZWT-Mn-ehb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-lV-RtG">
+                    <rect key="frame" x="60" y="328" width="34" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="PYB-5C-QI6"/>
+                        <constraint firstAttribute="width" constant="34" id="XCH-RB-Om7"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prc-xG-Mui">
+                    <rect key="frame" x="279" y="328" width="36" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="jLb-o4-BsF"/>
+                        <constraint firstAttribute="width" constant="36" id="nKQ-vp-7pl"/>
+                    </constraints>
+                    <state key="normal" title="Clear"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gpe-OP-jkJ" secondAttribute="trailing" constant="60" id="68c-eM-mS5"/>
+                <constraint firstItem="zb9-lV-RtG" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="50" id="F12-Gq-bsW"/>
+                <constraint firstItem="huS-Xl-u4J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="QFu-6E-CJ3"/>
+                <constraint firstItem="Gpe-OP-jkJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="ZxN-wO-baJ"/>
+                <constraint firstAttribute="trailing" secondItem="prc-xG-Mui" secondAttribute="trailing" constant="60" id="aaR-FP-O9N"/>
+                <constraint firstItem="zb9-lV-RtG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="drK-Hv-gkP"/>
+                <constraint firstItem="huS-Xl-u4J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="e4P-lF-bdo"/>
+                <constraint firstItem="prc-xG-Mui" firstAttribute="top" secondItem="huS-Xl-u4J" secondAttribute="bottom" constant="50" id="gY3-zE-hZw"/>
+                <constraint firstItem="Gpe-OP-jkJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="hv1-rL-mEH"/>
+                <constraint firstAttribute="trailing" secondItem="huS-Xl-u4J" secondAttribute="trailing" constant="60" id="jBQ-KA-SUA"/>
+            </constraints>
         </view>
     </objects>
 </document>
