@@ -22,7 +22,6 @@ final class FetchingDataViewController: UIViewController {
         super.viewDidLoad()
         title = "fetching data"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.dataSource = self
         getData()
     }
 
@@ -30,27 +29,17 @@ final class FetchingDataViewController: UIViewController {
         eventService.getEvents()
 
         eventService.events.asObservable()
-            .subscribe(onNext: { [weak self] _ in
-                guard let this = self else { return }
-                this.tableView.reloadData()
-            })
-            .addDisposableTo(eventService.bag)
+            .bind(to: tableView.rx.items) { [weak self] tableView, index, event in
+                let indexPath = IndexPath(item: index, section: 0)
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-    }
-}
+                cell.textLabel?.text = event.name
+                cell.detailTextLabel?.text = event.repo + ", " + event.action.replacingOccurrences(of: "Event", with: "").lowercased()
+                cell.imageView?.kf.setImage(with: event.imageUrl, placeholder: UIImage(named: "blank-avatar"))
 
-extension FetchingDataViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventService.events.value.count
-    }
+                return cell
+            }
+            .disposed(by: bag)
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = eventService.events.value[indexPath.row]
-
-        cell.textLabel?.text = event.name
-        cell.detailTextLabel?.text = event.repo + ", " + event.action.replacingOccurrences(of: "Event", with: "").lowercased()
-        cell.imageView?.kf.setImage(with: event.imageUrl, placeholder: UIImage(named: "blank-avatar"))
-        return cell
     }
 }
