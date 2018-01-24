@@ -37,11 +37,11 @@ final class MVVMViewController: UIViewController, MVVM.View {
 
     private func setupObservable() {
         viewModel.dataObservable
-            .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: CarTableViewCell.self)) { [weak self] (row, _, cell) in
+            .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: CarTableViewCell.self))({ [weak self] (index, data, cell) in
                 guard let this = self else { return }
-                cell.viewModel = this.viewModel.viewModelForItem(at: IndexPath(row: row, section: 0))
-            }
-            .addDisposableTo(bag)
+                let indexPath = IndexPath(item: index, section: 0)
+                cell.viewModel = this.viewModel.viewModelForItem(at: indexPath)
+            }).addDisposableTo(bag)
     }
 }
 
