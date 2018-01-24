@@ -57,9 +57,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="photoImageView" destination="3gZ-Dx-bAZ" id="4Iv-uJ-ObI"/>
-                <outlet property="powerLabel" destination="qFj-RG-xU9" id="QAk-WN-JTy"/>
-                <outlet property="titleLabel" destination="eh1-CS-odA" id="HaF-Ll-0rq"/>
+                <outlet property="photoImageView" destination="3gZ-Dx-bAZ" id="xf3-Fy-kIe"/>
+                <outlet property="powerLabel" destination="qFj-RG-xU9" id="YWp-Jl-yxO"/>
+                <outlet property="titleLabel" destination="eh1-CS-odA" id="Yw6-RY-INT"/>
             </connections>
             <point key="canvasLocation" x="25" y="22"/>
         </tableViewCell>

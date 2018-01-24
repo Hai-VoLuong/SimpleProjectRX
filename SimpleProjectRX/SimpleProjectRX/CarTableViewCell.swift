@@ -9,14 +9,15 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MVVM
 
-final class CarTableViewCell: UITableViewCell {
+final class CarTableViewCell: UITableViewCell, MVVM.View {
 
     @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var powerLabel: UILabel!
 
-    let bag = DisposeBag()
+    private let bag = DisposeBag()
 
     var viewModel: CarViewModel? {
         didSet {
@@ -24,15 +25,17 @@ final class CarTableViewCell: UITableViewCell {
         }
     }
 
-    private func updateView() {
+    func updateView() {
+
         guard let viewModel = viewModel else { return }
+        
         viewModel.titleText
-        .bind(to: titleLabel.rx.text)
-        .addDisposableTo(bag)
+            .bind(to: titleLabel.rx.text)
+            .addDisposableTo(bag)
 
         viewModel.horsepowerText
-        .bind(to: powerLabel.rx.text)
-        .addDisposableTo(bag)
+            .bind(to: powerLabel.rx.text)
+            .addDisposableTo(bag)
 
         guard let url = viewModel.photoURL else { return }
         URLSession.shared.rx.data(request: URLRequest(url: url))

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MVVMViewController" customModule="SimpleProjectRX" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="5hY-mj-v7V" id="y3G-h8-Yl5"/>
+                <outlet property="tableView" destination="5hY-mj-v7V" id="41Y-Hl-Xl2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
