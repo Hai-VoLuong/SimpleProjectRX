@@ -21,7 +21,7 @@ class CarViewModel: ViewModel {
     var makeText: BehaviorSubject<String>
     var titleText: BehaviorSubject<String>
     var horsepowerText: BehaviorSubject<String>
-    var photo: URL? {
+    var photoURL: URL? {
         return URL(string: car.photoURL)
     }
 
