@@ -98,6 +98,11 @@
 		9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B202006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift */; };
 		9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBE4B212006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib */; };
 		9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */; };
+		9CC927FA20181F4000A9C055 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC927F920181F4000A9C055 /* CarListViewModel.swift */; };
+		9CC927FD2018201400A9C055 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC927FC2018201400A9C055 /* Car.swift */; };
+		9CC928012018232300A9C055 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC928002018232300A9C055 /* CarViewModel.swift */; };
+		9CC9280420182EC000A9C055 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9280220182EC000A9C055 /* CarTableViewCell.swift */; };
+		9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9280320182EC000A9C055 /* CarTableViewCell.xib */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -240,6 +245,11 @@
 		9CBE4B202006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDesignPatternViewController.swift; sourceTree = "<group>"; };
 		9CBE4B212006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDesignPatternViewController.xib; sourceTree = "<group>"; };
 		9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
+		9CC927F920181F4000A9C055 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		9CC927FC2018201400A9C055 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		9CC928002018232300A9C055 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		9CC9280220182EC000A9C055 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		9CC9280320182EC000A9C055 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -578,8 +588,10 @@
 		9C55D8A11FFB6DC100F29453 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */,
-				9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */,
+				9CC927FB2018200300A9C055 /* Models */,
+				9CC927F820181F1900A9C055 /* ViewModels */,
+				9CC927FF2018214F00A9C055 /* Views */,
+				9CC927FE2018213C00A9C055 /* Controllers */,
 			);
 			name = MVVM;
 			sourceTree = "<group>";
@@ -782,6 +794,41 @@
 				9CBE4B24200611A800C1FFB6 /* ArticleRepository.swift */,
 			);
 			name = "Repository Design Pattern in Swift";
+			sourceTree = "<group>";
+		};
+		9CC927F820181F1900A9C055 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CC927F920181F4000A9C055 /* CarListViewModel.swift */,
+				9CC928002018232300A9C055 /* CarViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		9CC927FB2018200300A9C055 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CC927FC2018201400A9C055 /* Car.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9CC927FE2018213C00A9C055 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */,
+				9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CC927FF2018214F00A9C055 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CC9280220182EC000A9C055 /* CarTableViewCell.swift */,
+				9CC9280320182EC000A9C055 /* CarTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		9CD6813A1FFB1E080077729C = {
@@ -998,6 +1045,7 @@
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
+				9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C24BC982004B0D000374517 /* RepoCell.xib in Resources */,
 				9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */,
@@ -1160,11 +1208,14 @@
 				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
 				9C55D8971FFB43CF00F29453 /* RaywenderViewController.swift in Sources */,
+				9CC927FA20181F4000A9C055 /* CarListViewModel.swift in Sources */,
 				9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */,
+				9CC9280420182EC000A9C055 /* CarTableViewCell.swift in Sources */,
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
 				9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */,
 				9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */,
 				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
+				9CC928012018232300A9C055 /* CarViewModel.swift in Sources */,
 				9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */,
 				9C24BC972004B0D000374517 /* RepoCell.swift in Sources */,
 				9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */,
@@ -1183,6 +1234,7 @@
 				9C0EB7A52005CA0000721A06 /* API.swift in Sources */,
 				9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */,
 				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
+				9CC927FD2018201400A9C055 /* Car.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
