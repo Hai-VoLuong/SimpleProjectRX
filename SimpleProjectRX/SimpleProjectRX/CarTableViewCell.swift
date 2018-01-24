@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import MVVM
+import Kingfisher
 
 final class CarTableViewCell: UITableViewCell, MVVM.View {
 
@@ -38,12 +39,6 @@ final class CarTableViewCell: UITableViewCell, MVVM.View {
             .addDisposableTo(bag)
 
         guard let url = viewModel.photoURL else { return }
-        URLSession.shared.rx.data(request: URLRequest(url: url))
-            .subscribe(onNext: { [weak self] data in
-                guard let this = self else { return }
-                DispatchQueue.main.async {
-                    this.photoImageView.image = UIImage(data: data)
-                }
-            }).addDisposableTo(bag)
+        photoImageView.kf.setImage(with: url)
     }
 }
