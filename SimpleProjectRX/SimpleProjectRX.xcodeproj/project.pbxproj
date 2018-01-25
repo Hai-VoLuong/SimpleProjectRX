@@ -105,6 +105,8 @@
 		9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9280320182EC000A9C055 /* CarTableViewCell.xib */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
+		9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */; };
+		9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
@@ -252,6 +254,8 @@
 		9CC9280320182EC000A9C055 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
+		9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffeeViewController.swift; sourceTree = "<group>"; };
+		9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCoffeeViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
@@ -467,6 +471,7 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C8D13772007100200C1BE5E /* Home */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
 				9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */,
@@ -831,6 +836,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */ = {
+			isa = PBXGroup;
+			children = (
+				9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */,
+				9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */,
+			);
+			name = ProjectDrinkCoffee;
+			sourceTree = "<group>";
+		};
 		9CD6813A1FFB1E080077729C = {
 			isa = PBXGroup;
 			children = (
@@ -1072,6 +1086,7 @@
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 				9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */,
 				9C5B4D8520035FAC00C0514C /* RepoListViewController.xib in Resources */,
+				9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,6 +1219,7 @@
 				9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */,
 				9C4DB9792016F17A00B4023E /* RxAPI.swift in Sources */,
 				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
