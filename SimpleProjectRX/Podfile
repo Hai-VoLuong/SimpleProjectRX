@@ -35,5 +35,6 @@ target 'SimpleProjectRX' do
   pod 'SwinjectStoryboard', '1.0.0'
   pod 'Action'
   pod 'Moya', '~> 10.0'
+  pod 'LGSideMenuController', '~> 2.1'
 
 end
