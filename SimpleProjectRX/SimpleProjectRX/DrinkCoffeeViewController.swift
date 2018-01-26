@@ -15,6 +15,9 @@ class DrinkCoffeeViewController: UIViewController {
         title = "Drink Coffee"
         setupRightNavItems()
     }
+}
+
+extension DrinkCoffeeViewController {
 
     fileprivate func setupRightNavItems() {
         navigationController?.navigationBar.backgroundColor = .white
