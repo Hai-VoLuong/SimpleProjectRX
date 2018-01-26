@@ -88,6 +88,10 @@
 		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
 		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
 		9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */; };
+		9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */; };
+		9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */; };
+		9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */; };
+		9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */; };
 		9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */; };
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
@@ -235,6 +239,10 @@
 		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9C9374E52008B121008D2FC9 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
 		9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
+		9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDrinkViewController.swift; sourceTree = "<group>"; };
+		9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDrinkViewController.xib; sourceTree = "<group>"; };
 		9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -772,6 +780,43 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CAEE030201ABC77001FEAFB /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */,
+				9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		9CAEE031201ABC8C001FEAFB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */,
+				9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		9CAEE032201ABC95001FEAFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */,
+				9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		9CAEE033201ABCA4001FEAFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE030201ABC77001FEAFB /* Favorite */,
+				9CAEE031201ABC8C001FEAFB /* Search */,
+				9CAEE032201ABC95001FEAFB /* Home */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		9CBA95F4200C8A1A00ABA54D /* TodayExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -839,8 +884,7 @@
 		9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */ = {
 			isa = PBXGroup;
 			children = (
-				9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */,
-				9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */,
+				9CAEE033201ABCA4001FEAFB /* Controllers */,
 			);
 			name = ProjectDrinkCoffee;
 			sourceTree = "<group>";
@@ -1056,6 +1100,7 @@
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
 				9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */,
 				9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */,
+				9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */,
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
@@ -1067,6 +1112,7 @@
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* RaywenderViewController.xib in Resources */,
 				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
@@ -1205,6 +1251,7 @@
 				9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
+				9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
@@ -1249,6 +1296,7 @@
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9C4DB97B2016F78400B4023E /* Events.swift in Sources */,
+				9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */,
 				9C0EB7A52005CA0000721A06 /* API.swift in Sources */,
 				9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */,
 				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
