@@ -92,6 +92,8 @@
 		9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */; };
 		9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */; };
 		9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */; };
+		9CAEE040201AC5FD001FEAFB /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */; };
+		9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */; };
 		9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */; };
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
@@ -115,6 +117,11 @@
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
 		9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681521FFB1E080077729C /* LaunchScreen.storyboard */; };
+		9CD943BB201EBFA5001349AB /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */; };
+		9CD943BF201EFCA1001349AB /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943BE201EFCA1001349AB /* Venue.swift */; };
+		9CD943C1201EFE92001349AB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C0201EFE92001349AB /* Photo.swift */; };
+		9CD943C3201F0210001349AB /* UserMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C2201F0210001349AB /* UserMap.swift */; };
+		9CD943C5201F0DA4001349AB /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C4201F0DA4001349AB /* Tip.swift */; };
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
@@ -243,6 +250,8 @@
 		9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDrinkViewController.swift; sourceTree = "<group>"; };
 		9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDrinkViewController.xib; sourceTree = "<group>"; };
+		9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
 		9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +279,11 @@
 		9CD681501FFB1E080077729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD681531FFB1E080077729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD681551FFB1E080077729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
+		9CD943BE201EFCA1001349AB /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		9CD943C0201EFE92001349AB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		9CD943C2201F0210001349AB /* UserMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMap.swift; sourceTree = "<group>"; };
+		9CD943C4201F0DA4001349AB /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
@@ -479,8 +493,8 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C8D13772007100200C1BE5E /* Home */,
+				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
 				9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */,
 				9C55D89F1FFB6D9A00F29453 /* Custom Observable */,
@@ -801,8 +815,10 @@
 		9CAEE032201ABC95001FEAFB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9CAEE03D201AC5C3001FEAFB /* Cells */,
 				9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */,
 				9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */,
+				9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -815,6 +831,15 @@
 				9CAEE032201ABC95001FEAFB /* Home */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CAEE03D201AC5C3001FEAFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */,
+				9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9CBA95F4200C8A1A00ABA54D /* TodayExtension */ = {
@@ -884,6 +909,8 @@
 		9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				9CD943BD201EC196001349AB /* Service */,
+				9CD943BC201EC188001349AB /* Model */,
 				9CAEE033201ABCA4001FEAFB /* Controllers */,
 			);
 			name = ProjectDrinkCoffee;
@@ -919,6 +946,24 @@
 				9C55D8791FFB2A5200F29453 /* Tabbar */,
 			);
 			path = SimpleProjectRX;
+			sourceTree = "<group>";
+		};
+		9CD943BC201EC188001349AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CD943BE201EFCA1001349AB /* Venue.swift */,
+				9CD943C0201EFE92001349AB /* Photo.swift */,
+				9CD943C2201F0210001349AB /* UserMap.swift */,
+				9CD943C4201F0DA4001349AB /* Tip.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9CD943BD201EC196001349AB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		9CDE9ADA20031D00001E3FCE /* Circle View */ = {
@@ -1104,6 +1149,7 @@
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
+				9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */,
 				9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C24BC982004B0D000374517 /* RepoCell.xib in Resources */,
@@ -1244,7 +1290,9 @@
 				9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */,
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
 				9C4F69E920047F3100BDE993 /* APIOutputBase.swift in Sources */,
+				9CAEE040201AC5FD001FEAFB /* VenueCell.swift in Sources */,
 				9C727A762011F65F006CFB25 /* MovieService.swift in Sources */,
+				9CD943C3201F0210001349AB /* UserMap.swift in Sources */,
 				9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */,
 				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
 				9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */,
@@ -1279,10 +1327,12 @@
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
 				9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */,
 				9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */,
+				9CD943BB201EBFA5001349AB /* DrinkViewModel.swift in Sources */,
 				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
 				9CC928012018232300A9C055 /* CarViewModel.swift in Sources */,
 				9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */,
 				9C24BC972004B0D000374517 /* RepoCell.swift in Sources */,
+				9CD943C1201EFE92001349AB /* Photo.swift in Sources */,
 				9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
@@ -1312,6 +1362,8 @@
 				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
 				9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
+				9CD943C5201F0DA4001349AB /* Tip.swift in Sources */,
+				9CD943BF201EFCA1001349AB /* Venue.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
 				9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */,

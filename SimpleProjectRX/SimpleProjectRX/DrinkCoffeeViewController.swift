@@ -7,16 +7,48 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class DrinkCoffeeViewController: UIViewController {
+final class DrinkCoffeeViewController: UIViewController {
 
+    // MARK: - IBoutlets
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
+
+    // MARK: - Private Properties
+    private let bag = DisposeBag()
+    private var refreshControl = UIRefreshControl()
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Drink Coffee"
         setupRightNavItems()
+        configuration()
+    }
+
+    // MARK: - Private Func
+    private func configuration() {
+        tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.rowHeight = 143.0
+        tableView.addSubview(refreshControl)
+        tableView.dataSource = self
     }
 }
 
+extension DrinkCoffeeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VenueCell
+        return cell
+    }
+}
+
+// MARKL: - Extenion DrinkCoffeeViewController Navigation
 extension DrinkCoffeeViewController {
 
     fileprivate func setupRightNavItems() {
