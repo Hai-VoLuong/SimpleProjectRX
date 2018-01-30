@@ -1,5 +1,5 @@
 //
-//  VenueCellViewModel.swift
+//  VenueCellModel.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 1/30/18.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-final class VenueCellViewModel {
+final class VenueCellModel {
 
     // MARK: - Private Properties
     private var venue: Venue

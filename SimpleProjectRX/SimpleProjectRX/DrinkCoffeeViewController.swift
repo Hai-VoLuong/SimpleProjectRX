@@ -37,7 +37,8 @@ final class DrinkCoffeeViewController: UIViewController {
         viewModel.venues.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "VenueCell", cellType: VenueCell.self))({
                 [weak self] (index, venue, cell) in
-            
+                guard let this = self else { return }
+                cell.viewModel = this.viewModel.viewModelForItem(at: IndexPath(row: index, section: 0))
             }).addDisposableTo(bag)
 
     }

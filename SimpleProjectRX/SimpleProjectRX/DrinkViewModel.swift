@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import MVVM
 
-class DrinkViewModel: MVVM.ViewModel {
+class DrinkViewModel {
 
     enum Section: Int {
         case coffee = 0
@@ -72,6 +72,13 @@ class DrinkViewModel: MVVM.ViewModel {
     }
 }
 
+extension DrinkViewModel: MVVM.ViewModel {
+    func viewModelForItem(at indexPath: IndexPath) -> VenueCellModel {
+        guard indexPath.count < venues.value.count else { return VenueCellModel() }
+        let venue = venues.value[indexPath.row]
+        return VenueCellModel(venue: venue)
+    }
+}
 
 
 
