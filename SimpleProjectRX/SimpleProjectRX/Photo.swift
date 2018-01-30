@@ -35,4 +35,9 @@ class Photo: Object, Mappable {
         width <- map["width"]
         height <- map["height"]
     }
+
+    func patch(radioWith: Int = 2, radioHeight: Int = 2) -> String {
+        let path = prefix + "\(width / radioWith)" + "x" + "\(height / radioHeight)" + suffix
+        return path
+    }
 }

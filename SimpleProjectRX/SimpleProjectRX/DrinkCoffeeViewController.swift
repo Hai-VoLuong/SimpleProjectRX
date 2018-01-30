@@ -31,13 +31,13 @@ final class DrinkCoffeeViewController: UIViewController {
 
     // MARK: - Private Func
     private func configuration() {
-        tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "VenueCell")
         tableView.rowHeight = 143.0
         tableView.addSubview(refreshControl)
         viewModel.venues.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "VenueCell", cellType: VenueCell.self))({
                 [weak self] (index, venue, cell) in
-                print(venue)
+            
             }).addDisposableTo(bag)
 
     }
