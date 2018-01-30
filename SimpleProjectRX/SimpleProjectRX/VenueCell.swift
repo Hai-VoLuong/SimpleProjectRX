@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
-class VenueCell: UITableViewCell {
+final class VenueCell: UITableViewCell {
 
+    // MARK: - IBoutlets
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var categoryLabel: UILabel!
@@ -19,11 +21,26 @@ class VenueCell: UITableViewCell {
     @IBOutlet private weak var thumnailImageView: UIImageView!
     @IBOutlet private weak var containerView: UIView!
 
+    // MARK: - Properties
+    let bag = DisposeBag()
+
+    var viewModel = VenueCellModel() {
+        didSet {
+            updateUI()
+        }
+    }
+
     override func awakeFromNib() {
         updateUI()
     }
 
     private func updateUI() {
         ratingLabel.layer.cornerRadius = 10
+        viewModel.name.bind(to: nameLabel.rx.text).addDisposableTo(bag)
+        viewModel.address.bind(to: addressLabel.rx.text).addDisposableTo(bag)
+        viewModel.rating.bind(to: ratingLabel.rx.text).addDisposableTo(bag)
+        thumnailImageView.setImage(path: viewModel.photoPath)
+        .subscribe()
+        .disposed(by: bag)
     }
 }

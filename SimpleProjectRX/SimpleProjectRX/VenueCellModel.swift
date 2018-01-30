@@ -25,27 +25,12 @@ final class VenueCellViewModel {
         return venue.thumbnail?.patch()
     }
 
-    var photoURL: URL? {
-        return URL(string: venue.thumbnail?.patch() ?? "")
-    }
-
-
-    //MARK: - init
+    // MARK: - init
     init(venue: Venue = Venue()) {
         self.venue = venue
         name = BehaviorSubject<String>(value: venue.name)
         address = BehaviorSubject<String>(value: venue.fullAddress)
         rating = BehaviorSubject<String>(value: String(describing: venue.rating))
         image = BehaviorSubject<UIImage?>(value:#imageLiteral(resourceName: "Bill_Gates"))
-
-        guard let url = photoURL else { return }
-        URLSession.shared.rx.data(request: URLRequest(url: url))
-            .subscribe(onNext: { [weak self] (data) in
-                guard let this = self else { return }
-                DispatchQueue.main.async {
-                    this.image.onNext(UIImage(data: data))
-                }
-            })
-            .disposed(by: bag)
     }
 }
