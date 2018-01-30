@@ -19,6 +19,7 @@ final class DrinkCoffeeViewController: UIViewController {
     // MARK: - Private Properties
     private let bag = DisposeBag()
     private var refreshControl = UIRefreshControl()
+    var viewModel = DrinkViewModel()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -33,18 +34,12 @@ final class DrinkCoffeeViewController: UIViewController {
         tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.rowHeight = 143.0
         tableView.addSubview(refreshControl)
-        tableView.dataSource = self
-    }
-}
+        viewModel.venues.asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: "VenueCell", cellType: VenueCell.self))({
+                [weak self] (index, venue, cell) in
+                print(venue)
+            }).addDisposableTo(bag)
 
-extension DrinkCoffeeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VenueCell
-        return cell
     }
 }
 
