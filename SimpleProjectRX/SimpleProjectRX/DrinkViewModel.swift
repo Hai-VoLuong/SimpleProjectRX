@@ -35,7 +35,7 @@ class DrinkViewModel {
     private var bag = DisposeBag()
 
     init() {
-        self.getVenues()
+        self.setup()
     }
 
     // MARK: - Private Func
@@ -48,6 +48,15 @@ class DrinkViewModel {
                     this.getVenues()
                 }
             })
+
+        section.asObservable()
+        .skip(1)
+            .subscribe(onNext: { [weak self] section in
+                guard let this = self else { return }
+                this.venues.value.removeAll()
+                this.getVenues()
+            })
+        .disposed(by: bag)
     }
 
     private func getVenues() {

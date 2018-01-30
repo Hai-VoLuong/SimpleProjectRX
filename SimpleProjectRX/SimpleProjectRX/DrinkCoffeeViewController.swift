@@ -41,6 +41,16 @@ final class DrinkCoffeeViewController: UIViewController {
                 cell.viewModel = this.viewModel.viewModelForItem(at: IndexPath(row: index, section: 0))
             }).addDisposableTo(bag)
 
+        tableView.rx.contentOffset
+            .map { $0.y }
+            .subscribe { [weak self] (event) in
+                guard let this = self else { return }
+                if let y = event.element {
+                    let maximumOffset = this.tableView.contentSize.height - this.tableView.frame.size.height
+                    this.viewModel.isLoadMore.value = true
+                }
+            }
+            .disposed(by: bag)
     }
 }
 
