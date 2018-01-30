@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Kingfisher
 
 final class VenueCell: UITableViewCell {
 
@@ -39,8 +40,6 @@ final class VenueCell: UITableViewCell {
         viewModel.name.bind(to: nameLabel.rx.text).addDisposableTo(bag)
         viewModel.address.bind(to: addressLabel.rx.text).addDisposableTo(bag)
         viewModel.rating.bind(to: ratingLabel.rx.text).addDisposableTo(bag)
-        thumnailImageView.setImage(path: viewModel.photoPath)
-        .subscribe()
-        .disposed(by: bag)
+        thumnailImageView.kf.setImage(with: viewModel.photoURL)
     }
 }

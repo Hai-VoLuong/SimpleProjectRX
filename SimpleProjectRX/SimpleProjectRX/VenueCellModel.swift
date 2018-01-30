@@ -19,18 +19,21 @@ final class VenueCellModel {
     var name: BehaviorSubject<String>
     var address: BehaviorSubject<String>
     var rating: BehaviorSubject<String>
-    var image: BehaviorSubject<UIImage?>
 
     var photoPath: String? {
         return venue.thumbnail?.patch()
     }
 
-    // MARK: - init
+    // support kingfisher framework
+    var photoURL: URL? {
+        return URL(string: venue.thumbnail?.patch() ?? "")
+    }
+
+    //MARK: - init
     init(venue: Venue = Venue()) {
         self.venue = venue
         name = BehaviorSubject<String>(value: venue.name)
         address = BehaviorSubject<String>(value: venue.fullAddress)
         rating = BehaviorSubject<String>(value: String(describing: venue.rating))
-        image = BehaviorSubject<UIImage?>(value:#imageLiteral(resourceName: "Bill_Gates"))
     }
 }
