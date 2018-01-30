@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import ObjectMapper
 
 extension APIBase {
     class func getVenues(params: JSObject) -> Observable<[Venue]> {
@@ -17,7 +18,7 @@ extension APIBase {
         }
 
         let object = Observable<[Venue]>.create({ observer -> Disposable in
-            _ = APIBase.request(path: path).subscribe(onNext: { (json) in
+            _ = APIBase.request(path: path).subscribe(onNext: { json in
                 var venues: [Venue] = []
                 guard let groups = json["groups"] as? JSArray else {
                     observer.onError(RxError.noElements)
@@ -29,9 +30,14 @@ extension APIBase {
                 }
 
                 for item in items {
-                    print(item)
+                    if let venueObject = item["venues"] as? JSObject {
+                        if let venue = Mapper<Venue>().map(JSON: venueObject) {
+                            venues.append(venue)
+                        }
+                    }
                 }
-
+                observer.onNext(venues)
+                observer.onCompleted()
             })
             return Disposables.create()
         })
