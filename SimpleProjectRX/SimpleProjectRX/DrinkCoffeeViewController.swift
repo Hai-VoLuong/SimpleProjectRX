@@ -41,16 +41,40 @@ final class DrinkCoffeeViewController: UIViewController {
                 cell.viewModel = this.viewModel.viewModelForItem(at: IndexPath(row: index, section: 0))
             }).addDisposableTo(bag)
 
+        // load more
         tableView.rx.contentOffset
             .map { $0.y }
             .subscribe { [weak self] (event) in
                 guard let this = self else { return }
                 if let y = event.element {
                     let maximumOffset = this.tableView.contentSize.height - this.tableView.frame.size.height
-                    this.viewModel.isLoadMore.value = true
+                    if !this.viewModel.isLoadMore.value && y == maximumOffset {
+                        this.viewModel.isLoadMore.value = true
+                    }
                 }
             }
             .disposed(by: bag)
+
+        // section
+        segmentControl.rx.selectedSegmentIndex
+            .asObservable()
+            .map({ rawValue -> DrinkViewModel.Section in
+                return DrinkViewModel.Section(rawValue: rawValue)!
+            })
+            .bind(to: viewModel.section)
+            .addDisposableTo(bag)
+
+
+        // refresh
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] in
+                guard let this = self else { return }
+                this.viewModel.refresh()
+            }).addDisposableTo(bag)
+
+        viewModel.isRefreshing.asDriver()
+        .drive(refreshControl.rx.isRefreshing)
+        .addDisposableTo(bag)
     }
 }
 
