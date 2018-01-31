@@ -137,6 +137,7 @@
 		9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEFC200DF5A5006766A3 /* RepositoryListViewController.xib */; };
 		9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */; };
 		9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */; };
+		9CFC18C02021C51000CD0BFE /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */; };
 		9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDCFB02015E7E2009875CB /* AlbumViewController.swift */; };
 		9CFDCFB32015E7E3009875CB /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDCFB12015E7E2009875CB /* AlbumViewController.xib */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
@@ -303,6 +304,7 @@
 		9CE9FEFC200DF5A5006766A3 /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
 		9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
+		9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
 		9CFDCFB02015E7E2009875CB /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		9CFDCFB12015E7E2009875CB /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
 		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */,
+				9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */,
 			);
 			name = "Resoure+Extension";
 			sourceTree = "<group>";
@@ -1369,6 +1372,7 @@
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9C4DB97B2016F78400B4023E /* Events.swift in Sources */,
+				9CFC18C02021C51000CD0BFE /* Reactive+Extension.swift in Sources */,
 				9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */,
 				9C0EB7A52005CA0000721A06 /* API.swift in Sources */,
 				9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */,
