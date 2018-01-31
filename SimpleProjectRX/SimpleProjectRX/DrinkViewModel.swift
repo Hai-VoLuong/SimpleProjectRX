@@ -73,7 +73,7 @@ class DrinkViewModel {
         var params: JSObject = [:]
         params["section"] = section.value.rawValue
         params["offset"] = venues.value.count
-        APIBase.getVenues(params: params)
+        APIBase.getVenues(params: params).HUD()
             .subscribe { [weak self] (event) in
                 guard let this = self else { return }
                 if let venues = event.element {
