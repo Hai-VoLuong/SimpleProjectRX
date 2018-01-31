@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultMaskType(.black)
         let tabbarController = TabbarController()
         window?.rootViewController = tabbarController
-        window?.rootViewController?.view.backgroundColor = .white
         window?.makeKeyAndVisible()
         return true
     }

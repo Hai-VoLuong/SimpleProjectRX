@@ -25,6 +25,7 @@
 		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
+		9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */; };
 		9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */; };
 		9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */; };
 		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
@@ -88,6 +89,12 @@
 		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
 		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
 		9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */; };
+		9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */; };
+		9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */; };
+		9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */; };
+		9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */; };
+		9CAEE040201AC5FD001FEAFB /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */; };
+		9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */; };
 		9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */; };
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
@@ -105,10 +112,20 @@
 		9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9280320182EC000A9C055 /* CarTableViewCell.xib */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
+		9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */; };
+		9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */; };
+		9CD5CDCA202008E700A41E9E /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
 		9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681521FFB1E080077729C /* LaunchScreen.storyboard */; };
+		9CD943BB201EBFA5001349AB /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */; };
+		9CD943BF201EFCA1001349AB /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943BE201EFCA1001349AB /* Venue.swift */; };
+		9CD943C1201EFE92001349AB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C0201EFE92001349AB /* Photo.swift */; };
+		9CD943C3201F0210001349AB /* UserMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C2201F0210001349AB /* UserMap.swift */; };
+		9CD943C5201F0DA4001349AB /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C4201F0DA4001349AB /* Tip.swift */; };
+		9CD943C7201F176B001349AB /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C6201F176B001349AB /* APIBase.swift */; };
+		9CD943C9201F1E59001349AB /* APIBase+Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C8201F1E59001349AB /* APIBase+Venue.swift */; };
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
@@ -168,6 +185,7 @@
 		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
+		9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViblo_ViewController.swift; sourceTree = "<group>"; };
 		9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViblo_ViewController.xib; sourceTree = "<group>"; };
 		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +251,12 @@
 		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9C9374E52008B121008D2FC9 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
 		9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
+		9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDrinkViewController.swift; sourceTree = "<group>"; };
+		9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDrinkViewController.xib; sourceTree = "<group>"; };
+		9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
 		9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -252,12 +276,22 @@
 		9CC9280320182EC000A9C055 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
+		9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffeeViewController.swift; sourceTree = "<group>"; };
+		9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCoffeeViewController.xib; sourceTree = "<group>"; };
+		9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
 		9CD681501FFB1E080077729C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD681531FFB1E080077729C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD681551FFB1E080077729C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
+		9CD943BE201EFCA1001349AB /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		9CD943C0201EFE92001349AB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		9CD943C2201F0210001349AB /* UserMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMap.swift; sourceTree = "<group>"; };
+		9CD943C4201F0DA4001349AB /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		9CD943C6201F176B001349AB /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
+		9CD943C8201F1E59001349AB /* APIBase+Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Venue.swift"; sourceTree = "<group>"; };
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
@@ -374,6 +408,14 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		9C3D08E920202A950085E1F0 /* Resoure+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */,
+			);
+			name = "Resoure+Extension";
+			sourceTree = "<group>";
+		};
 		9C4B0DE71FFF825D007F0817 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8D13772007100200C1BE5E /* Home */,
+				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
 				9C55D8A01FFB6DAC00F29453 /* Fetching Data from the web */,
 				9C55D89F1FFB6D9A00F29453 /* Custom Observable */,
@@ -767,6 +810,55 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CAEE030201ABC77001FEAFB /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */,
+				9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */,
+			);
+			name = Favorite;
+			sourceTree = "<group>";
+		};
+		9CAEE031201ABC8C001FEAFB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE039201ABD92001FEAFB /* SearchDrinkViewController.swift */,
+				9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		9CAEE032201ABC95001FEAFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE03D201AC5C3001FEAFB /* Cells */,
+				9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */,
+				9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */,
+				9CD943BA201EBFA5001349AB /* DrinkViewModel.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		9CAEE033201ABCA4001FEAFB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE030201ABC77001FEAFB /* Favorite */,
+				9CAEE031201ABC8C001FEAFB /* Search */,
+				9CAEE032201ABC95001FEAFB /* Home */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9CAEE03D201AC5C3001FEAFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */,
+				9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */,
+				9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		9CBA95F4200C8A1A00ABA54D /* TodayExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +923,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */ = {
+			isa = PBXGroup;
+			children = (
+				9C3D08E920202A950085E1F0 /* Resoure+Extension */,
+				9CD943BD201EC196001349AB /* Service */,
+				9CD943BC201EC188001349AB /* Model */,
+				9CAEE033201ABCA4001FEAFB /* Controllers */,
+			);
+			name = ProjectDrinkCoffee;
+			sourceTree = "<group>";
+		};
 		9CD6813A1FFB1E080077729C = {
 			isa = PBXGroup;
 			children = (
@@ -861,6 +964,26 @@
 				9C55D8791FFB2A5200F29453 /* Tabbar */,
 			);
 			path = SimpleProjectRX;
+			sourceTree = "<group>";
+		};
+		9CD943BC201EC188001349AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CD943BE201EFCA1001349AB /* Venue.swift */,
+				9CD943C0201EFE92001349AB /* Photo.swift */,
+				9CD943C2201F0210001349AB /* UserMap.swift */,
+				9CD943C4201F0DA4001349AB /* Tip.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9CD943BD201EC196001349AB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9CD943C6201F176B001349AB /* APIBase.swift */,
+				9CD943C8201F1E59001349AB /* APIBase+Venue.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		9CDE9ADA20031D00001E3FCE /* Circle View */ = {
@@ -1042,9 +1165,11 @@
 				9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */,
 				9C727A652011A09C006CFB25 /* ClosuresGenericsPOPViewController.xib in Resources */,
 				9CBE4B232006112D00C1FFB6 /* RepositoryDesignPatternViewController.xib in Resources */,
+				9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */,
 				9C4CEAA11FFE0939004F6E74 /* SwitchEnumsAndTableViewController.xib in Resources */,
 				9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */,
 				9CD681541FFB1E080077729C /* LaunchScreen.storyboard in Resources */,
+				9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */,
 				9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
 				9C24BC982004B0D000374517 /* RepoCell.xib in Resources */,
@@ -1053,6 +1178,7 @@
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* RaywenderViewController.xib in Resources */,
 				9C55D8B91FFB6F9200F29453 /* CustomObservableViewController.xib in Resources */,
@@ -1072,6 +1198,7 @@
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 				9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */,
 				9C5B4D8520035FAC00C0514C /* RepoListViewController.xib in Resources */,
+				9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,14 +1309,18 @@
 			files = (
 				9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */,
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
+				9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */,
 				9C4F69E920047F3100BDE993 /* APIOutputBase.swift in Sources */,
+				9CAEE040201AC5FD001FEAFB /* VenueCell.swift in Sources */,
 				9C727A762011F65F006CFB25 /* MovieService.swift in Sources */,
+				9CD943C3201F0210001349AB /* UserMap.swift in Sources */,
 				9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */,
 				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
 				9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */,
 				9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
+				9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
@@ -1206,6 +1337,8 @@
 				9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9CD943C7201F176B001349AB /* APIBase.swift in Sources */,
+				9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */,
 				9C4DB9792016F17A00B4023E /* RxAPI.swift in Sources */,
 				9C0EB79C2005B26500721A06 /* LazyClosureViewController.swift in Sources */,
 				9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */,
@@ -1214,12 +1347,15 @@
 				9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */,
 				9CC9280420182EC000A9C055 /* CarTableViewCell.swift in Sources */,
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
+				9CD943C9201F1E59001349AB /* APIBase+Venue.swift in Sources */,
 				9C5F9F902004C8400095D64A /* Storyboard+.swift in Sources */,
 				9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */,
+				9CD943BB201EBFA5001349AB /* DrinkViewModel.swift in Sources */,
 				9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */,
 				9CC928012018232300A9C055 /* CarViewModel.swift in Sources */,
 				9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */,
 				9C24BC972004B0D000374517 /* RepoCell.swift in Sources */,
+				9CD943C1201EFE92001349AB /* Photo.swift in Sources */,
 				9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
@@ -1233,6 +1369,7 @@
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
 				9C4DB97B2016F78400B4023E /* Events.swift in Sources */,
+				9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */,
 				9C0EB7A52005CA0000721A06 /* API.swift in Sources */,
 				9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */,
 				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
@@ -1241,6 +1378,7 @@
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
 				9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */,
+				9CD5CDCA202008E700A41E9E /* VenueCellModel.swift in Sources */,
 				9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */,
 				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
@@ -1248,6 +1386,8 @@
 				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
 				9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
+				9CD943C5201F0DA4001349AB /* Tip.swift in Sources */,
+				9CD943BF201EFCA1001349AB /* Venue.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
 				9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */,
