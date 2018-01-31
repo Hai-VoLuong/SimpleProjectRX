@@ -47,7 +47,7 @@ class DrinkViewModel {
                 if this.venues.value.count % 10 == 0 {
                     this.getVenues()
                 }
-            })
+            }).addDisposableTo(bag)
 
         section.asObservable()
         .skip(1)
@@ -57,6 +57,16 @@ class DrinkViewModel {
                 this.getVenues()
             })
         .disposed(by: bag)
+    }
+
+    func refresh() {
+        // isRefreshing = false
+        if isRefreshing.value {
+            return
+        }
+        isRefreshing.value = true
+        venues.value.removeAll()
+        getVenues()
     }
 
     private func getVenues() {
