@@ -36,7 +36,6 @@ final class VenueCell: UITableViewCell {
     }
 
     private func updateUI() {
-        ratingLabel.layer.cornerRadius = 10
         viewModel.name.bind(to: nameLabel.rx.text).addDisposableTo(bag)
         viewModel.address.bind(to: addressLabel.rx.text).addDisposableTo(bag)
         viewModel.rating.bind(to: ratingLabel.rx.text).addDisposableTo(bag)
