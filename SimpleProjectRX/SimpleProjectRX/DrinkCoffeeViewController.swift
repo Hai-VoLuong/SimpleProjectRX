@@ -52,7 +52,8 @@ final class DrinkCoffeeViewController: UIViewController {
                 case .next(let venue, let indexPath):
                     this.tableView.deselectRow(at: indexPath, animated: true)
                     let detail = VenueDetailViewController()
-                    detail.venue = venue
+                    print("Venue: 1 minh \(venue)")
+                    detail.viewModel = VenueDetailModel(venue: venue)
                     this.navigationController?.pushViewController(detail, animated: true)
                 case .error(let error):
                     this.alert(message: "error: \(error.localizedDescription)")

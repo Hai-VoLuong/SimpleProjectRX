@@ -8,13 +8,14 @@
 
 import UIKit
 
-class VenueDetailViewController: UIViewController {
+final class VenueDetailViewController: UIViewController {
 
-    var venue = Venue()
+    // MARK: - Properties
+
+    var viewModel: VenueDetailModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"
-        print(venue.name)
     }
 }
