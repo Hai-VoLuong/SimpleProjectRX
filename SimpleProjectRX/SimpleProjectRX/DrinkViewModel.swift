@@ -59,17 +59,7 @@ class DrinkViewModel {
         .disposed(by: bag)
     }
 
-    func refresh() {
-        // isRefreshing = false
-        if isRefreshing.value {
-            return
-        }
-        isRefreshing.value = true
-        venues.value.removeAll()
-        getVenues()
-    }
-
-    private func getVenues() {
+    fileprivate func getVenues() {
         var params: JSObject = [:]
         params["section"] = section.value.rawValue
         params["offset"] = venues.value.count
@@ -89,9 +79,28 @@ class DrinkViewModel {
             }
             .disposed(by: bag)
     }
+
+
 }
 
 extension DrinkViewModel: MVVM.ViewModel {
+
+    // MARK: - Public Func
+    func refresh() {
+        // isRefreshing = false
+        if isRefreshing.value {
+            return
+        }
+        isRefreshing.value = true
+        venues.value.removeAll()
+        getVenues()
+    }
+
+    func venueItem(at indexPath: IndexPath) -> (Venue, IndexPath)  {
+        guard indexPath.row < venues.value.count else { return (Venue(), indexPath) }
+        return (venues.value[indexPath.row], indexPath)
+    }
+
     func viewModelForItem(at indexPath: IndexPath) -> VenueCellModel {
         guard indexPath.count < venues.value.count else { return VenueCellModel() }
         let venue = venues.value[indexPath.row]

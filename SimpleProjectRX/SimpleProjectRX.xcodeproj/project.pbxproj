@@ -138,6 +138,8 @@
 		9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */; };
 		9CE9FF06200DF64A006766A3 /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */; };
 		9CFC18C02021C51000CD0BFE /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */; };
+		9CFC18C82021C92F00CD0BFE /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC18C62021C92F00CD0BFE /* VenueDetailViewController.swift */; };
+		9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFC18C72021C92F00CD0BFE /* VenueDetailViewController.xib */; };
 		9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDCFB02015E7E2009875CB /* AlbumViewController.swift */; };
 		9CFDCFB32015E7E3009875CB /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDCFB12015E7E2009875CB /* AlbumViewController.xib */; };
 		9CFE39521FFC7B1C0033B6C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */; };
@@ -305,6 +307,8 @@
 		9CE9FF03200DF64A006766A3 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		9CE9FF04200DF64A006766A3 /* DetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
 		9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
+		9CFC18C62021C92F00CD0BFE /* VenueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		9CFC18C72021C92F00CD0BFE /* VenueDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueDetailViewController.xib; sourceTree = "<group>"; };
 		9CFDCFB02015E7E2009875CB /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		9CFDCFB12015E7E2009875CB /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
 		9CFE39511FFC7B1C0033B6C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -845,6 +849,7 @@
 		9CAEE033201ABCA4001FEAFB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9CFC18C12021C8DA00CD0BFE /* VenueDetail */,
 				9CAEE030201ABC77001FEAFB /* Favorite */,
 				9CAEE031201ABC8C001FEAFB /* Search */,
 				9CAEE032201ABC95001FEAFB /* Home */,
@@ -1046,6 +1051,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CFC18C12021C8DA00CD0BFE /* VenueDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9CFC18C62021C92F00CD0BFE /* VenueDetailViewController.swift */,
+				9CFC18C72021C92F00CD0BFE /* VenueDetailViewController.xib */,
+			);
+			name = VenueDetail;
+			sourceTree = "<group>";
+		};
 		B3BB9E409BD5E636252B7D88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1194,7 @@
 				9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */,
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
+				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
@@ -1319,6 +1334,7 @@
 				9CD943C3201F0210001349AB /* UserMap.swift in Sources */,
 				9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */,
 				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
+				9CFC18C82021C92F00CD0BFE /* VenueDetailViewController.swift in Sources */,
 				9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */,
 				9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,

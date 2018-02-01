@@ -31,15 +31,34 @@ final class DrinkCoffeeViewController: UIViewController {
 
     // MARK: - Private Func
     private func configuration() {
-        tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "VenueCell")
+        tableView.register(UINib(nibName: "VenueCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.rowHeight = 143.0
         tableView.addSubview(refreshControl)
         viewModel.venues.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: "VenueCell", cellType: VenueCell.self))({
+            .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: VenueCell.self))({
                 [weak self] (index, venue, cell) in
                 guard let this = self else { return }
                 cell.viewModel = this.viewModel.viewModelForItem(at: IndexPath(row: index, section: 0))
             }).addDisposableTo(bag)
+
+        // itemsSelected
+        tableView.rx.itemSelected
+            .map({ indexPath in
+               self.viewModel.venueItem(at: indexPath)
+            })
+            .subscribe({ [weak self] event in
+                guard let this = self else { return }
+                switch event {
+                case .next(let venue, let indexPath):
+                    this.tableView.deselectRow(at: indexPath, animated: true)
+                    let detail = VenueDetailViewController()
+                    detail.venue = venue
+                    this.navigationController?.pushViewController(detail, animated: true)
+                case .error(let error):
+                    this.alert(message: "error: \(error.localizedDescription)")
+                default : break
+                }
+            })
 
         // load more
         tableView.rx.contentOffset
@@ -75,6 +94,12 @@ final class DrinkCoffeeViewController: UIViewController {
         viewModel.isRefreshing.asDriver()
         .drive(refreshControl.rx.isRefreshing)
         .addDisposableTo(bag)
+    }
+
+    private func alert(message: String) {
+        let alertController = UIAlertController(title: "RxSwfit", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction.Action("OK", style: .default))
+        present(alertController, animated: true, completion: nil)
     }
 }
 
