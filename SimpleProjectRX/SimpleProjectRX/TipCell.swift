@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MVVM
 
 struct TipModel {
     var title: String
@@ -16,10 +17,24 @@ struct TipModel {
     var avatarURL: URL?
 }
 
-final class TipCell: UITableViewCell {
+final class TipCell: UITableViewCell , MVVM.View {
+
     // MARK: - IBoutlets
     @IBOutlet private weak var thumbImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var createdAtLabel: UILabel!
+
+    // MARK: - Properties
+    var viewModel: TipModel? {
+        didSet {
+            updateView()
+        }
+    }
+
+    func updateView() {
+        self.titleLabel.text = viewModel?.title
+        self.subtitleLabel.text = viewModel?.subtitle
+        self.createdAtLabel.text = viewModel?.timeStamp
+    }
 }

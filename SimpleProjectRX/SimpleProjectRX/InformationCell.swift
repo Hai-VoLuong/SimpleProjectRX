@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import MVVM
 
 struct InformationModel {
     let title: String
     var content: String
 }
 
-final class InformationCell: UITableViewCell {
+final class InformationCell: UITableViewCell, MVVM.View {
 
     // MARK: - IBoutlets
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var contentLabel: UILabel!
-    @IBOutlet private weak var thumbImageView: UIImageView!
+
+    // MARK: - Properties
+    var viewModel: InformationModel? {
+        didSet {
+            updateView()
+        }
+    }
+
+    func updateView() {
+        self.titleLabel.text = viewModel?.title
+        self.contentLabel.text = viewModel?.content
+    }
 
 }
