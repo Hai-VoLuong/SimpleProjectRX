@@ -47,8 +47,9 @@ extension DetailVenueSection: SectionModelType {
 final class VenueDetailModel: MVVM.ViewModel {
 
     // MARK: - Properties
-    private var venue: Venue
+    private var venue = Venue()
     private let bag = DisposeBag()
+    var dataSource: Variable<[DetailVenueSection]> = Variable([])
 
     // MARK: - init
     init(venue: Venue) {
@@ -60,7 +61,30 @@ final class VenueDetailModel: MVVM.ViewModel {
     private func setup() {
         APIBase.getVenue(id: venue.id)
             .subscribe(onNext: {[weak self] venue in
-                print(venue)
+                guard let this = self else { return }
+                this.venue = venue
+
+                let tipViewModels: [SectionItem] = this.venue.tips.map({ tip -> SectionItem in
+                    let createdAt = dateTimeFormatter.string(from: tip.createdAt)
+                    return SectionItem.tip(viewModel: TipModel(
+                        title: tip.user?.fullName ?? "",
+                        subtitle: tip.text, thumbImage: "",
+                        timeStamp: createdAt,
+                        avatarURL: tip.user?.avatar
+                    ))
+                })
+
+                this.dataSource.value = [
+                    DetailVenueSection.informations(
+                        title: "information",
+                        items: [
+                            SectionItem.information(viewModel: InformationModel(title: "Name : ", content: this.venue.name)),
+                            SectionItem.information(viewModel: InformationModel(title: "Address : ", content: this.venue.fullAddress)),
+                            SectionItem.information(viewModel: InformationModel(title: "Categories : ", content: this.venue.category)),
+                            SectionItem.information(viewModel: InformationModel(title: "Rating : ", content: String(this.venue.rating)))
+                        ]),
+                    DetailVenueSection.tips(title: "Tips", items: tipViewModels)
+                ]
                 }, onError: { error in
                     print("error: \(error.localizedDescription)")
             }).addDisposableTo(bag)

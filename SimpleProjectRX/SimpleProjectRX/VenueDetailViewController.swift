@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 import RxDataSources
 
 final class VenueDetailViewController: UIViewController {
@@ -16,6 +17,7 @@ final class VenueDetailViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel: VenueDetailModel?
+    var bag = DisposeBag()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -26,10 +28,36 @@ final class VenueDetailViewController: UIViewController {
 
     // MARK: - Private Func
     private func configTableView() {
-        tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        tableView.register(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: "InfoCell")
+        tableView.register(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "TipCell")
         tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = UITableViewAutomaticDimension
 
+        let dataSource = RxTableViewSectionedReloadDataSource<DetailVenueSection>()
+        dataSource.configureCell = {(dataSource, tableView, indexpath, item) in
+            switch dataSource[indexpath] {
+            case .information(let viewModel):
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell") as? InformationCell else { return InformationCell() }
+                cell.viewModel = viewModel
+                return cell
+            case .tip(let viewModel):
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "TipCell") as? TipCell else { return TipCell() }
+                cell.viewModel = viewModel
+                return cell
+            }
+        }
+
+        dataSource.titleForHeaderInSection = {(dataSource, index) in
+            if index == 0 {
+                return "Information"
+            } else {
+                return "Tips"
+            }
+        }
+
+        viewModel?.dataSource.asObservable()
+        .bind(to: tableView.rx.items(dataSource: dataSource))
+        .disposed(by: bag)
     }
 }
 
