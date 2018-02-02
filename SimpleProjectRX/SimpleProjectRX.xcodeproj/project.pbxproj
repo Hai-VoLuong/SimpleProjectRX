@@ -82,6 +82,10 @@
 		9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A732011DAB9006CFB25 /* JSONDownloader.swift */; };
 		9C727A762011F65F006CFB25 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C727A752011F65F006CFB25 /* MovieService.swift */; };
 		9C80F2442022BA6200A405A1 /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F2432022BA6200A405A1 /* VenueDetailModel.swift */; };
+		9C80F24920231B3400A405A1 /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F24720231B3400A405A1 /* InformationCell.swift */; };
+		9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24820231B3400A405A1 /* InformationCell.xib */; };
+		9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F24B20231B4400A405A1 /* TipCell.swift */; };
+		9C80F24E20231B4400A405A1 /* TipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24C20231B4400A405A1 /* TipCell.xib */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -247,6 +251,10 @@
 		9C727A752011F65F006CFB25 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		9C7D108B200D9F62003D4A62 /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C80F2432022BA6200A405A1 /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
+		9C80F24720231B3400A405A1 /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
+		9C80F24820231B3400A405A1 /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
+		9C80F24B20231B4400A405A1 /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
+		9C80F24C20231B4400A405A1 /* TipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipCell.xib; sourceTree = "<group>"; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
 		9C8D1370200709D800C1BE5E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -734,6 +742,24 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		9C80F24520231AEF00A405A1 /* InformationCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C80F24720231B3400A405A1 /* InformationCell.swift */,
+				9C80F24820231B3400A405A1 /* InformationCell.xib */,
+			);
+			name = InformationCell;
+			sourceTree = "<group>";
+		};
+		9C80F24620231B0100A405A1 /* TipCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C80F24B20231B4400A405A1 /* TipCell.swift */,
+				9C80F24C20231B4400A405A1 /* TipCell.xib */,
+			);
+			name = TipCell;
+			sourceTree = "<group>";
+		};
 		9C8D136B200708F200C1BE5E /* Design Patterns */ = {
 			isa = PBXGroup;
 			children = (
@@ -1056,6 +1082,8 @@
 		9CFC18C12021C8DA00CD0BFE /* VenueDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9C80F24620231B0100A405A1 /* TipCell */,
+				9C80F24520231AEF00A405A1 /* InformationCell */,
 				9CFC18C62021C92F00CD0BFE /* VenueDetailViewController.swift */,
 				9CFC18C72021C92F00CD0BFE /* VenueDetailViewController.xib */,
 				9C80F2432022BA6200A405A1 /* VenueDetailModel.swift */,
@@ -1207,6 +1235,7 @@
 				9C55D8941FFB43C200F29453 /* MediumViewController.xib in Resources */,
 				9C0EB7A22005C9B400721A06 /* APIReactiveRxSwiftViewController.xib in Resources */,
 				9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */,
+				9C80F24E20231B4400A405A1 /* TipCell.xib in Resources */,
 				9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
@@ -1215,6 +1244,7 @@
 				9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
+				9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */,
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
 				9C0BD0CA1FFF5A9B00335F3A /* SecondViewController.xib in Resources */,
@@ -1236,6 +1266,7 @@
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
 				"${BUILT_PRODUCTS_DIR}/MVVM-Swift/MVVM.framework",
@@ -1246,6 +1277,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxMapKit/RxMapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
@@ -1258,6 +1290,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MVVM.framework",
@@ -1268,6 +1301,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
@@ -1349,6 +1383,7 @@
 				9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */,
+				9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
@@ -1419,6 +1454,7 @@
 				9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */,
 				9C8D1371200709D800C1BE5E /* Album.swift in Sources */,
 				9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */,
+				9C80F24920231B3400A405A1 /* InformationCell.swift in Sources */,
 				9CE9FEFD200DF5A5006766A3 /* RepositoryListViewController.swift in Sources */,
 				9C4F69F62004802600BDE993 /* RepoService.swift in Sources */,
 				9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */,
