@@ -8,6 +8,7 @@
 
 import UIKit
 import MVVM
+import Kingfisher
 
 struct TipModel {
     var title: String
@@ -36,5 +37,8 @@ final class TipCell: UITableViewCell , MVVM.View {
         self.titleLabel.text = viewModel?.title
         self.subtitleLabel.text = viewModel?.subtitle
         self.createdAtLabel.text = viewModel?.timeStamp
+        self.thumbImageView.layer.cornerRadius = 30
+        self.thumbImageView.layer.masksToBounds = true
+        self.thumbImageView.kf.setImage(with: viewModel?.avatarURL)
     }
 }
