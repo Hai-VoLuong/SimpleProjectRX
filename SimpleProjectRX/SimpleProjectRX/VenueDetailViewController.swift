@@ -48,10 +48,11 @@ final class VenueDetailViewController: UIViewController {
         }
 
         dataSource.titleForHeaderInSection = {(dataSource, index) in
-            if index == 0 {
-                return "Information"
-            } else {
-                return "Tips"
+            switch dataSource[index] {
+            case .informations(let title, _ ):
+                return "\(title)"
+            case .tips(let title, _ ):
+                return "\(title)"
             }
         }
 

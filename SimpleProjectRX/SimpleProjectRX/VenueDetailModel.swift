@@ -76,7 +76,7 @@ final class VenueDetailModel: MVVM.ViewModel {
 
                 this.dataSource.value = [
                     DetailVenueSection.informations(
-                        title: "information",
+                        title: "Information",
                         items: [
                             SectionItem.information(viewModel: InformationModel(title: "Name : ", content: this.venue.name)),
                             SectionItem.information(viewModel: InformationModel(title: "Address : ", content: this.venue.fullAddress)),
