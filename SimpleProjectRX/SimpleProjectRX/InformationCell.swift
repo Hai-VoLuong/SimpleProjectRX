@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct InformationModel {
+    let title: String
+    var content: String
+}
+
 final class InformationCell: UITableViewCell {
 
     // MARK: - IBoutlets

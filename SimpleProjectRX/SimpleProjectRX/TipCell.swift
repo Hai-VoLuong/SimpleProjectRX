@@ -8,6 +8,14 @@
 
 import UIKit
 
+struct TipModel {
+    var title: String
+    var subtitle: String
+    var thumbImage: String
+    var timeStamp: String
+    var avatarURL: URL?
+}
+
 final class TipCell: UITableViewCell {
     // MARK: - IBoutlets
     @IBOutlet private weak var thumbImageView: UIImageView!

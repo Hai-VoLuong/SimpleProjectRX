@@ -119,7 +119,6 @@
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */; };
 		9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */; };
-		9CD5CDCA202008E700A41E9E /* VenueCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
 		9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD6814D1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld */; };
 		9CD681511FFB1E080077729C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD681501FFB1E080077729C /* Assets.xcassets */; };
@@ -291,7 +290,6 @@
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffeeViewController.swift; sourceTree = "<group>"; };
 		9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCoffeeViewController.xib; sourceTree = "<group>"; };
-		9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCellModel.swift; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD681461FFB1E080077729C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD6814E1FFB1E080077729C /* SimpleProjectRX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleProjectRX.xcdatamodel; sourceTree = "<group>"; };
@@ -890,7 +888,6 @@
 			children = (
 				9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */,
 				9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */,
-				9CD5CDC9202008E700A41E9E /* VenueCellModel.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1437,7 +1434,6 @@
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
 				9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */,
-				9CD5CDCA202008E700A41E9E /* VenueCellModel.swift in Sources */,
 				9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */,
 				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
