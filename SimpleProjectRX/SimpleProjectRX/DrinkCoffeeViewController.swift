@@ -42,7 +42,7 @@ final class DrinkCoffeeViewController: UIViewController {
             }).addDisposableTo(bag)
 
         // itemsSelected
-        tableView.rx.itemSelected
+        _ = tableView.rx.itemSelected
             .map({ indexPath in
                self.viewModel.venueItem(at: indexPath)
             })
@@ -52,7 +52,6 @@ final class DrinkCoffeeViewController: UIViewController {
                 case .next(let venue, let indexPath):
                     this.tableView.deselectRow(at: indexPath, animated: true)
                     let detail = VenueDetailViewController()
-                    print("Venue: 1 minh \(venue)")
                     detail.viewModel = VenueDetailModel(venue: venue)
                     this.navigationController?.pushViewController(detail, animated: true)
                 case .error(let error):

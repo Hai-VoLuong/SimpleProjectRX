@@ -23,7 +23,7 @@ extension APIBase {
         }
 
         return Observable<[Venue]>.create({ observer -> Disposable in
-            _ = APIBase.request(path: path).subscribe(onNext: { json in
+           _ = APIBase.request(path: path).subscribe(onNext: { json in
                 var venues: [Venue] = []
                 guard let groups = json["groups"] as? JSArray else {
                     observer.onError(RxError.noElements)
@@ -51,7 +51,7 @@ extension APIBase {
     class func getVenue(id: String) -> Observable<Venue> {
         return Observable<Venue>.create({ observer -> Disposable in
             let path = "venues/\(id)?client_secret=\(clientSecret)&client_id=\(clientId)&v=\(version)"
-            APIBase.request(path: path).subscribe({ event in
+           _ = APIBase.request(path: path).subscribe({ event in
                 switch event {
                 case .error:
                     observer.onError(RxError.noElements)
