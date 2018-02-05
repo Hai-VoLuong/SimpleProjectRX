@@ -11,21 +11,23 @@ import RxSwift
 import MVVM
 import RxDataSources
 
+// Item
 enum SectionItem {
     case information(viewModel: InformationModel)
     case tip(viewModel: TipModel)
 }
 
+// Section
 enum DetailVenueSection {
-    case informations(title: String, items: [SectionItem])
-    case tips(title: String, items: [SectionItem])
+    case informations(title: String, items: [Item])
+    case tips(title: String, items: [Item])
 }
 
 extension DetailVenueSection: SectionModelType {
 
     typealias Item = SectionItem
 
-    var items: [SectionItem] {
+    var items: [Item] {
         switch self {
         case .informations(title: _, items: let items):
             return items.map({$0})
@@ -34,7 +36,7 @@ extension DetailVenueSection: SectionModelType {
         }
     }
 
-    init(original: DetailVenueSection, items: [SectionItem]) {
+    init(original: DetailVenueSection, items: [Item]) {
         switch original {
         case let .informations(viewModel):
             self = .informations(title: viewModel.title, items: viewModel.items)
@@ -58,21 +60,11 @@ final class VenueDetailModel: MVVM.ViewModel {
     }
 
     // MARK: - Private Func
-    private func setup() {
+        private func setup() {
         APIBase.getVenue(id: venue.id)
             .subscribe(onNext: {[weak self] venue in
                 guard let this = self else { return }
                 this.venue = venue
-
-                let tipViewModels: [SectionItem] = this.venue.tips.map({ tip -> SectionItem in
-                    let createdAt = dateTimeFormatter.string(from: tip.createdAt)
-                    return SectionItem.tip(viewModel: TipModel(
-                        title: tip.user?.fullName ?? "",
-                        subtitle: tip.text, thumbImage: "",
-                        timeStamp: createdAt,
-                        avatarURL: tip.user?.avatar
-                    ))
-                })
 
                 this.dataSource.value = [
                     DetailVenueSection.informations(
@@ -83,7 +75,14 @@ final class VenueDetailModel: MVVM.ViewModel {
                             SectionItem.information(viewModel: InformationModel(title: "Categories : ", content: this.venue.category)),
                             SectionItem.information(viewModel: InformationModel(title: "Rating : ", content: String(this.venue.rating)))
                         ]),
-                    DetailVenueSection.tips(title: "Tips", items: tipViewModels)
+                    DetailVenueSection.tips(title: "Tips", items: this.venue.tips.map({ tip -> SectionItem in
+                        return SectionItem.tip(viewModel: TipModel(
+                            title: tip.user?.fullName ?? "",
+                            subtitle: tip.text,
+                            timeStamp: tip.createAtString,
+                            avatarURL: tip.user?.avatar
+                        ))
+                    }))
                 ]
                 }, onError: { error in
                     print("error: \(error.localizedDescription)")

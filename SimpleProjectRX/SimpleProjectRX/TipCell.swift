@@ -13,7 +13,6 @@ import Kingfisher
 struct TipModel {
     var title: String
     var subtitle: String
-    var thumbImage: String
     var timeStamp: String
     var avatarURL: URL?
 }

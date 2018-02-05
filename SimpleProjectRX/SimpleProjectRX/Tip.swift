@@ -24,7 +24,7 @@ class Tip: Mappable {
     var photoSuffix = ""
     var user: UserMap?
 
-    var createString: String {
+    var createAtString: String {
         return dateTimeFormatter.string(from: createdAt)
     }
 
