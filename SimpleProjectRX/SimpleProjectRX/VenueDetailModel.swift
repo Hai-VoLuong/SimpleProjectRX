@@ -65,7 +65,7 @@ final class VenueDetailModel {
             .subscribe(onNext: {[weak self] venue in
                 guard let this = self else { return }
                 this.venue = venue
-
+                let urlString: [String] = this.venue.photos.map({$0.patch()})
                 this.dataSource.value = [
                     DetailVenueSection.informations(
                         title: "Information",

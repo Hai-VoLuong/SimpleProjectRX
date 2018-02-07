@@ -16,27 +16,26 @@ class Venue: Object, Mappable {
     dynamic var name: String = ""
     dynamic var latitude: Double = 0.0
     dynamic var longitude: Double = 0.0
-    dynamic var isFavorite = false
     dynamic var rating: Double = 0.0
     dynamic var ratingColor: String = ""
     dynamic var category: String = ""
     dynamic var likes:String = ""
     dynamic var phone: String = ""
-    dynamic var thumbnail: Photo?
-
-    var photos = List<Photo>()
-    var tips: [Tip] = []
-
     dynamic private var address: String = ""
     dynamic private var city: String = ""
+    dynamic var isFavorite = false
 
     var fullAddress: String {
         if city.isEmpty {
             return address
         } else {
-           return address + ", " + city
+            return address + ", " + city
         }
     }
+
+    var thumbnail: Photo?
+    var photos: [Photo] = []
+    var tips: [Tip] = []
 
     override class func primaryKey() -> String {
         return "id"
@@ -52,15 +51,15 @@ class Venue: Object, Mappable {
         name <- map["name"]
         latitude <- map["location.lat"]
         longitude <- map["location.lng"]
-        city <- map["location.city"]
-        address <- map["location.address"]
         rating <- map["rating"]
         ratingColor <- map["ratingColor"]
         category <- map["categories.0.name"]
         likes <- map["likes.summary"]
         phone <- map["contact.phone"]
-        thumbnail <- map["photos.groups.0.items.0"]
+        address <- map["location.address"]
+        city <- map["location.city"]
 
+        thumbnail <- map["photos.groups.0.items.0"]
         tips <- map["tips.groups.0.items"]
         photos <- map["photos.groups.0.items"]
     }
