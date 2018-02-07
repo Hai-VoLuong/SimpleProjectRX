@@ -46,7 +46,7 @@ extension DetailVenueSection: SectionModelType {
     }
 }
 
-final class VenueDetailModel: MVVM.ViewModel {
+final class VenueDetailModel {
 
     // MARK: - Properties
     private var venue = Venue()
@@ -75,7 +75,9 @@ final class VenueDetailModel: MVVM.ViewModel {
                             SectionItem.information(viewModel: InformationModel(title: "Categories : ", content: this.venue.category)),
                             SectionItem.information(viewModel: InformationModel(title: "Rating : ", content: String(this.venue.rating)))
                         ]),
-                    DetailVenueSection.tips(title: "Tips", items: this.venue.tips.map({ tip -> SectionItem in
+                    DetailVenueSection.tips(
+                        title: "Tips",
+                        items: this.venue.tips.map({ tip -> SectionItem in
                         return SectionItem.tip(viewModel: TipModel(
                             title: tip.user?.fullName ?? "",
                             subtitle: tip.text,
