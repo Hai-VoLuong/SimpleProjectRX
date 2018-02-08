@@ -23,11 +23,20 @@ final class VenueDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"
+        configRightBarButtonItems()
         configTableView()
         configPageView()
     }
 
     // MARK: - Private Func
+    private func configRightBarButtonItems() {
+        let favoriteButton: UIBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "favor"), style: .done, target: nil, action: nil)
+        favoriteButton.rx.tap.asObservable().subscribe(onNext:{
+
+        }).addDisposableTo(bag)
+         navigationItem.rightBarButtonItem = favoriteButton
+    }
+
     private func configTableView() {
         tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: "InfoCell")
         tableView.register(UINib(nibName: "TipCell", bundle: nil), forCellReuseIdentifier: "TipCell")
@@ -82,9 +91,8 @@ final class VenueDetailViewController: UIViewController {
                 imageView.setImage(path: url).subscribe().addDisposableTo(self.bag)
                 cell.addSubview(imageView)
 
-            })
+            }).addDisposableTo(bag)
         headerView.addSubview(collectionView)
-
     }
 }
 
