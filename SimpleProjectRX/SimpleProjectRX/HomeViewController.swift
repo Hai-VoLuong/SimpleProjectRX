@@ -24,6 +24,7 @@ final class HomeViewController: UIViewController {
         case fetchDataNetwork
         case mvvm
         case drink
+        case tap
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -35,7 +36,8 @@ final class HomeViewController: UIViewController {
         "Custom Observable",
         "Fetching Data From the Web",
         "MVVM - Demo",
-        "ProjectDrinkCoffee"
+        "ProjectDrinkCoffee",
+        "actionTap"
         ]
 
     // MARK: - private func
@@ -69,7 +71,9 @@ final class HomeViewController: UIViewController {
         case .drink:
             vc = DrinkCoffeeViewController()
             return vc
-
+        case .tap:
+            vc = TapViewController()
+            return vc
         }
     }
 
