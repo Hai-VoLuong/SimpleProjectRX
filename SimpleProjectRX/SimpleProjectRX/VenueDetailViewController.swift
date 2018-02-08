@@ -24,6 +24,7 @@ final class VenueDetailViewController: UIViewController {
         super.viewDidLoad()
         title = "Detail"
         configTableView()
+        configPageView()
     }
 
     // MARK: - Private Func
@@ -59,6 +60,31 @@ final class VenueDetailViewController: UIViewController {
         viewModel?.dataSource.asObservable()
         .bind(to: tableView.rx.items(dataSource: dataSource))
         .disposed(by: bag)
+    }
+
+    private func configPageView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = headerView.bounds.size
+        layout.footerReferenceSize = .zero
+        layout.headerReferenceSize = .zero
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = .leastNormalMagnitude
+        layout.minimumLineSpacing = .leastNormalMagnitude
+        let collectionView = UICollectionView(frame: headerView.bounds, collectionViewLayout: layout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.isPagingEnabled = true
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.backgroundColor = .white
+        viewModel?.urlString.asObservable()
+            .bind(to: collectionView.rx.items(cellIdentifier: "Cell"))({ (indexPath, url, cell) in
+               let imageView = UIImageView(frame: cell.bounds)
+                imageView.contentMode = .scaleAspectFill
+                imageView.setImage(path: url).subscribe().addDisposableTo(self.bag)
+                cell.addSubview(imageView)
+
+            })
+        headerView.addSubview(collectionView)
+
     }
 }
 

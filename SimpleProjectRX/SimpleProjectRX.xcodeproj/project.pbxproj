@@ -19,6 +19,8 @@
 		9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */; };
 		9C0EB7A22005C9B400721A06 /* APIReactiveRxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */; };
 		9C0EB7A52005CA0000721A06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB7A42005CA0000721A06 /* API.swift */; };
+		9C1B9651202ADB03000A5544 /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B964F202ADB03000A5544 /* TapViewController.swift */; };
+		9C1B9652202ADB03000A5544 /* TapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B9650202ADB03000A5544 /* TapViewController.xib */; };
 		9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC912004A8D800374517 /* EventListViewModel.swift */; };
 		9C24BC972004B0D000374517 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC952004B0D000374517 /* RepoCell.swift */; };
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
@@ -186,6 +188,8 @@
 		9C0EB79F2005C9B400721A06 /* APIReactiveRxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIReactiveRxSwiftViewController.swift; sourceTree = "<group>"; };
 		9C0EB7A02005C9B400721A06 /* APIReactiveRxSwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = APIReactiveRxSwiftViewController.xib; sourceTree = "<group>"; };
 		9C0EB7A42005CA0000721A06 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9C1B964F202ADB03000A5544 /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
+		9C1B9650202ADB03000A5544 /* TapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TapViewController.xib; sourceTree = "<group>"; };
 		9C24BC912004A8D800374517 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		9C24BC952004B0D000374517 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
@@ -384,6 +388,15 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		9C1B964E202ADAAD000A5544 /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				9C1B964F202ADB03000A5544 /* TapViewController.swift */,
+				9C1B9650202ADB03000A5544 /* TapViewController.xib */,
+			);
+			name = Tap;
+			sourceTree = "<group>";
+		};
 		9C24BC932004AE6400374517 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +537,7 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C1B964E202ADAAD000A5544 /* Tap */,
 				9C8D13772007100200C1BE5E /* Home */,
 				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
@@ -1239,6 +1253,7 @@
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
 				9CFDCFB32015E7E3009875CB /* AlbumViewController.xib in Resources */,
 				9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */,
+				9C1B9652202ADB03000A5544 /* TapViewController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
 				9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */,
@@ -1359,6 +1374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1B9651202ADB03000A5544 /* TapViewController.swift in Sources */,
 				9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */,
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
 				9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */,

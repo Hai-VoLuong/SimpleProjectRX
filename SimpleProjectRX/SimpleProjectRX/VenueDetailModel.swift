@@ -52,6 +52,7 @@ final class VenueDetailModel {
     private var venue = Venue()
     private let bag = DisposeBag()
     var dataSource: Variable<[DetailVenueSection]> = Variable([])
+    var urlString: Variable<[String]> = Variable([])
 
     // MARK: - init
     init(venue: Venue) {
@@ -66,6 +67,7 @@ final class VenueDetailModel {
                 guard let this = self else { return }
                 this.venue = venue
                 let urlString: [String] = this.venue.photos.map({$0.patch()})
+                this.urlString.value = urlString
                 this.dataSource.value = [
                     DetailVenueSection.informations(
                         title: "Information",
