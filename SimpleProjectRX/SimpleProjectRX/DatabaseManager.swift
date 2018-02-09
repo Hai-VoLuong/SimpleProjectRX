@@ -10,7 +10,6 @@ import RxSwift
 import RealmSwift
 
 class DatabaseManager {
-    static let shared = DatabaseManager()
 
     fileprivate var realm: Realm {
         do {

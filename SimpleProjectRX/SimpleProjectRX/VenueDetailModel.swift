@@ -56,7 +56,7 @@ final class VenueDetailModel {
 
     // MARK: - init
     init(venueId: String) {
-        if let venue = Venue.fetch(by: venueId) {
+        if let venue = MyLibrary.shared.fetch(by: venueId) {
             self.venue = venue
         } else {
             self.venue.id = venueId
