@@ -132,6 +132,7 @@
 		9CD943C5201F0DA4001349AB /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C4201F0DA4001349AB /* Tip.swift */; };
 		9CD943C7201F176B001349AB /* APIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C6201F176B001349AB /* APIBase.swift */; };
 		9CD943C9201F1E59001349AB /* APIBase+Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD943C8201F1E59001349AB /* APIBase+Venue.swift */; };
+		9CDB7447202D302D00819FC6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB7446202D302D00819FC6 /* DatabaseManager.swift */; };
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
@@ -307,6 +308,7 @@
 		9CD943C4201F0DA4001349AB /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		9CD943C6201F176B001349AB /* APIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBase.swift; sourceTree = "<group>"; };
 		9CD943C8201F1E59001349AB /* APIBase+Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Venue.swift"; sourceTree = "<group>"; };
+		9CDB7446202D302D00819FC6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
@@ -1029,6 +1031,7 @@
 			children = (
 				9CD943C6201F176B001349AB /* APIBase.swift */,
 				9CD943C8201F1E59001349AB /* APIBase+Venue.swift */,
+				9CDB7446202D302D00819FC6 /* DatabaseManager.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -1436,6 +1439,7 @@
 				9C6AA3F82016DCE9002F681A /* PhotoWriter.swift in Sources */,
 				9C4DB97D2017151400B4023E /* EventService.swift in Sources */,
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
+				9CDB7447202D302D00819FC6 /* DatabaseManager.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
