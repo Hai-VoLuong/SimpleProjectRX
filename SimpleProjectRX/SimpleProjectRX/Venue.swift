@@ -64,3 +64,10 @@ class Venue: Object, Mappable {
         photos <- map["photos.groups.0.items"]
     }
 }
+
+extension Venue {
+    static func fetch(by id: String) -> Venue? {
+        let pre = NSPredicate(format: "id = %@", id)
+        return DatabaseManager.shared.object(Venue.self, filter: pre)
+    }
+}

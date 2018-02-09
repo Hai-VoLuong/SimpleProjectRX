@@ -55,8 +55,12 @@ final class VenueDetailModel {
     var urlString: Variable<[String]> = Variable([])
 
     // MARK: - init
-    init(venue: Venue) {
-        self.venue = venue
+    init(venueId: String) {
+        if let venue = Venue.fetch(by: venueId) {
+            self.venue = venue
+        } else {
+            self.venue.id = venueId
+        }
         setup()
     }
 

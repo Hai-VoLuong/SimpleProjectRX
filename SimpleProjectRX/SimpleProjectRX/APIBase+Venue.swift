@@ -43,6 +43,7 @@ extension APIBase {
                 }
                 observer.onNext(venues)
                 observer.onCompleted()
+                DatabaseManager.shared.addObjects(venues)
             })
             return Disposables.create()
         })
