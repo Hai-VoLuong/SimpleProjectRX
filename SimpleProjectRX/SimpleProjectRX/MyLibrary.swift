@@ -20,13 +20,28 @@ final class MyLibrary {
     private init() {
     }
 
+    // MARK: - private func
+    func addAll(by venues: [Venue]? = nil) {
+        guard let venues = venues else { return }
+        return databaseManager.addObjects(venues)
+    }
+
+    // MARK: - public func
     func fetch(by venueId: String) -> Venue? {
         let pre = NSPredicate(format: "id = %@", venueId)
         return databaseManager.object(Venue.self, filter: pre)
     }
 
-    func addAll(by venues: [Venue]? = nil) {
-        guard let venues = venues else { return }
-        return databaseManager.addObjects(venues)
+    func getAll() -> [Venue]? {
+        let results = databaseManager.objects(Venue.self)
+        return Array(results)
+    }
+
+    func checkObjects(venues: [Venue]) -> [Venue]? {
+        if venues.count == self.getAll()?.count {
+            return self.getAll()
+        }
+        self.addAll(by: venues)
+        return nil
     }
 }

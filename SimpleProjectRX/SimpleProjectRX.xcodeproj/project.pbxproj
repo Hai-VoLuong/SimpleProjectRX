@@ -71,6 +71,7 @@
 		9C5B4D8520035FAC00C0514C /* RepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */; };
 		9C5B4D882003608A00C0514C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D872003608A00C0514C /* Repo.swift */; };
 		9C5B4D8A2003609700C0514C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D892003609700C0514C /* Event.swift */; };
+		9C5C99F8202DA14E005C03F6 /* RealmObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C99F7202DA14E005C03F6 /* RealmObservable.swift */; };
 		9C5F9F8A2004C7540095D64A /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F892004C7540095D64A /* Navigator.swift */; };
 		9C5F9F8C2004C8020095D64A /* SwinjectStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */; };
 		9C5F9F8E2004C82C0095D64A /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9F8D2004C82C0095D64A /* TableView+.swift */; };
@@ -242,6 +243,7 @@
 		9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListViewController.xib; sourceTree = "<group>"; };
 		9C5B4D872003608A00C0514C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		9C5B4D892003609700C0514C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9C5C99F7202DA14E005C03F6 /* RealmObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObservable.swift; sourceTree = "<group>"; };
 		9C5F9F892004C7540095D64A /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		9C5F9F8B2004C8020095D64A /* SwinjectStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboard.swift; sourceTree = "<group>"; };
 		9C5F9F8D2004C82C0095D64A /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			children = (
 				9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */,
 				9CFC18BF2021C51000CD0BFE /* Reactive+Extension.swift */,
+				9C5C99F7202DA14E005C03F6 /* RealmObservable.swift */,
 			);
 			name = "Resoure+Extension";
 			sourceTree = "<group>";
@@ -1392,6 +1395,7 @@
 				9C5B4D882003608A00C0514C /* Repo.swift in Sources */,
 				9CFC18C82021C92F00CD0BFE /* VenueDetailViewController.swift in Sources */,
 				9CFDCFB22015E7E3009875CB /* AlbumViewController.swift in Sources */,
+				9C5C99F8202DA14E005C03F6 /* RealmObservable.swift in Sources */,
 				9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
