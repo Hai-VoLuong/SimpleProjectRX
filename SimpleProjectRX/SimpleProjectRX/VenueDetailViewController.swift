@@ -31,9 +31,15 @@ final class VenueDetailViewController: UIViewController {
     // MARK: - Private Func
     private func configRightBarButtonItems() {
         let favoriteButton: UIBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "favor"), style: .done, target: nil, action: nil)
-        favoriteButton.rx.tap.asObservable().subscribe(onNext:{
-
+        favoriteButton.rx.tap.asObservable().subscribe(onNext:{ [weak self] in
+            guard let this = self else { return }
+            this.viewModel?.toggleFavorite()
         }).addDisposableTo(bag)
+
+        viewModel?.isFavorite.asObservable().subscribe(onNext: {
+            favoriteButton.tintColor = $0 ? .red : .blue
+        }).addDisposableTo(bag)
+
          navigationItem.rightBarButtonItem = favoriteButton
     }
 

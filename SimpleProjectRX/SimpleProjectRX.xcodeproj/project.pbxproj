@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81BF9C38E8B32CC671FDDDAA /* Pods_SimpleProjectRX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */; };
+		9C04C072203185AE00905B43 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C04C071203185AE00905B43 /* FavoriteViewModel.swift */; };
 		9C0BD0C41FFF3AED00335F3A /* DetailB_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C21FFF3AED00335F3A /* DetailB_ViewController.swift */; };
 		9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C31FFF3AED00335F3A /* DetailB_ViewController.xib */; };
 		9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BD0C71FFF5A9B00335F3A /* SecondViewController.swift */; };
@@ -180,6 +181,7 @@
 
 /* Begin PBXFileReference section */
 		79F3F7A24FAE677405EFE0BA /* Pods_SimpleProjectRX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProjectRX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C04C071203185AE00905B43 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		9C0BD0C21FFF3AED00335F3A /* DetailB_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailB_ViewController.swift; sourceTree = "<group>"; };
 		9C0BD0C31FFF3AED00335F3A /* DetailB_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailB_ViewController.xib; sourceTree = "<group>"; };
 		9C0BD0C71FFF5A9B00335F3A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -869,6 +871,7 @@
 			children = (
 				9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */,
 				9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */,
+				9C04C071203185AE00905B43 /* FavoriteViewModel.swift */,
 			);
 			name = Favorite;
 			sourceTree = "<group>";
@@ -1441,6 +1444,7 @@
 				9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */,
 				9C55D8BC1FFB6FCD00F29453 /* FetchingDataViewController.swift in Sources */,
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
+				9C04C072203185AE00905B43 /* FavoriteViewModel.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */,

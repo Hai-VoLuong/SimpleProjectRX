@@ -53,6 +53,7 @@ final class VenueDetailModel {
     private let bag = DisposeBag()
     var dataSource: Variable<[DetailVenueSection]> = Variable([])
     var urlString: Variable<[String]> = Variable([])
+    var isFavorite: Variable<Bool> = Variable(false)
 
     // MARK: - init
     init(venueId: String) {
@@ -95,6 +96,15 @@ final class VenueDetailModel {
                 }, onError: { error in
                     print("error: \(error.localizedDescription)")
             }).addDisposableTo(bag)
+    }
+
+    func toggleFavorite() {
+        guard let venue = MyLibrary.shared.fetch(by: venue.id) else { return }
+        MyLibrary.shared.databaseManager.write().subscribe(onCompleted: {
+            venue.isFavorite = !venue.isFavorite
+        })
+        venue.isFavorite == true ? MyLibrary.shared.add(by: venue) : MyLibrary.shared.databaseManager.deleteObject(venue)
+        isFavorite.value = venue.isFavorite
     }
 
 }

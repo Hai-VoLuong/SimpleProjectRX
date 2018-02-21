@@ -12,7 +12,7 @@ import RealmSwift
 final class MyLibrary {
 
     // MARK: - private properties
-    private let databaseManager = DatabaseManager()
+    let databaseManager = DatabaseManager()
     private let api = APIBase()
 
     static let shared = MyLibrary()
@@ -20,10 +20,15 @@ final class MyLibrary {
     private init() {
     }
 
-    // MARK: - private func
+    // MARK: - public func
     func addAll(by venues: [Venue]? = nil) {
         guard let venues = venues else { return }
         return databaseManager.addObjects(venues)
+    }
+
+    func add(by venue: Venue? = nil) {
+        guard let venue = venue else { return }
+        return databaseManager.addObject(venue)
     }
 
     // MARK: - public func
@@ -43,5 +48,11 @@ final class MyLibrary {
         }
         self.addAll(by: venues)
         return nil
+    }
+
+    func objectsIsFavorite() -> [Venue]? {
+        let pre = NSPredicate(format: "isFavorite = true")
+        let result = databaseManager.objects(Venue.self, filter: pre, sortBy: nil)
+        return Array(result)
     }
 }
