@@ -60,10 +60,6 @@ final class VenueCell: UITableViewCell {
         }
     }
 
-    override func awakeFromNib() {
-        updateUI()
-    }
-
     private func updateUI() {
         viewModel.name.bind(to: nameLabel.rx.text).addDisposableTo(bag)
         viewModel.address.bind(to: addressLabel.rx.text).addDisposableTo(bag)

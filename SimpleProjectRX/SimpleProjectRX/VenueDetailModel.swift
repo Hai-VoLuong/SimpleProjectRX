@@ -93,18 +93,23 @@ final class VenueDetailModel {
                         ))
                     }))
                 ]
+                MyLibrary.shared.add(by: this.venue)
                 }, onError: { error in
                     print("error: \(error.localizedDescription)")
             }).addDisposableTo(bag)
     }
 
+    // MARK: - Public Func
     func toggleFavorite() {
-        guard let venue = MyLibrary.shared.fetch(by: venue.id) else { return }
-        MyLibrary.shared.databaseManager.write().subscribe(onCompleted: {
+        guard MyLibrary.shared.fetch(by: venue.id) != nil else {
             venue.isFavorite = !venue.isFavorite
+            MyLibrary.shared.add(by: venue)
+            return
+        }
+        MyLibrary.shared.databaseManager.write().subscribe(onCompleted: { [weak self] in
+            guard let this = self else { return }
+            this.venue.isFavorite = !this.venue.isFavorite
+            this.isFavorite.value = this.venue.isFavorite
         })
-        venue.isFavorite == true ? MyLibrary.shared.add(by: venue) : MyLibrary.shared.databaseManager.deleteObject(venue)
-        isFavorite.value = venue.isFavorite
     }
-
 }

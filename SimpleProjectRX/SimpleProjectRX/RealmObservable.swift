@@ -43,4 +43,25 @@ final class RealmObservable {
             }
         })
     }
+
+    // MARK :- Observer object change
+    static func propertyChanges<T>(from object: T) -> Observable<PropertyChange> where T: Object {
+        return Observable<PropertyChange>.create { observer in
+            let token = object.observe { change in
+                switch change {
+                case .change(let changes):
+                    for change in changes {
+                        observer.onNext(change)
+                    }
+                case .deleted: break
+                case .error(let error):
+                    observer.onError(error)
+                }
+            }
+
+            return Disposables.create {
+                token.invalidate()
+            }
+        }
+    }
 }

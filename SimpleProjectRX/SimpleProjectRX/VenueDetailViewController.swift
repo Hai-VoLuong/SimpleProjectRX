@@ -36,8 +36,9 @@ final class VenueDetailViewController: UIViewController {
             this.viewModel?.toggleFavorite()
         }).addDisposableTo(bag)
 
-        viewModel?.isFavorite.asObservable().subscribe(onNext: {
-            favoriteButton.tintColor = $0 ? .red : .blue
+        viewModel?.isFavorite.asObservable().subscribe(onNext: { favorite in
+            print(favorite)
+            favoriteButton.tintColor = favorite ? .red : .blue
         }).addDisposableTo(bag)
 
          navigationItem.rightBarButtonItem = favoriteButton

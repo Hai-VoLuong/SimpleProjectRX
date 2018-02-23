@@ -104,12 +104,22 @@ final class DrinkCoffeeViewController: UIViewController {
 }
 
 // MARKL: - Extenion DrinkCoffeeViewController Navigation
+enum mau: String {
+    case sandyBrown
+    case coolGrey
+    case unknown
+}
+
 extension DrinkCoffeeViewController {
 
     fileprivate func setupRightNavItems() {
 
         let favoriteButton = UIButton(type: .system)
-        favoriteButton.setImage(#imageLiteral(resourceName: "favor_1").withRenderingMode(.alwaysOriginal), for: .normal)
+        if #available(iOS 11.0, *) {
+            favoriteButton.backgroundColor = UIColor(named: mau.coolGrey.rawValue)
+        } else {
+            favoriteButton.setImage(#imageLiteral(resourceName: "favor_1").withRenderingMode(.alwaysOriginal), for: .normal)
+        }
         favoriteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         favoriteButton.rx.tap
         .asDriver()
