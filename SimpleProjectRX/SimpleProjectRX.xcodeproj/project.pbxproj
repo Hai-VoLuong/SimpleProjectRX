@@ -106,6 +106,8 @@
 		9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */; };
 		9CAEE040201AC5FD001FEAFB /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */; };
 		9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */; };
+		9CB34CB8204565B5004E0A37 /* MagicalGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB34CB6204565B5004E0A37 /* MagicalGridController.swift */; };
+		9CB34CB9204565B5004E0A37 /* MagicalGridController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB34CB7204565B5004E0A37 /* MagicalGridController.xib */; };
 		9CBA95F3200C8A1A00ABA54D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */; };
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
@@ -283,6 +285,8 @@
 		9CAEE03A201ABD92001FEAFB /* SearchDrinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDrinkViewController.xib; sourceTree = "<group>"; };
 		9CAEE03E201AC5FD001FEAFB /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		9CAEE03F201AC5FD001FEAFB /* VenueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
+		9CB34CB6204565B5004E0A37 /* MagicalGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicalGridController.swift; sourceTree = "<group>"; };
+		9CB34CB7204565B5004E0A37 /* MagicalGridController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MagicalGridController.xib; sourceTree = "<group>"; };
 		9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CBA95F2200C8A1A00ABA54D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -400,13 +404,13 @@
 			name = API;
 			sourceTree = "<group>";
 		};
-		9C1B964E202ADAAD000A5544 /* Tap */ = {
+		9C1B964E202ADAAD000A5544 /* LiveStream */ = {
 			isa = PBXGroup;
 			children = (
 				9C1B964F202ADB03000A5544 /* LiveStreamController.swift */,
 				9C1B9650202ADB03000A5544 /* LiveStreamController.xib */,
 			);
-			name = Tap;
+			name = LiveStream;
 			sourceTree = "<group>";
 		};
 		9C24BC932004AE6400374517 /* ViewController */ = {
@@ -550,7 +554,8 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9C1B964E202ADAAD000A5544 /* Tap */,
+				9CB34CB520456588004E0A37 /* MagicalGrid */,
+				9C1B964E202ADAAD000A5544 /* LiveStream */,
 				9C8D13772007100200C1BE5E /* Home */,
 				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
@@ -921,6 +926,15 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		9CB34CB520456588004E0A37 /* MagicalGrid */ = {
+			isa = PBXGroup;
+			children = (
+				9CB34CB6204565B5004E0A37 /* MagicalGridController.swift */,
+				9CB34CB7204565B5004E0A37 /* MagicalGridController.xib */,
+			);
+			name = MagicalGrid;
+			sourceTree = "<group>";
+		};
 		9CBA95F4200C8A1A00ABA54D /* TodayExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1269,6 +1283,7 @@
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
+				9CB34CB9204565B5004E0A37 /* MagicalGridController.xib in Resources */,
 				9CFDCFB32015E7E3009875CB /* AlbumViewController.xib in Resources */,
 				9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */,
 				9C1B9652202ADB03000A5544 /* LiveStreamController.xib in Resources */,
@@ -1426,6 +1441,7 @@
 				9C727A712011CC4E006CFB25 /* MovieViewModel.swift in Sources */,
 				9C727A6F2011A4EE006CFB25 /* Movie.swift in Sources */,
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
+				9CB34CB8204565B5004E0A37 /* MagicalGridController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
 				9CDB7449202D898200819FC6 /* MyLibrary.swift in Sources */,
 				9CD943C7201F176B001349AB /* APIBase.swift in Sources */,

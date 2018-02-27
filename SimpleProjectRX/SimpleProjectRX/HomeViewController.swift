@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
         case mvvm
         case drink
         case liveStream
+        case magicalGrid
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -37,7 +38,8 @@ final class HomeViewController: UIViewController {
         "Fetching Data From the Web",
         "MVVM - Demo",
         "ProjectDrinkCoffee",
-        "Live Stream Live"
+        "Live Stream Live",
+        "Magical Grid to Tinde"
         ]
 
     // MARK: - private func
@@ -73,6 +75,9 @@ final class HomeViewController: UIViewController {
             return vc
         case .liveStream:
             vc = LiveStreamController()
+            return vc
+        case .magicalGrid:
+            vc = MagicalGridController()
             return vc
         }
     }
