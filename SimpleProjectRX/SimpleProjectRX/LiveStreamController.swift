@@ -17,18 +17,26 @@ final class LiveStreamController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // background đường cong
         let curvedView = CurvedView(frame: view.frame)
         curvedView.backgroundColor = .yellow
         view.addSubview(curvedView)
 
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "heart").withRenderingMode(.alwaysOriginal))
-        imageView.frame = CGRect(x: 0, y: 300, width: 30, height: 30)
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "heart"))
+        // random kích thước image
+        let dimension = 20 + drand48() * 10
+        imageView.frame = CGRect(x: 0, y: 300, width: dimension, height: 30)
 
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = customPath().cgPath
         animation.duration = 3
+
+        // biết mất hình sau khi animation
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
+
+        // animation nhanh sau đó chậm dần
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 
         imageView.layer.add(animation, forKey: nil)
         view.addSubview(imageView)
