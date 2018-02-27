@@ -20,7 +20,8 @@ final class LiveStreamController: UIViewController {
     }
 
     func handleTap() {
-        (0...10).forEach({ (_) in
+        // số lượng image muốn hiển thị : ví dụ 5 icon
+        (0...4).forEach({ (_) in
             generateAnimationViews()
         })
     }
@@ -33,7 +34,8 @@ final class LiveStreamController: UIViewController {
 
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = customPath().cgPath
-        animation.duration = 3
+        // random thời gian
+        animation.duration = 2 + drand48() * 3
 
         // biết mất hình sau khi animation
         animation.fillMode = kCAFillModeForwards
@@ -51,8 +53,11 @@ func customPath() -> UIBezierPath {
     let path = UIBezierPath()
     path.move(to: CGPoint(x: 0, y: 200))
     let endPoint = CGPoint(x: 400, y: 200)
-    let cp1 = CGPoint(x: 100, y: 100)
-    let cp2 = CGPoint(x: 200, y: 300)
+
+    // random độ cao và độ thấp của image
+    let randomY = 200 + drand48() * 300
+    let cp1 = CGPoint(x: 100, y: 100 - randomY)
+    let cp2 = CGPoint(x: 200, y: 300 + randomY)
     path.addCurve(to: endPoint, controlPoint1: cp1, controlPoint2: cp2)
     return path
 }
