@@ -16,18 +16,21 @@ final class LiveStreamController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "live stream like faceBook"
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
 
     func handleTap() {
-        // số lượng image muốn hiển thị : ví dụ 5 icon
-        (0...4).forEach({ (_) in
+        // số lượng image muốn hiển thị : ví dụ 10 icon
+        (0...10).forEach({ (_) in
             generateAnimationViews()
         })
     }
 
     fileprivate func generateAnimationViews() {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "heart"))
+        let image = drand48() > 0.5 ? #imageLiteral(resourceName: "heart") : #imageLiteral(resourceName: "like")
+        let imageView = UIImageView(image: image)
+
         // random kích thước image
         let dimension = 20 + drand48() * 10
         imageView.frame = CGRect(x: 0, y: 300, width: dimension, height: 30)
