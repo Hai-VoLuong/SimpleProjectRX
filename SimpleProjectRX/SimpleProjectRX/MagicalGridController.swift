@@ -17,12 +17,23 @@ class MagicalGridController: UIViewController {
         let numViewPerRow = 15
         let width = view.frame.width / CGFloat(numViewPerRow)
 
-        for i in 0...numViewPerRow {
-            let redView = UIView()
-            redView.backgroundColor = randomColor()
-            redView.frame = CGRect(x: CGFloat(i) * width , y: 64, width: width , height: width)
-            view.addSubview(redView)
+        for j in 0...30 {
+            for i in 0...numViewPerRow {
+                let cellView = UIView()
+                cellView.backgroundColor = randomColor()
+                cellView.frame = CGRect(x: CGFloat(i) * width , y: 64 + (CGFloat(j) * width), width: width , height: width)
+                cellView.layer.borderWidth = 0.5
+                cellView.layer.borderColor = UIColor.black.cgColor
+                view.addSubview(cellView)
+
+                view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan)))
+            }
         }
+    }
+
+    func handlePan(gesture: UIPanGestureRecognizer) {
+        let location = gesture.location(in: view)
+        print(location)
     }
 
     private func randomColor() -> UIColor {
