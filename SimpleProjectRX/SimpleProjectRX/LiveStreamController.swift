@@ -16,12 +16,16 @@ final class LiveStreamController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+    }
 
-        // background đường cong
-        let curvedView = CurvedView(frame: view.frame)
-        curvedView.backgroundColor = .yellow
-        view.addSubview(curvedView)
+    func handleTap() {
+        (0...10).forEach({ (_) in
+            generateAnimationViews()
+        })
+    }
 
+    fileprivate func generateAnimationViews() {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "heart"))
         // random kích thước image
         let dimension = 20 + drand48() * 10
@@ -40,7 +44,6 @@ final class LiveStreamController: UIViewController {
 
         imageView.layer.add(animation, forKey: nil)
         view.addSubview(imageView)
-
     }
 }
 
