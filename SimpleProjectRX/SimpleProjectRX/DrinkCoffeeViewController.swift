@@ -133,7 +133,7 @@ extension DrinkCoffeeViewController {
         searchButton.rx.tap
         .asDriver()
         .drive(onNext: {
-            self.navigationController?.pushViewController(FavoriteViewController(), animated: true)
+            self.navigationController?.pushViewController(SearchDrinkViewController(), animated: true)
         }).addDisposableTo(bag)
 
         navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: favoriteButton),UIBarButtonItem(customView: searchButton)]
