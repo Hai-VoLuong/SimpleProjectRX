@@ -6,8 +6,6 @@
 //  Copyright © 2018 Hai Vo L. All rights reserved.
 //
 
-import Foundation
-import RealmSwift
 import ObjectMapper
 
 let dateTimeFormatter = { () -> DateFormatter in
@@ -24,7 +22,7 @@ class Tip: Mappable {
     var photoSuffix = ""
     var user: UserMap?
 
-    var createString: String {
+    var createAtString: String {
         return dateTimeFormatter.string(from: createdAt)
     }
 

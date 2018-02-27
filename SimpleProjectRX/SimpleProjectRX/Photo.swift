@@ -6,26 +6,18 @@
 //  Copyright © 2018 Hai Vo L. All rights reserved.
 //
 
-import Foundation
-import RealmSwift
 import ObjectMapper
 
-class Photo: Object, Mappable {
-    dynamic var id: String!
-    dynamic var prefix: String = ""
-    dynamic var suffix: String = ""
-    dynamic var width: Int = 0
-    dynamic var height: Int = 0
-
-    override class func primaryKey() -> String? {
-        return "id"
-    }
+class Photo: Mappable {
+    var id: String = ""
+    var prefix: String = ""
+    var suffix: String = ""
+    var width: Int = 0
+    var height: Int = 0
 
     required convenience init?(map: Map) {
         self.init()
-        if map.JSON["id"] == nil {
-            return nil
-        }
+        guard let _ = map.JSON["id"] as? String else { return nil }
     }
 
     func mapping(map: Map) {

@@ -17,7 +17,7 @@ final class DrinkCoffeeViewController: UIViewController {
     @IBOutlet private weak var segmentControl: UISegmentedControl!
 
     // MARK: - Private Properties
-    private let bag = DisposeBag()
+    fileprivate let bag = DisposeBag()
     private var refreshControl = UIRefreshControl()
     var viewModel = DrinkViewModel()
 
@@ -42,7 +42,7 @@ final class DrinkCoffeeViewController: UIViewController {
             }).addDisposableTo(bag)
 
         // itemsSelected
-        tableView.rx.itemSelected
+        _ = tableView.rx.itemSelected
             .map({ indexPath in
                self.viewModel.venueItem(at: indexPath)
             })
@@ -52,7 +52,7 @@ final class DrinkCoffeeViewController: UIViewController {
                 case .next(let venue, let indexPath):
                     this.tableView.deselectRow(at: indexPath, animated: true)
                     let detail = VenueDetailViewController()
-                    detail.venue = venue
+                    detail.viewModel = VenueDetailModel(venueId: venue.id)
                     this.navigationController?.pushViewController(detail, animated: true)
                 case .error(let error):
                     this.alert(message: "error: \(error.localizedDescription)")
@@ -104,30 +104,39 @@ final class DrinkCoffeeViewController: UIViewController {
 }
 
 // MARKL: - Extenion DrinkCoffeeViewController Navigation
+enum mau: String {
+    case sandyBrown
+    case coolGrey
+    case unknown
+}
+
 extension DrinkCoffeeViewController {
 
     fileprivate func setupRightNavItems() {
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.isTranslucent = false
 
         let favoriteButton = UIButton(type: .system)
-        favoriteButton.setImage(#imageLiteral(resourceName: "favor_1").withRenderingMode(.alwaysOriginal), for: .normal)
+        if #available(iOS 11.0, *) {
+            favoriteButton.backgroundColor = UIColor(named: mau.coolGrey.rawValue)
+        } else {
+            favoriteButton.setImage(#imageLiteral(resourceName: "favor_1").withRenderingMode(.alwaysOriginal), for: .normal)
+        }
         favoriteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        favoriteButton.addTarget(self, action: #selector(pushFavoriteController), for: .touchUpInside)
+        favoriteButton.rx.tap
+        .asDriver()
+        .drive(onNext: {
+            self.navigationController?.pushViewController(FavoriteViewController(), animated: true)
+        }).addDisposableTo(bag)
 
         let searchButton = UIButton(type: .system)
         searchButton.setImage(#imageLiteral(resourceName: "search").withRenderingMode(.alwaysOriginal), for: .normal)
         searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        searchButton.addTarget(self, action: #selector(pushSearchController), for: .touchUpInside)
+        searchButton.rx.tap
+        .asDriver()
+        .drive(onNext: {
+            self.navigationController?.pushViewController(SearchDrinkViewController(), animated: true)
+        }).addDisposableTo(bag)
 
         navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: favoriteButton),UIBarButtonItem(customView: searchButton)]
-    }
 
-    @objc private func pushFavoriteController() {
-        navigationController?.pushViewController(FavoriteViewController(), animated: true)
-    }
-
-    @objc private func pushSearchController() {
-        navigationController?.pushViewController(SearchDrinkViewController(), animated: true)
     }
 }
