@@ -20,6 +20,19 @@ final class LiveStreamController: UIViewController {
         let curvedView = CurvedView(frame: view.frame)
         curvedView.backgroundColor = .yellow
         view.addSubview(curvedView)
+
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "heart").withRenderingMode(.alwaysOriginal))
+        imageView.frame = CGRect(x: 0, y: 300, width: 30, height: 30)
+
+        let animation = CAKeyframeAnimation(keyPath: "position")
+        animation.path = customPath().cgPath
+        animation.duration = 3
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
+
+        imageView.layer.add(animation, forKey: nil)
+        view.addSubview(imageView)
+
     }
 }
 
