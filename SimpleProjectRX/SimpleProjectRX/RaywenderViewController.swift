@@ -16,10 +16,14 @@ final class RaywenderViewController: UIViewController {
     // MARK: - Dummy Data
     fileprivate enum Demo: Int {
         case DesignPattern
+        case liveStream
+        case magicalGrid
     }
 
     fileprivate let dummyDatas: [String] = [
-        "Design Patterns"
+        "Design Patterns",
+        "Live Stream Live",
+        "Magical Grid to Tinde"
         ]
 
     // MARK: - private func
@@ -28,6 +32,12 @@ final class RaywenderViewController: UIViewController {
         switch demo {
         case .DesignPattern:
             vc = DesignPatternViewController()
+            return vc
+        case .liveStream:
+            vc = LiveStreamController()
+            return vc
+        case .magicalGrid:
+            vc = MagicalGridController()
             return vc
         }
     }
