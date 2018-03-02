@@ -554,8 +554,6 @@
 		9C55D8871FFB431D00F29453 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9CB34CB520456588004E0A37 /* MagicalGrid */,
-				9C1B964E202ADAAD000A5544 /* LiveStream */,
 				9C8D13772007100200C1BE5E /* Home */,
 				9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */,
 				9C55D8A11FFB6DC100F29453 /* MVVM */,
@@ -599,6 +597,8 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9CB34CB520456588004E0A37 /* MagicalGrid */,
+				9C1B964E202ADAAD000A5544 /* LiveStream */,
 				9C8D137A2007104F00C1BE5E /* Raywender */,
 				9C8D136B200708F200C1BE5E /* Design Patterns */,
 			);
