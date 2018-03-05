@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AnimatedCircleProgressBar: UIViewController {
-
+class AnimatedCircleProgressBar: UIViewController, URLSessionDownloadDelegate {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("Finish download ")
+    }
 
     let shapeLayer = CAShapeLayer()
 
@@ -43,10 +45,32 @@ class AnimatedCircleProgressBar: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
 
-    func handleTap() {
+    fileprivate func animateCircle() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 1
         basicAnimation.duration = 2
+
+        // nhìn thấy trạng thái cuối cùng của animation
+        basicAnimation.fillMode = kCAFillModeForwards
+        basicAnimation.isRemovedOnCompletion = false
+
         shapeLayer.add(basicAnimation, forKey: "urlSoBasic")
+    }
+
+     let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+
+    fileprivate func beginDownloadFile() {
+        print("begin download")
+        let configuration = URLSessionConfiguration.default
+        let operation = OperationQueue()
+        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operation)
+        guard let url = URL(string: urlString) else { return }
+        let downloadTask = urlSession.downloadTask(with: url)
+        downloadTask.resume()
+    }
+
+    func handleTap() {
+        animateCircle()
+        beginDownloadFile()
     }
 }
