@@ -2,13 +2,14 @@
 //  AnimatedCircleProgressBar.swift
 //  SimpleProjectRX
 //
-//  Created by Hai Vo L. on 3/2/18.
+//  Created by Hai Vo L. on 3/5/18.
 //  Copyright © 2018 Hai Vo L. All rights reserved.
 //
 
 import UIKit
 
-final class AnimatedCircleProgressBar: UIViewController {
+class AnimatedCircleProgressBar: UIViewController {
+
 
     let shapeLayer = CAShapeLayer()
 
@@ -43,7 +44,7 @@ final class AnimatedCircleProgressBar: UIViewController {
     }
 
     func handleTap() {
-       let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 1
         basicAnimation.duration = 2
         shapeLayer.add(basicAnimation, forKey: "urlSoBasic")

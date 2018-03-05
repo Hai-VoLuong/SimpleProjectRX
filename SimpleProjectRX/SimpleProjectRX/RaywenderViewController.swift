@@ -18,12 +18,14 @@ final class RaywenderViewController: UIViewController {
         case DesignPattern
         case liveStream
         case magicalGrid
+        case animatedCircleProgressBar
     }
 
     fileprivate let dummyDatas: [String] = [
         "Design Patterns",
         "Live Stream Live",
-        "Magical Grid to Tinde"
+        "Magical Grid to Tinde",
+        "Animated Circle ProgressBar"
         ]
 
     // MARK: - private func
@@ -39,6 +41,10 @@ final class RaywenderViewController: UIViewController {
         case .magicalGrid:
             vc = MagicalGridController()
             return vc
+        case .animatedCircleProgressBar:
+            vc = AnimatedCircleProgressBar()
+            return vc
+
         }
     }
 
