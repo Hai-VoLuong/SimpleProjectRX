@@ -19,13 +19,15 @@ final class RaywenderViewController: UIViewController {
         case liveStream
         case magicalGrid
         case animatedCircleProgressBar
+        case tinderProfileGrid
     }
 
     fileprivate let dummyDatas: [String] = [
         "Design Patterns",
         "Live Stream Live",
         "Magical Grid to Tinde",
-        "Animated Circle ProgressBar"
+        "Animated Circle ProgressBar",
+        "Tinder Profile Grid"
         ]
 
     // MARK: - private func
@@ -44,6 +46,9 @@ final class RaywenderViewController: UIViewController {
         case .animatedCircleProgressBar:
             vc = AnimatedCircleProgressBar()
             return vc
+        case .tinderProfileGrid:
+            vc = TinderProfileGrid()
+            return vc
 
         }
     }
@@ -52,7 +57,7 @@ final class RaywenderViewController: UIViewController {
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Home"
+        navigationItem.title = "Raywender"
         tableView.backgroundColor = UIColor.white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self

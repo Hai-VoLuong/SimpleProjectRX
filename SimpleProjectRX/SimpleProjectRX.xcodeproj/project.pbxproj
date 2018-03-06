@@ -28,8 +28,11 @@
 		9C24BC972004B0D000374517 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC952004B0D000374517 /* RepoCell.swift */; };
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
 		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
+		9C2C3635204E8A6600808E42 /* TinderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3634204E8A6600808E42 /* TinderImageView.swift */; };
 		9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */; };
 		9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */; };
+		9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */; };
+		9C2F0DCE204D47AE003E52FD /* TinderProfileGrid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCC204D47AE003E52FD /* TinderProfileGrid.xib */; };
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
 		9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */; };
@@ -72,6 +75,7 @@
 		9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */; };
 		9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */; };
 		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
+		9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5846F4204D4D59008FC2C0 /* Header.xib */; };
 		9C5B4D8420035FAC00C0514C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8220035FAC00C0514C /* RepoListViewController.swift */; };
 		9C5B4D8520035FAC00C0514C /* RepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */; };
 		9C5B4D882003608A00C0514C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D872003608A00C0514C /* Repo.swift */; };
@@ -207,8 +211,11 @@
 		9C24BC952004B0D000374517 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
+		9C2C3634204E8A6600808E42 /* TinderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderImageView.swift; sourceTree = "<group>"; };
 		9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Search.swift"; sourceTree = "<group>"; };
+		9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderProfileGrid.swift; sourceTree = "<group>"; };
+		9C2F0DCC204D47AE003E52FD /* TinderProfileGrid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinderProfileGrid.xib; sourceTree = "<group>"; };
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
 		9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -251,6 +258,7 @@
 		9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingDataViewController.xib; sourceTree = "<group>"; };
 		9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
+		9C5846F4204D4D59008FC2C0 /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		9C5B4D8220035FAC00C0514C /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListViewController.xib; sourceTree = "<group>"; };
 		9C5B4D872003608A00C0514C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -453,6 +461,17 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		9C2F0DCA204D4784003E52FD /* TinderProfileGrid */ = {
+			isa = PBXGroup;
+			children = (
+				9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */,
+				9C2F0DCC204D47AE003E52FD /* TinderProfileGrid.xib */,
+				9C5846F4204D4D59008FC2C0 /* Header.xib */,
+				9C2C3634204E8A6600808E42 /* TinderImageView.swift */,
+			);
+			name = TinderProfileGrid;
+			sourceTree = "<group>";
+		};
 		9C37E6131FFF29E400D9A7E6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +629,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C2F0DCA204D4784003E52FD /* TinderProfileGrid */,
 				9C1A944D204CE16C006D2ACC /* AnimatedCircleProgressBar */,
 				9CB34CB520456588004E0A37 /* MagicalGrid */,
 				9C1B964E202ADAAD000A5544 /* LiveStream */,
@@ -1283,6 +1303,7 @@
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
+				9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
@@ -1294,6 +1315,7 @@
 				9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */,
 				9C80F24E20231B4400A405A1 /* TipCell.xib in Resources */,
 				9C55D8B11FFB6F1E00F29453 /* GalleryImageViewController.xib in Resources */,
+				9C2F0DCE204D47AE003E52FD /* TinderProfileGrid.xib in Resources */,
 				9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */,
 				9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */,
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
@@ -1468,7 +1490,9 @@
 				9C55D8971FFB43CF00F29453 /* RaywenderViewController.swift in Sources */,
 				9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */,
 				9CC927FA20181F4000A9C055 /* CarListViewModel.swift in Sources */,
+				9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */,
 				9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */,
+				9C2C3635204E8A6600808E42 /* TinderImageView.swift in Sources */,
 				9CC9280420182EC000A9C055 /* CarTableViewCell.swift in Sources */,
 				9C55D8A41FFB6DFD00F29453 /* CalculatorViewController.swift in Sources */,
 				9CD943C9201F1E59001349AB /* APIBase+Venue.swift in Sources */,
