@@ -20,6 +20,7 @@ final class RaywenderViewController: UIViewController {
         case magicalGrid
         case animatedCircleProgressBar
         case tinderProfileGrid
+        case autoLayoutThroughExtensions
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -27,7 +28,8 @@ final class RaywenderViewController: UIViewController {
         "Live Stream Live",
         "Magical Grid to Tinde",
         "Animated Circle ProgressBar",
-        "Tinder Profile Grid"
+        "Tinder Profile Grid",
+        "AutoLayoutThroughExtensions"
         ]
 
     // MARK: - private func
@@ -49,7 +51,9 @@ final class RaywenderViewController: UIViewController {
         case .tinderProfileGrid:
             vc = TinderProfileGrid()
             return vc
-
+        case .autoLayoutThroughExtensions:
+            vc = AutoLayoutThroughExtensions()
+            return vc
         }
     }
 
