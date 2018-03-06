@@ -10,6 +10,7 @@ import UIKit
 
 class TinderProfileGrid: UIViewController {
 
+    // 7:51
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Tinder Profile Grid"

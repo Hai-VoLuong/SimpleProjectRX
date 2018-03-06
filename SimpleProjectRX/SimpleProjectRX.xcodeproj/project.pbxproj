@@ -74,6 +74,7 @@
 		9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */; };
 		9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */; };
 		9C55D8C11FFB6FF900F29453 /* MVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */; };
+		9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5846F4204D4D59008FC2C0 /* Header.xib */; };
 		9C5B4D8420035FAC00C0514C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8220035FAC00C0514C /* RepoListViewController.swift */; };
 		9C5B4D8520035FAC00C0514C /* RepoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */; };
 		9C5B4D882003608A00C0514C /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B4D872003608A00C0514C /* Repo.swift */; };
@@ -255,6 +256,7 @@
 		9C55D8BB1FFB6FCD00F29453 /* FetchingDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FetchingDataViewController.xib; sourceTree = "<group>"; };
 		9C55D8BE1FFB6FF900F29453 /* MVVMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		9C55D8BF1FFB6FF900F29453 /* MVVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMViewController.xib; sourceTree = "<group>"; };
+		9C5846F4204D4D59008FC2C0 /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		9C5B4D8220035FAC00C0514C /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		9C5B4D8320035FAC00C0514C /* RepoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoListViewController.xib; sourceTree = "<group>"; };
 		9C5B4D872003608A00C0514C /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			children = (
 				9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */,
 				9C2F0DCC204D47AE003E52FD /* TinderProfileGrid.xib */,
+				9C5846F4204D4D59008FC2C0 /* Header.xib */,
 			);
 			name = TinderProfileGrid;
 			sourceTree = "<group>";
@@ -1297,6 +1300,7 @@
 				9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */,
 				9CD681511FFB1E080077729C /* Assets.xcassets in Resources */,
 				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
+				9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
