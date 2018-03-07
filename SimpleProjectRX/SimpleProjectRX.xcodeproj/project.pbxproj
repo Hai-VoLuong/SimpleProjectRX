@@ -29,6 +29,7 @@
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
 		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
 		9C2C3635204E8A6600808E42 /* TinderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3634204E8A6600808E42 /* TinderImageView.swift */; };
+		9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */; };
 		9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */; };
 		9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */; };
 		9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */; };
@@ -212,6 +213,7 @@
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
 		9C2C3634204E8A6600808E42 /* TinderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderImageView.swift; sourceTree = "<group>"; };
+		9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThroughExtensions.swift; sourceTree = "<group>"; };
 		9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Search.swift"; sourceTree = "<group>"; };
 		9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderProfileGrid.swift; sourceTree = "<group>"; };
@@ -461,6 +463,14 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
+		9C2C3636204EA14800808E42 /* AutoLayoutThroughExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */,
+			);
+			name = AutoLayoutThroughExtensions;
+			sourceTree = "<group>";
+		};
 		9C2F0DCA204D4784003E52FD /* TinderProfileGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +639,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C2C3636204EA14800808E42 /* AutoLayoutThroughExtensions */,
 				9C2F0DCA204D4784003E52FD /* TinderProfileGrid */,
 				9C1A944D204CE16C006D2ACC /* AnimatedCircleProgressBar */,
 				9CB34CB520456588004E0A37 /* MagicalGrid */,
@@ -1534,6 +1545,7 @@
 				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
+				9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */,
 				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
 				9C727A742011DAB9006CFB25 /* JSONDownloader.swift in Sources */,
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
