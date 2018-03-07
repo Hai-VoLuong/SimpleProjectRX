@@ -23,6 +23,13 @@ struct Course {
     let name: String
     let link: String
     let imageUrl: String
+
+    init(json: [String: Any]) {
+        id = json["id"] as? Int ?? -1
+        name = json["name"] as? String ?? ""
+        link = json["link"] as? String ?? ""
+        imageUrl = json["imageUrl"] as? String ?? ""
+    }
 }
 
 class ParsingJSONWithDecodable: UIViewController {
@@ -36,8 +43,15 @@ class ParsingJSONWithDecodable: UIViewController {
         guard let url = URL(string: jsonString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
-            let dataString = String(data: data, encoding: .utf8)
-            print(dataString)
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: AnyObject] else { return }
+                let course = Course(json: json)
+                print(course)
+            } catch let err {
+                print("error serializing json, \(err.localizedDescription)")
+            }
+
+
         }.resume()
 
     }
