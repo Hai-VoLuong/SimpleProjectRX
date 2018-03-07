@@ -48,6 +48,14 @@ class AutoLayoutThroughExtensions: UIViewController {
         return view
     }()
 
+    let textView: UITextView = {
+        let tv = UITextView()
+        tv.backgroundColor = .lightGray
+        tv.font = UIFont.preferredFont(forTextStyle: .headline)
+        tv.text = ""
+        return tv
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "auto layout extension"
@@ -66,9 +74,29 @@ class AutoLayoutThroughExtensions: UIViewController {
 
             whiteView.anchor(top: blueView.bottomAnchor, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: blueView.trailingAnchor, padding: .init(top: 12, left: 12, bottom: 0, right: 0), size: .init(width: 0, height: 200))
 
+            whiteView.addSubview(textView)
+            textView.anchor(top: whiteView.topAnchor, leading: whiteView.leadingAnchor, bottom: nil, trailing: whiteView.trailingAnchor, padding: .zero, size: .init(width: 0, height: 50))
+
+            textView.delegate = self
+            textView.isScrollEnabled = false
+            textViewDidChange(textView)
         } else {
 
         }
+    }
+}
+
+extension AutoLayoutThroughExtensions: UITextViewDelegate {
+
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: whiteView.frame.width, height: .infinity)
+        let estimateSize = textView.sizeThatFits(size)
+
+        textView.constraints.forEach({ contraint in
+            if contraint.firstAttribute == .height {
+                contraint.constant = estimateSize.height
+            }
+        })
     }
 }
 
