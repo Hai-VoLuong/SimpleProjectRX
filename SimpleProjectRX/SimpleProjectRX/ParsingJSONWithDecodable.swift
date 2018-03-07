@@ -12,11 +12,29 @@ import UIKit
  1 --> https://api.letsbuildthatapp.com/jsondecodable/course
 
  {
- "id": 1,
- "name": "Instagram Firebase",
- "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
- "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93"
+     "id": 1,
+     "name": "Instagram Firebase",
+     "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
+     "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93"
  }
+
+2 --> https://api.letsbuildthatapp.com/jsondecodable/courses
+
+ [
+     {
+         "id": 1,
+         "name": "Instagram Firebase",
+         "link": "https://www.letsbuildthatapp.com/course/instagram-firebase",
+         "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/04782e30-d72a-4917-9d7a-c862226e0a93"
+         },
+         {
+         "id": 3,
+         "name": "Kindle Basic Training",
+         "link": "https://www.letsbuildthatapp.com/basic-training",
+         "imageUrl": "https://letsbuildthatapp-videos.s3-us-west-2.amazonaws.com/a6180731-c077-46e7-88d5-4900514e06cf"
+     }
+ ]
+
  */
 
 struct Course: Decodable {
@@ -33,13 +51,14 @@ class ParsingJSONWithDecodable: UIViewController {
         title = "Parsing JSON With Decodable"
 
         let jsonString1 = "https://api.letsbuildthatapp.com/jsondecodable/course"
+        let jsonString2 = "https://api.letsbuildthatapp.com/jsondecodable/courses"
 
-        guard let url = URL(string: jsonString) else { return }
+        guard let url = URL(string: jsonString2) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             do {
-                let course = try JSONDecoder().decode(Course.self, from: data)
-                print(course)
+                let courses = try JSONDecoder().decode([Course].self, from: data)
+                print(courses)
             } catch let err {
                 print("error serializing json, \(err.localizedDescription)")
             }
