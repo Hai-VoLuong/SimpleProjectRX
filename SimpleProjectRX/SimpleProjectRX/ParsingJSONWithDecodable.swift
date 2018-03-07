@@ -8,8 +8,9 @@
 
 import UIKit
 
-// https://api.letsbuildthatapp.com/jsondecodable/course
 /*
+ 1 --> https://api.letsbuildthatapp.com/jsondecodable/course
+
  {
  "id": 1,
  "name": "Instagram Firebase",
@@ -18,18 +19,11 @@ import UIKit
  }
  */
 
-struct Course {
+struct Course: Decodable {
     let id: Int
     let name: String
     let link: String
-    let imageUrl: String
-
-    init(json: [String: Any]) {
-        id = json["id"] as? Int ?? -1
-        name = json["name"] as? String ?? ""
-        link = json["link"] as? String ?? ""
-        imageUrl = json["imageUrl"] as? String ?? ""
-    }
+    // let imageUrl: String
 }
 
 class ParsingJSONWithDecodable: UIViewController {
@@ -38,14 +32,13 @@ class ParsingJSONWithDecodable: UIViewController {
         super.viewDidLoad()
         title = "Parsing JSON With Decodable"
 
-        let jsonString = "https://api.letsbuildthatapp.com/jsondecodable/course"
+        let jsonString1 = "https://api.letsbuildthatapp.com/jsondecodable/course"
 
         guard let url = URL(string: jsonString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             do {
-                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: AnyObject] else { return }
-                let course = Course(json: json)
+                let course = try JSONDecoder().decode(Course.self, from: data)
                 print(course)
             } catch let err {
                 print("error serializing json, \(err.localizedDescription)")
