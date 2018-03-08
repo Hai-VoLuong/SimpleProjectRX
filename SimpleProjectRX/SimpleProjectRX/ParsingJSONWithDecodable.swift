@@ -99,6 +99,13 @@ class ParsingJSONWithDecodable: UIViewController {
         super.viewDidLoad()
         title = "Parsing JSON With Decodable"
 
+        getJson { (courses) in
+            print(courses)
+        }
+
+    }
+
+    private func getJson(completion:@escaping ([Course]) -> ()) {
         let jsonString1 = "https://api.letsbuildthatapp.com/jsondecodable/course"
         let jsonString2 = "https://api.letsbuildthatapp.com/jsondecodable/courses"
         let jsonString3 = "https://api.letsbuildthatapp.com/jsondecodable/website_description"
@@ -109,11 +116,10 @@ class ParsingJSONWithDecodable: UIViewController {
             guard let data = data else { return }
             do {
                 let courses = try JSONDecoder().decode([Course].self, from: data)
-                print(courses)
+                completion(courses)
             } catch let err {
                 print("error serializing json, \(err.localizedDescription)")
             }
         }.resume()
-
     }
 }
