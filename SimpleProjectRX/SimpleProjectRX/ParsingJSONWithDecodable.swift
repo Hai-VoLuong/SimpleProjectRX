@@ -76,6 +76,8 @@ import UIKit
      }
  ]
 
+ tham khao: https://grokswift.com/json-swift-4/
+
  */
 
 struct WebsiteDescription: Decodable {
