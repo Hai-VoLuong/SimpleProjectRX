@@ -53,6 +53,8 @@
 		9C4F69F42004801B00BDE993 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F32004801B00BDE993 /* EventList.swift */; };
 		9C4F69F62004802600BDE993 /* RepoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F52004802600BDE993 /* RepoService.swift */; };
 		9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */; };
+		9C553D75204FEB2D00A9A986 /* ParsingJSONWithDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C553D73204FEB2D00A9A986 /* ParsingJSONWithDecodable.swift */; };
+		9C553D76204FEB2D00A9A986 /* ParsingJSONWithDecodable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C553D74204FEB2D00A9A986 /* ParsingJSONWithDecodable.xib */; };
 		9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D87A1FFB2AC400F29453 /* TabbarController.swift */; };
 		9C55D8841FFB2C9400F29453 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55D8821FFB2C9400F29453 /* HomeViewController.swift */; };
 		9C55D8851FFB2C9400F29453 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C55D8831FFB2C9400F29453 /* HomeViewController.xib */; };
@@ -237,6 +239,8 @@
 		9C4F69F32004801B00BDE993 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		9C4F69F52004802600BDE993 /* RepoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoService.swift; sourceTree = "<group>"; };
 		9C4F69F820049E5E00BDE993 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		9C553D73204FEB2D00A9A986 /* ParsingJSONWithDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingJSONWithDecodable.swift; sourceTree = "<group>"; };
+		9C553D74204FEB2D00A9A986 /* ParsingJSONWithDecodable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParsingJSONWithDecodable.xib; sourceTree = "<group>"; };
 		9C55D87A1FFB2AC400F29453 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		9C55D8821FFB2C9400F29453 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C55D8831FFB2C9400F29453 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -562,6 +566,15 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		9C553D72204FEB0F00A9A986 /* ParsingJSONWithDecodable */ = {
+			isa = PBXGroup;
+			children = (
+				9C553D73204FEB2D00A9A986 /* ParsingJSONWithDecodable.swift */,
+				9C553D74204FEB2D00A9A986 /* ParsingJSONWithDecodable.xib */,
+			);
+			name = ParsingJSONWithDecodable;
+			sourceTree = "<group>";
+		};
 		9C55D8791FFB2A5200F29453 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +652,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C553D72204FEB0F00A9A986 /* ParsingJSONWithDecodable */,
 				9C2C3636204EA14800808E42 /* AutoLayoutThroughExtensions */,
 				9C2F0DCA204D4784003E52FD /* TinderProfileGrid */,
 				9C1A944D204CE16C006D2ACC /* AnimatedCircleProgressBar */,
@@ -1332,6 +1346,7 @@
 				9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */,
 				9CB34CB9204565B5004E0A37 /* MagicalGridController.xib in Resources */,
 				9CFDCFB32015E7E3009875CB /* AlbumViewController.xib in Resources */,
+				9C553D76204FEB2D00A9A986 /* ParsingJSONWithDecodable.xib in Resources */,
 				9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */,
 				9C1B9652202ADB03000A5544 /* LiveStreamController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
@@ -1457,6 +1472,7 @@
 			files = (
 				9C1B9651202ADB03000A5544 /* LiveStreamController.swift in Sources */,
 				9C1A9452204CE20D006D2ACC /* AnimatedCircleProgressBar.swift in Sources */,
+				9C553D75204FEB2D00A9A986 /* ParsingJSONWithDecodable.swift in Sources */,
 				9C4F69ED20047F5300BDE993 /* ResponseError.swift in Sources */,
 				9C55D8B81FFB6F9200F29453 /* CustomObservableViewController.swift in Sources */,
 				9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */,
