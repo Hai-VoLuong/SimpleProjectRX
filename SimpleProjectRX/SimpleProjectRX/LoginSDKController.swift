@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
+final class LoginSDKController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,16 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(customFBButton)
     }
 
-    @objc private func handleCustomFBLogin() {
+    fileprivate func presentAlert(message: String) {
+        let alertController = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
+    }
+}
+
+extension LoginSDKController: FBSDKLoginButtonDelegate {
+
+    @objc fileprivate func handleCustomFBLogin() {
         FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) {[weak self] (result, error) in
             guard let this = self else { return }
             if error != nil {
@@ -67,11 +76,5 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
                 self.presentAlert(message: user)
             }
         }
-    }
-
-    private func presentAlert(message: String) {
-        let alertController = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true)
     }
 }
