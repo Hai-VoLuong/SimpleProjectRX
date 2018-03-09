@@ -17,6 +17,7 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(loginButton)
         loginButton.frame = CGRect(x: 16, y: 100, width: view.frame.width / 2 + 40 , height: 50)
         loginButton.delegate = self
+        loginButton.readPermissions = ["email", "public_profile"]
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
@@ -30,5 +31,13 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
         }
 
         print("Successfully logged in with faceBook...")
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, link, first_name, last_name, picture.type(large), email"]).start { (connection, result, error) in
+            if error != nil {
+                print("Failed to start graph request: ", error)
+                return
+            }
+
+            print(result)
+        }
     }
 }
