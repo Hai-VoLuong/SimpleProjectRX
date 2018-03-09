@@ -38,4 +38,8 @@ target 'SimpleProjectRX' do
   pod 'Moya', '~> 10.0'
   pod 'LGSideMenuController', '~> 2.1'
 
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
+
 end

@@ -3,10 +3,22 @@ PODS:
     - RxCocoa (~> 3.4)
     - RxSwift (~> 3.4)
   - Alamofire (4.5.1)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Differentiator (2.0.2)
+  - FBSDKCoreKit (4.30.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.30.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.30.0):
+    - FBSDKCoreKit (~> 4.30.0)
   - Kingfisher (3.13.1)
   - LGSideMenuController (2.1.1)
   - Moya (10.0.1):
@@ -48,6 +60,9 @@ DEPENDENCIES:
   - Action
   - Alamofire (~> 4.5)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - Kingfisher (~> 3.10)
   - LGSideMenuController (~> 2.1)
   - Moya (~> 10.0)
@@ -76,8 +91,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Action: 991c9e175e04675028724868768aa08f22c85476
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Differentiator: caa9b3957981a2ac8e6b2eac8a676af461caa604
+  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
+  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
+  FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
   Kingfisher: ed9707a409cc47fddafbcd12a43a9757e3600af5
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   Moya: 9e621707ff754eeb51ff3ec51a3d54e517c0733a
@@ -97,6 +116,6 @@ SPEC CHECKSUMS:
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
 
-PODFILE CHECKSUM: ff0f83f7158b7d379f24510abdfc881483bdd161
+PODFILE CHECKSUM: 814855cab13e2992084fb8f2831573b37212c0ff
 
 COCOAPODS: 1.3.1
