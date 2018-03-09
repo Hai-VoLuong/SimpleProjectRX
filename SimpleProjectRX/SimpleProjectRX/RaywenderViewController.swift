@@ -22,6 +22,7 @@ final class RaywenderViewController: UIViewController {
         case tinderProfileGrid
         case autoLayoutThroughExtensions
         case parsingJSONWithDecodable
+        case loginSDK
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -31,7 +32,8 @@ final class RaywenderViewController: UIViewController {
         "Animated Circle ProgressBar",
         "Tinder Profile Grid",
         "AutoLayoutThroughExtensions",
-        "ParsingJSON With Decodable"
+        "ParsingJSON With Decodable",
+        "Login SDK"
         ]
 
     // MARK: - private func
@@ -58,6 +60,9 @@ final class RaywenderViewController: UIViewController {
             return vc
         case .parsingJSONWithDecodable:
             vc = ParsingJSONWithDecodable()
+            return vc
+        case .loginSDK:
+            vc = LoginSDKController()
             return vc
         }
     }
