@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import SVProgressHUD
 import FBSDKCoreKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // setupFBSDK
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+        // setupFireBase
+        FirebaseApp.configure()
 
         let tabbarController = TabbarController()
         window?.rootViewController = tabbarController
