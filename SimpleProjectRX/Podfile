@@ -42,4 +42,6 @@ target 'SimpleProjectRX' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
 
+  pod 'Firebase/Auth'
+
 end
