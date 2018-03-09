@@ -66,6 +66,8 @@ extension LoginSDKController: FBSDKLoginButtonDelegate {
     }
 
     fileprivate func showEmailAddress() {
+
+        // login Firebase with user facebook
         let accessToken = FBSDKAccessToken.current()
         guard let accessTokenString = accessToken?.tokenString else { return }
 
@@ -79,6 +81,7 @@ extension LoginSDKController: FBSDKLoginButtonDelegate {
             print("Successfully logged in with our user: ", user?.email ?? "")
         })
 
+        // get infor user from facebook
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, link, first_name, last_name, picture.type(large), email"]).start { (connection, result, error) in
             if error != nil {
                 print("Failed to start graph request: ", error ?? "")
