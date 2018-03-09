@@ -18,7 +18,29 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.frame = CGRect(x: 16, y: 100, width: view.frame.width / 2 + 40 , height: 50)
         loginButton.delegate = self
         loginButton.readPermissions = ["email", "public_profile"]
+
+        // add custom login facebook
+        let customFBButton = UIButton(type: .system)
+        customFBButton.backgroundColor = .blue
+        customFBButton.frame = CGRect(x: 16, y: 160, width: view.frame.width / 2 + 40 , height: 50)
+        customFBButton.setTitle("Custom FB Login here", for: .normal)
+        customFBButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        customFBButton.setTitleColor(.white, for: .normal)
+        customFBButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+        view.addSubview(customFBButton)
     }
+
+    @objc private func handleCustomFBLogin() {
+        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) {[weak self] (result, error) in
+            guard let this = self else { return }
+            if error != nil {
+                print("Custom FB Login Failed: ", error)
+                return
+            }
+            this.showEmailAddress()
+        }
+    }
+
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did log out of FaceBook")
@@ -30,14 +52,26 @@ final class LoginSDKController: UIViewController, FBSDKLoginButtonDelegate {
             return
         }
 
+        showEmailAddress()
+    }
+
+    fileprivate func showEmailAddress() {
         print("Successfully logged in with faceBook...")
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, link, first_name, last_name, picture.type(large), email"]).start { (connection, result, error) in
             if error != nil {
                 print("Failed to start graph request: ", error)
                 return
             }
-
-            print(result)
+            if let result = result as? [String: Any]  {
+                let user = result["email"] as! String
+                self.presentAlert(message: user)
+            }
         }
+    }
+
+    private func presentAlert(message: String) {
+        let alertController = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
     }
 }
