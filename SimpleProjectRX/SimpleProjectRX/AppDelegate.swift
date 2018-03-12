@@ -45,7 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             return
         }
 
-        print("Successfully logged into google, ", user)
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let err = error {
+                print("Failed to create a Firebase Use with google account: ", err)
+                return
+            }
+            print("Successfully logged into google, ", user?.email)
+        }
+
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

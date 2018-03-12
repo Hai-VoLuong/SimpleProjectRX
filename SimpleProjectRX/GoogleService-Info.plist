@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>943431096249-vvjkeughof22r55sru5b3dhr4f9hpd2t.apps.googleusercontent.com</string>
+	<string>989732410106-mb9dbumohe1viird52saj5kj8iv9nh4r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.943431096249-vvjkeughof22r55sru5b3dhr4f9hpd2t</string>
+	<string>com.googleusercontent.apps.989732410106-mb9dbumohe1viird52saj5kj8iv9nh4r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD6q9I_5-T9-7NoykJYaf9uudzQZuJ3iok</string>
+	<string>AIzaSyCV72hBTy-aWFn6B7n4Ia2OylCEpvsq4Sc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>943431096249</string>
+	<string>989732410106</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>vn.asiantech.dev.SimpleProjectRX</string>
 	<key>PROJECT_ID</key>
-	<string>simpleprojectrx-6b084</string>
+	<string>simpleprojectrx</string>
 	<key>STORAGE_BUCKET</key>
-	<string>simpleprojectrx-6b084.appspot.com</string>
+	<string>simpleprojectrx.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:943431096249:ios:757322a06f454684</string>
+	<string>1:989732410106:ios:757322a06f454684</string>
 	<key>DATABASE_URL</key>
-	<string>https://simpleprojectrx-6b084.firebaseio.com</string>
+	<string>https://simpleprojectrx.firebaseio.com</string>
 </dict>
 </plist>
