@@ -66,7 +66,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
         // add custom login facebook
         let customFBButton = UIButton(type: .system)
-        customFBButton.backgroundColor = .blue
+        customFBButton.backgroundColor = UIColor(red: 53/255, green: 68/255, blue: 107/255, alpha: 1)
         customFBButton.frame = CGRect(x: 16, y: 160, width: view.frame.width / 2 + 40 , height: 50)
         customFBButton.setTitle("Custom FB Login here", for: .normal)
         customFBButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
