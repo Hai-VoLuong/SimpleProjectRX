@@ -33,6 +33,7 @@
 		9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */; };
 		9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */; };
 		9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */; };
+		9C2C4EE7205684A2008FACA6 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE6205684A2008FACA6 /* PageCell.swift */; };
 		9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */; };
 		9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */; };
 		9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */; };
@@ -224,6 +225,7 @@
 		9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThroughExtensions.swift; sourceTree = "<group>"; };
 		9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWalkthroughController.swift; sourceTree = "<group>"; };
 		9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWalkthroughController.xib; sourceTree = "<group>"; };
+		9C2C4EE6205684A2008FACA6 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Search.swift"; sourceTree = "<group>"; };
 		9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderProfileGrid.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 			children = (
 				9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */,
 				9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */,
+				9C2C4EE6205684A2008FACA6 /* PageCell.swift */,
 			);
 			name = LoginWalkthrough;
 			sourceTree = "<group>";
@@ -1546,6 +1549,7 @@
 				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
 				9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */,
+				9C2C4EE7205684A2008FACA6 /* PageCell.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */,
 				9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */,
