@@ -36,7 +36,21 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         customGoogleButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         view.addSubview(customGoogleButton)
 
+        let customGoogleButtonLogout = UIButton(type: .system)
+        customGoogleButtonLogout.frame = CGRect(x: 16, y: 350, width: view.frame.width / 2 + 50 , height: 50)
+        customGoogleButtonLogout.backgroundColor = .lightGray
+        customGoogleButtonLogout.setTitle("Logout google", for: .normal)
+        customGoogleButtonLogout.addTarget(self, action: #selector(logoutGoogle), for: .touchUpInside)
+        customGoogleButtonLogout.setTitleColor(.white, for: .normal)
+        customGoogleButtonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        view.addSubview(customGoogleButtonLogout)
+
         GIDSignIn.sharedInstance().uiDelegate = self
+    }
+
+    @objc private func logoutGoogle() {
+        GIDSignIn.sharedInstance().signOut()
+        print("Logout Google Success")
     }
 
     @objc private func handleCustomGoogleSign() {
@@ -55,7 +69,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         customFBButton.backgroundColor = .blue
         customFBButton.frame = CGRect(x: 16, y: 160, width: view.frame.width / 2 + 40 , height: 50)
         customFBButton.setTitle("Custom FB Login here", for: .normal)
-        customFBButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        customFBButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         customFBButton.setTitleColor(.white, for: .normal)
         customFBButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
         view.addSubview(customFBButton)
