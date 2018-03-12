@@ -31,6 +31,8 @@
 		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
 		9C2C3635204E8A6600808E42 /* TinderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3634204E8A6600808E42 /* TinderImageView.swift */; };
 		9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */; };
+		9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */; };
+		9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */; };
 		9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */; };
 		9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */; };
 		9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */; };
@@ -220,6 +222,8 @@
 		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
 		9C2C3634204E8A6600808E42 /* TinderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderImageView.swift; sourceTree = "<group>"; };
 		9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThroughExtensions.swift; sourceTree = "<group>"; };
+		9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWalkthroughController.swift; sourceTree = "<group>"; };
+		9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWalkthroughController.xib; sourceTree = "<group>"; };
 		9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Search.swift"; sourceTree = "<group>"; };
 		9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderProfileGrid.swift; sourceTree = "<group>"; };
@@ -481,6 +485,15 @@
 			name = AutoLayoutThroughExtensions;
 			sourceTree = "<group>";
 		};
+		9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */,
+				9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */,
+			);
+			name = LoginWalkthrough;
+			sourceTree = "<group>";
+		};
 		9C2F0DCA204D4784003E52FD /* TinderProfileGrid */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +680,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */,
 				9C3076C42052283900CF39AA /* LoginSDK */,
 				9C553D72204FEB0F00A9A986 /* ParsingJSONWithDecodable */,
 				9C2C3636204EA14800808E42 /* AutoLayoutThroughExtensions */,
@@ -1347,6 +1361,7 @@
 				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
 				9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* RaywenderViewController.xib in Resources */,
@@ -1580,6 +1595,7 @@
 				9C4DB97D2017151400B4023E /* EventService.swift in Sources */,
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9CDB7447202D302D00819FC6 /* DatabaseManager.swift in Sources */,
+				9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C3076C72052286F00CF39AA /* LoginSDKController.swift in Sources */,
