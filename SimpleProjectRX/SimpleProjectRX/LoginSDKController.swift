@@ -9,11 +9,26 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import GoogleSignIn
 
-final class LoginSDKController: UIViewController {
+final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupFacebookButton()
+        setupGoogleButton()
+        
+    }
+
+    fileprivate func setupGoogleButton() {
+        // add sign in google
+        let googleButton = GIDSignInButton()
+        googleButton.frame = CGRect(x: 16, y: 220, width: view.frame.width / 2 + 50 , height: 50)
+        view.addSubview(googleButton)
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+
+    fileprivate func setupFacebookButton() {
         let loginButton = FBSDKLoginButton()
         view.addSubview(loginButton)
         loginButton.frame = CGRect(x: 16, y: 100, width: view.frame.width / 2 + 40 , height: 50)
