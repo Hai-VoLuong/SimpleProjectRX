@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("Failed to login google: ", err)
             return
         }
-
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         Auth.auth().signIn(with: credential) { (user, error) in
@@ -52,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 print("Failed to create a Firebase Use with google account: ", err)
                 return
             }
-            print("Successfully logged into google, ", user?.email)
+            print("Successfully logged into google with Firebase, ", user?.email)
         }
 
     }
