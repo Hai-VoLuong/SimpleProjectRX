@@ -124,7 +124,8 @@ final class LoginWalkthroughController: UIViewController {
 
     @objc private func keyboardShow() {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.view.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: self.view.frame.height)
+            let y: CGFloat = UIDevice.current.orientation.isLandscape ? -100 : -50
+            self.view.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
 
@@ -154,6 +155,17 @@ final class LoginWalkthroughController: UIViewController {
         pageControlBottomAnchor?.constant = 40
         nextAnchor?.constant = -80
         skipAnchor?.constant = -80
+    }
+
+    // Tracking when Landscape and portrait device
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.collectionViewLayout.invalidateLayout()
+        let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
+        DispatchQueue.main.async { [weak self] in
+            guard let this = self else { return }
+            this.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            this.collectionView.reloadData()
+        }
     }
 }
 

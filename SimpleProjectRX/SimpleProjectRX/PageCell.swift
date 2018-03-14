@@ -13,7 +13,13 @@ class PageCell: UICollectionViewCell {
     var page: Page? {
         didSet {
             guard let page = page else { return }
-            imageView.image = UIImage(named: page.imageName)
+
+            var imageName = page.imageName
+            if UIDevice.current.orientation.isLandscape {
+                imageName += "_landscape"
+            }
+
+            imageView.image = UIImage(named: imageName)
             textView.text = page.title + "\n\n" + page.message
 
             let color = UIColor(white: 0.2, alpha: 1)
@@ -68,7 +74,9 @@ class PageCell: UICollectionViewCell {
 
         imageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: textView.topAnchor, trailing: trailingAnchor)
 
-        textView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 24, left: 16, bottom: 0, right: 16), size: .init(width: 0, height: frame.height / 3))
+        textView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16), size: .zero)
+        textView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3).isActive = true
+
 
         lineSeparatorView.anchor(top: nil, leading: leadingAnchor, bottom: textView.topAnchor, trailing: trailingAnchor, padding: .zero, size: .init(width: 0, height: 1))
 
