@@ -36,19 +36,44 @@ final class LoginWalkthroughController: UIViewController {
         return pc
     }()
 
-    let skipButton: UIButton = {
+    lazy var skipButton: UIButton = {
         let bt = UIButton(type: .system)
         bt.setTitle("Skip", for: .normal)
         bt.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+         bt.addTarget(self, action: #selector(skipPage), for: .touchUpInside)
         return bt
     }()
 
-    let nextButton: UIButton = {
+    @objc private func skipPage() {
+        pageControl.currentPage = pages.count - 1
+        nextPage()
+    }
+
+    lazy var nextButton: UIButton = {
         let bt = UIButton(type: .system)
         bt.setTitle("Next", for: .normal)
         bt.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+        bt.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return bt
     }()
+
+    @objc private func nextPage() {
+        // last page
+        if pageControl.currentPage == pages.count {
+            return
+        }
+
+        if pageControl.currentPage == pages.count - 1 {
+            moveControlContraintOffScreen()
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
+
+        let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        pageControl.currentPage += 1
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,9 +137,7 @@ final class LoginWalkthroughController: UIViewController {
         let pageCurrent = Int(targetContentOffset.pointee.x / view.frame.width)
         pageControl.currentPage = pageCurrent
         if pageCurrent == pages.count {
-            pageControlBottomAnchor?.constant = 40
-            nextAnchor?.constant = -40
-            skipAnchor?.constant = -40
+           moveControlContraintOffScreen()
         } else {
             pageControlBottomAnchor?.constant = 0
             nextAnchor?.constant = 16
@@ -125,6 +148,12 @@ final class LoginWalkthroughController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
 
+    }
+
+    private func moveControlContraintOffScreen() {
+        pageControlBottomAnchor?.constant = 40
+        nextAnchor?.constant = -80
+        skipAnchor?.constant = -80
     }
 }
 
