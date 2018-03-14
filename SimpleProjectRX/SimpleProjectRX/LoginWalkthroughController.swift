@@ -52,6 +52,7 @@ final class LoginWalkthroughController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        observekeyboardNotification()
         navigationController?.isNavigationBarHidden = true
         tabBarController?.tabBar.isHidden = true
         setupCollectionview()
@@ -83,6 +84,27 @@ final class LoginWalkthroughController: UIViewController {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+
+    private func observekeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHire), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+
+    @objc private func keyboardHire() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+
+    @objc private func keyboardShow() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 
     // Tracking Current Page
