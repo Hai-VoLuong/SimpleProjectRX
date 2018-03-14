@@ -128,6 +128,7 @@
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
 		9CBA95FD200C8A1A00ABA54D /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9CBD61DE2058C24F0039A8C5 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */; };
 		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
 		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
 		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
@@ -325,6 +326,7 @@
 		9CBA95F8200C8A1A00ABA54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9CBA95FA200C8A1A00ABA54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBA9602200C92CE00ABA54D /* SimpleProjectRX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleProjectRX.entitlements; sourceTree = "<group>"; };
+		9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 				9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */,
 				9C2C4EE6205684A2008FACA6 /* PageCell.swift */,
 				9C24A8342057722A00CD6159 /* Page.swift */,
+				9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */,
 			);
 			name = LoginWalkthrough;
 			sourceTree = "<group>";
@@ -1630,6 +1633,7 @@
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
 				9CD943C5201F0DA4001349AB /* Tip.swift in Sources */,
 				9CD943BF201EFCA1001349AB /* Venue.swift in Sources */,
+				9CBD61DE2058C24F0039A8C5 /* LoginCell.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
 				9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */,

@@ -79,7 +79,7 @@ final class LoginWalkthroughController: UIViewController {
     }
 
     fileprivate func regiseterCell() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "loginCell")
+        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: "loginCell")
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         collectionView.delegate = self
