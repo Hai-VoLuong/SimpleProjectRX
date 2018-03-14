@@ -8,7 +8,11 @@
 
 import UIKit
 
-final class LoginWalkthroughController: UIViewController {
+protocol LoginWalkthroughDelegate: class {
+    func finishLoggingIn()
+}
+
+final class LoginWalkthroughController: UIViewController, LoginWalkthroughDelegate {
 
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -73,6 +77,13 @@ final class LoginWalkthroughController: UIViewController {
         let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         pageControl.currentPage += 1
+    }
+
+    func finishLoggingIn() {
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        guard let mainNavigationController = rootViewController as? MainNaviController else { return }
+        mainNavigationController.viewControllers = [TabbarController()]
+        dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -177,7 +188,8 @@ extension LoginWalkthroughController: UICollectionViewDataSource, UICollectionVi
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginCell", for: indexPath)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginCell", for: indexPath) as! LoginCell
+            loginCell.delegate = self
             return loginCell
         }
 

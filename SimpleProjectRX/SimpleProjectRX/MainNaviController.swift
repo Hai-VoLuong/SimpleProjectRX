@@ -21,8 +21,8 @@ class MainNaviController: UINavigationController {
         }
     }
 
-    private func isLoggedIn() -> Bool {
-        return true
+    func isLoggedIn() -> Bool {
+        return false
     }
 
     @objc private func showLoginController() {
