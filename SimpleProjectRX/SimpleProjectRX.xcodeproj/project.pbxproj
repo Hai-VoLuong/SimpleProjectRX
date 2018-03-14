@@ -108,6 +108,7 @@
 		9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24820231B3400A405A1 /* InformationCell.xib */; };
 		9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F24B20231B4400A405A1 /* TipCell.swift */; };
 		9C80F24E20231B4400A405A1 /* TipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24C20231B4400A405A1 /* TipCell.xib */; };
+		9C89770C205910070093953B /* MainNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89770B205910070093953B /* MainNaviController.swift */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -303,6 +304,7 @@
 		9C80F24820231B3400A405A1 /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		9C80F24B20231B4400A405A1 /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
 		9C80F24C20231B4400A405A1 /* TipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipCell.xib; sourceTree = "<group>"; };
+		9C89770B205910070093953B /* MainNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviController.swift; sourceTree = "<group>"; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
 		9C8D1370200709D800C1BE5E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 				9C2C4EE6205684A2008FACA6 /* PageCell.swift */,
 				9C24A8342057722A00CD6159 /* Page.swift */,
 				9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */,
+				9C89770B205910070093953B /* MainNaviController.swift */,
 			);
 			name = LoginWalkthrough;
 			sourceTree = "<group>";
@@ -1562,6 +1565,7 @@
 				9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */,
+				9C89770C205910070093953B /* MainNaviController.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
 				9C80F2442022BA6200A405A1 /* VenueDetailModel.swift in Sources */,
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
