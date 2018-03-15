@@ -43,7 +43,21 @@ class LoginCell: UICollectionViewCell {
         return bt
     }()
 
+    lazy var buttonLogout: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.backgroundColor = .orange
+        bt.setTitle("Log out", for: .normal)
+        bt.setTitleColor(.white, for: .normal)
+        bt.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
+        return bt
+    }()
+
     weak var delegate: LoginWalkthroughDelegate?
+
+
+    @objc private func handleLogout() {
+        self.delegate?.finishlogOut()
+    }
 
     @objc private func handleLogin() {
         self.delegate?.finishLoggingIn()
@@ -55,6 +69,7 @@ class LoginCell: UICollectionViewCell {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(buttonLogin)
+        addSubview(buttonLogout)
 
         imageName.anchor(top: centerYAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: -230, left: 0, bottom: 0, right: 0), size: .init(width: 160, height: 160))
         imageName.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -64,6 +79,8 @@ class LoginCell: UICollectionViewCell {
         passwordTextField.anchor(top: emailTextField.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 32, bottom: 0, right: 32), size: .init(width: 0, height: 50))
 
         buttonLogin.anchor(top: passwordTextField.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 32, bottom: 0, right: 32), size: .init(width: 0, height: 50))
+
+        buttonLogout.anchor(top: buttonLogin.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 32, bottom: 0, right: 32), size: .init(width: 0, height: 50))
     }
 
     required init?(coder aDecoder: NSCoder) {

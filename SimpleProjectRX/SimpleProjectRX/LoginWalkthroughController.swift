@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginWalkthroughDelegate: class {
     func finishLoggingIn()
+    func finishlogOut()
 }
 
 final class LoginWalkthroughController: UIViewController, LoginWalkthroughDelegate {
@@ -83,7 +84,16 @@ final class LoginWalkthroughController: UIViewController, LoginWalkthroughDelega
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
         guard let mainNavigationController = rootViewController as? MainNaviController else { return }
         mainNavigationController.viewControllers = [TabbarController()]
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
         dismiss(animated: true, completion: nil)
+    }
+
+    func finishlogOut() {
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+        let login = LoginWalkthroughController()
+        present(login, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
