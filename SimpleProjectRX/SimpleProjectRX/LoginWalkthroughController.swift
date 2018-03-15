@@ -89,6 +89,8 @@ final class LoginWalkthroughController: UIViewController, LoginWalkthroughDelega
     }
 
     func finishlogOut() {
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        guard let _ = rootViewController as? MainNaviController else { return }
         UserDefaults.standard.setIsLoggedIn(value: false)
         let login = LoginWalkthroughController()
         present(login, animated: true, completion: nil)
