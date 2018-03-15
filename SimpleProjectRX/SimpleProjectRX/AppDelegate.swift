@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
 
-        let tabbarController = TabbarController()
-        window?.rootViewController = tabbarController
+        window?.rootViewController = TabbarController()
+       // window?.rootViewController = MainNaviController()
         window?.makeKeyAndVisible()
         return true
     }

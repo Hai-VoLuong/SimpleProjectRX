@@ -25,12 +25,16 @@
 		9C1A9453204CE20D006D2ACC /* AnimatedCircleProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A9451204CE20D006D2ACC /* AnimatedCircleProgressBar.xib */; };
 		9C1B9651202ADB03000A5544 /* LiveStreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B964F202ADB03000A5544 /* LiveStreamController.swift */; };
 		9C1B9652202ADB03000A5544 /* LiveStreamController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B9650202ADB03000A5544 /* LiveStreamController.xib */; };
+		9C24A8352057722A00CD6159 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24A8342057722A00CD6159 /* Page.swift */; };
 		9C24BC922004A8D800374517 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC912004A8D800374517 /* EventListViewModel.swift */; };
 		9C24BC972004B0D000374517 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C24BC952004B0D000374517 /* RepoCell.swift */; };
 		9C24BC982004B0D000374517 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C24BC962004B0D000374517 /* RepoCell.xib */; };
 		9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2511A32008496800A4995D /*  NotificationExtension.swift */; };
 		9C2C3635204E8A6600808E42 /* TinderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3634204E8A6600808E42 /* TinderImageView.swift */; };
 		9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */; };
+		9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */; };
+		9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */; };
+		9C2C4EE7205684A2008FACA6 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C4EE6205684A2008FACA6 /* PageCell.swift */; };
 		9C2C69FE2043F4CF009C02FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */; };
 		9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */; };
 		9C2F0DCD204D47AE003E52FD /* TinderProfileGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */; };
@@ -104,6 +108,7 @@
 		9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24820231B3400A405A1 /* InformationCell.xib */; };
 		9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80F24B20231B4400A405A1 /* TipCell.swift */; };
 		9C80F24E20231B4400A405A1 /* TipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C80F24C20231B4400A405A1 /* TipCell.xib */; };
+		9C89770C205910070093953B /* MainNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89770B205910070093953B /* MainNaviController.swift */; };
 		9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */; };
 		9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */; };
 		9C8D1371200709D800C1BE5E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D1370200709D800C1BE5E /* Album.swift */; };
@@ -111,6 +116,7 @@
 		9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137520070CDA00C1BE5E /* HTTPClient.swift */; };
 		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
 		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
+		9CA2B823205A537C0067F552 /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */; };
 		9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */; };
 		9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */; };
 		9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */; };
@@ -124,6 +130,7 @@
 		9CBA95F6200C8A1A00ABA54D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA95F5200C8A1A00ABA54D /* TodayViewController.swift */; };
 		9CBA95F9200C8A1A00ABA54D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA95F7200C8A1A00ABA54D /* MainInterface.storyboard */; };
 		9CBA95FD200C8A1A00ABA54D /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9CBA95F1200C8A1A00ABA54D /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9CBD61DE2058C24F0039A8C5 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */; };
 		9CBE4B192005CD7E00C1FFB6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */; };
 		9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */; };
 		9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */; };
@@ -214,12 +221,16 @@
 		9C1A9451204CE20D006D2ACC /* AnimatedCircleProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedCircleProgressBar.xib; sourceTree = "<group>"; };
 		9C1B964F202ADB03000A5544 /* LiveStreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamController.swift; sourceTree = "<group>"; };
 		9C1B9650202ADB03000A5544 /* LiveStreamController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveStreamController.xib; sourceTree = "<group>"; };
+		9C24A8342057722A00CD6159 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		9C24BC912004A8D800374517 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		9C24BC952004B0D000374517 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		9C24BC962004B0D000374517 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		9C2511A32008496800A4995D /*  NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NotificationExtension.swift"; sourceTree = "<group>"; };
 		9C2C3634204E8A6600808E42 /* TinderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderImageView.swift; sourceTree = "<group>"; };
 		9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThroughExtensions.swift; sourceTree = "<group>"; };
+		9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWalkthroughController.swift; sourceTree = "<group>"; };
+		9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWalkthroughController.xib; sourceTree = "<group>"; };
+		9C2C4EE6205684A2008FACA6 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9C2C69FD2043F4CF009C02FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9C2C69FF2043FC89009C02FE /* APIBase+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIBase+Search.swift"; sourceTree = "<group>"; };
 		9C2F0DCB204D47AE003E52FD /* TinderProfileGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderProfileGrid.swift; sourceTree = "<group>"; };
@@ -294,6 +305,7 @@
 		9C80F24820231B3400A405A1 /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		9C80F24B20231B4400A405A1 /* TipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCell.swift; sourceTree = "<group>"; };
 		9C80F24C20231B4400A405A1 /* TipCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipCell.xib; sourceTree = "<group>"; };
+		9C89770B205910070093953B /* MainNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviController.swift; sourceTree = "<group>"; };
 		9C8D136C2007090400C1BE5E /* DesignPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternViewController.swift; sourceTree = "<group>"; };
 		9C8D136D2007090400C1BE5E /* DesignPatternViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignPatternViewController.xib; sourceTree = "<group>"; };
 		9C8D1370200709D800C1BE5E /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -302,6 +314,7 @@
 		9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9C9374E52008B121008D2FC9 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
+		9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
 		9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
@@ -317,6 +330,7 @@
 		9CBA95F8200C8A1A00ABA54D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9CBA95FA200C8A1A00ABA54D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBA9602200C92CE00ABA54D /* SimpleProjectRX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleProjectRX.entitlements; sourceTree = "<group>"; };
+		9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		9CBE4B182005CD7E00C1FFB6 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		9CBE4B1B2005CDA900C1FFB6 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		9CBE4B1D2005CE2D00C1FFB6 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
@@ -479,6 +493,20 @@
 				9C2C3637204EA16B00808E42 /* AutoLayoutThroughExtensions.swift */,
 			);
 			name = AutoLayoutThroughExtensions;
+			sourceTree = "<group>";
+		};
+		9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				9C2C4EE1205679E3008FACA6 /* LoginWalkthroughController.swift */,
+				9C2C4EE2205679E3008FACA6 /* LoginWalkthroughController.xib */,
+				9C2C4EE6205684A2008FACA6 /* PageCell.swift */,
+				9C24A8342057722A00CD6159 /* Page.swift */,
+				9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */,
+				9C89770B205910070093953B /* MainNaviController.swift */,
+				9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */,
+			);
+			name = LoginWalkthrough;
 			sourceTree = "<group>";
 		};
 		9C2F0DCA204D4784003E52FD /* TinderProfileGrid */ = {
@@ -667,6 +695,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */,
 				9C3076C42052283900CF39AA /* LoginSDK */,
 				9C553D72204FEB0F00A9A986 /* ParsingJSONWithDecodable */,
 				9C2C3636204EA14800808E42 /* AutoLayoutThroughExtensions */,
@@ -1347,6 +1376,7 @@
 				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
 				9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
 				9C55D8981FFB43CF00F29453 /* RaywenderViewController.xib in Resources */,
@@ -1526,16 +1556,19 @@
 				9C8D136E2007090400C1BE5E /* DesignPatternViewController.swift in Sources */,
 				9C55D8B41FFB6F4F00F29453 /* MultipleCellViewController.swift in Sources */,
 				9C55D8AC1FFB6EEB00F29453 /* SearchViewController.swift in Sources */,
+				9C24A8352057722A00CD6159 /* Page.swift in Sources */,
 				9CAEE03B201ABD92001FEAFB /* SearchDrinkViewController.swift in Sources */,
 				9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */,
 				9CBE4B1E2005CE2D00C1FFB6 /* BookService.swift in Sources */,
 				9C0EB7A12005C9B400721A06 /* APIReactiveRxSwiftViewController.swift in Sources */,
 				9CBE4B222006112D00C1FFB6 /* RepositoryDesignPatternViewController.swift in Sources */,
+				9C2C4EE7205684A2008FACA6 /* PageCell.swift in Sources */,
 				9C55D8B01FFB6F1E00F29453 /* GalleryImageViewController.swift in Sources */,
 				9CBE4B1C2005CDA900C1FFB6 /* BaseService.swift in Sources */,
 				9C80F24D20231B4400A405A1 /* TipCell.swift in Sources */,
 				9C4F69F920049E5E00BDE993 /* RepoListViewModel.swift in Sources */,
 				9CBE4B25200611A800C1FFB6 /* ArticleRepository.swift in Sources */,
+				9C89770C205910070093953B /* MainNaviController.swift in Sources */,
 				9C0BD0C91FFF5A9B00335F3A /* SecondViewController.swift in Sources */,
 				9C80F2442022BA6200A405A1 /* VenueDetailModel.swift in Sources */,
 				9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */,
@@ -1580,6 +1613,8 @@
 				9C4DB97D2017151400B4023E /* EventService.swift in Sources */,
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9CDB7447202D302D00819FC6 /* DatabaseManager.swift in Sources */,
+				9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */,
+				9CA2B823205A537C0067F552 /* UserDefaults+Helpers.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C3076C72052286F00CF39AA /* LoginSDKController.swift in Sources */,
@@ -1606,6 +1641,7 @@
 				9C8D137320070A0500C1BE5E /* AlbumView.swift in Sources */,
 				9CD943C5201F0DA4001349AB /* Tip.swift in Sources */,
 				9CD943BF201EFCA1001349AB /* Venue.swift in Sources */,
+				9CBD61DE2058C24F0039A8C5 /* LoginCell.swift in Sources */,
 				9CD6814F1FFB1E080077729C /* SimpleProjectRX.xcdatamodeld in Sources */,
 				9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */,
 				9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */,
