@@ -116,6 +116,7 @@
 		9C8D137620070CDA00C1BE5E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137520070CDA00C1BE5E /* HTTPClient.swift */; };
 		9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */; };
 		9C8D13812007129B00C1BE5E /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D13802007129B00C1BE5E /* PersistencyManager.swift */; };
+		9CA2B823205A537C0067F552 /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */; };
 		9CA4C3B7200761CF0063DD99 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */; };
 		9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */; };
 		9CAEE038201ABD1D001FEAFB /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */; };
@@ -313,6 +314,7 @@
 		9C8D137E2007120D00C1BE5E /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		9C8D13802007129B00C1BE5E /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		9C9374E52008B121008D2FC9 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
+		9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
 		9CA4C3B6200761CF0063DD99 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		9CAEE035201ABD1D001FEAFB /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		9CAEE036201ABD1D001FEAFB /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				9C24A8342057722A00CD6159 /* Page.swift */,
 				9CBD61DD2058C24F0039A8C5 /* LoginCell.swift */,
 				9C89770B205910070093953B /* MainNaviController.swift */,
+				9CA2B822205A537C0067F552 /* UserDefaults+Helpers.swift */,
 			);
 			name = LoginWalkthrough;
 			sourceTree = "<group>";
@@ -1611,6 +1614,7 @@
 				9C2511A42008496800A4995D /*  NotificationExtension.swift in Sources */,
 				9CDB7447202D302D00819FC6 /* DatabaseManager.swift in Sources */,
 				9C2C4EE3205679E3008FACA6 /* LoginWalkthroughController.swift in Sources */,
+				9CA2B823205A537C0067F552 /* UserDefaults+Helpers.swift in Sources */,
 				9C55D87B1FFB2AC400F29453 /* TabbarController.swift in Sources */,
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C3076C72052286F00CF39AA /* LoginSDKController.swift in Sources */,
