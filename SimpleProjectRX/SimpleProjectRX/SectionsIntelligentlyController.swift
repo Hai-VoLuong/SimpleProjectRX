@@ -68,6 +68,10 @@ class SectionsIntelligentlyController: UIViewController {
 
 extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return twoDimensionArray.count
     }
@@ -89,14 +93,35 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let button = UIButton (type: .system)
-        button.backgroundColor = .yellow
-        button.setTitle("Close", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
-        button.tag = section
-        return button
+
+        let buttonHeader: UIButton = {
+            let button = UIButton (type: .system)
+            button.backgroundColor = .yellow
+            button.setTitle("Close", for: .normal)
+            button.setTitleColor(.black, for: .normal)
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+            button.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
+            button.tag = section
+            return button
+        }()
+
+        let nameLabel: UILabel = {
+            let lb = UILabel()
+            lb.text = "title"
+            return lb
+        }()
+
+        let view: UIView = {
+            let v = UIView()
+            v.backgroundColor = .orange
+            v.addSubview(buttonHeader)
+            v.addSubview(nameLabel)
+            buttonHeader.anchor(top: v.topAnchor, leading: nil, bottom: v.bottomAnchor, trailing: v.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 8) , size: .init(width: 50, height: 0))
+            nameLabel.anchor(top: v.topAnchor, leading: v.leadingAnchor, bottom: v.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 50, height: 0))
+            return v
+        }()
+
+        return view
     }
 
     @objc private func handleExpandClose(button: UIButton) {
@@ -115,8 +140,6 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         twoDimensionArray[section].isExpanded = !isExpanded
 
         button.setTitle(isExpanded ? "Open" : "Close", for: .normal)
-        button.setTitleColor(isExpanded ? .white : .black, for: .normal)
-        button.backgroundColor = isExpanded ? .blue : .yellow
 
         // nếu isExpaned là true thì delete còn false thì insert vào
         isExpanded ? tableView.deleteRows(at: indexPaths, with: .fade) : tableView.insertRows(at: indexPaths, with: .fade)
