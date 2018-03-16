@@ -88,13 +88,13 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         let section = button.tag
         var indexPaths = [IndexPath]()
 
-        // index first rows
+        // mãng indexPaths theo section
         for row in twoDimensionArray[section].indices {
             let indexPath = IndexPath(row: row, section: section)
             indexPaths.append(indexPath)
         }
 
-        // delete first rows
+        // delete section
         twoDimensionArray[section].removeAll()
         tableView.deleteRows(at: indexPaths, with: .fade)
     }
