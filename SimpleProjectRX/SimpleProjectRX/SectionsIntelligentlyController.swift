@@ -16,7 +16,7 @@ class SectionsIntelligentlyController: UIViewController {
     fileprivate let names = ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]
     fileprivate let anotherListNames = ["Bary", "Bary", "Bary", "Bary"]
 
-    fileprivate let twoDimensionArray = [
+    fileprivate var twoDimensionArray = [
         ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"],
         ["Bary", "Bary", "Bary", "Bary"],
         ["What", "What"]
@@ -73,10 +73,30 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.text = "Header"
-        label.backgroundColor = .lightGray
-        return label
+        let button = UIButton (type: .system)
+        button.backgroundColor = .yellow
+        button.setTitle("show", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
+        button.tag = section
+        return button
+    }
+
+    @objc private func handleExpandClose(button: UIButton) {
+
+        let section = button.tag
+        var indexPaths = [IndexPath]()
+
+        // index first rows
+        for row in twoDimensionArray[section].indices {
+            let indexPath = IndexPath(row: row, section: section)
+            indexPaths.append(indexPath)
+        }
+
+        // delete first rows
+        twoDimensionArray[section].removeAll()
+        tableView.deleteRows(at: indexPaths, with: .fade)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
