@@ -17,9 +17,9 @@ class SectionsIntelligentlyController: UIViewController {
     fileprivate let anotherListNames = ["Bary", "Bary", "Bary", "Bary"]
 
     fileprivate var twoDimensionArray = [
-        ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"],
-        ["Bary", "Bary", "Bary", "Bary"],
-        ["What", "What"]
+        ExpandableNames(isExpanded: true, names: ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]),
+        ExpandableNames(isExpanded: true, names: ["Bary", "Bary", "Bary", "Bary"]),
+        ExpandableNames(isExpanded: true, names: ["What", "What"])
     ]
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -49,7 +49,7 @@ class SectionsIntelligentlyController: UIViewController {
     @objc private func handleShowIndexPath() {
         var indexPathsToReload = [IndexPath]()
         for section in twoDimensionArray.indices {
-            for index in twoDimensionArray[section].indices {
+            for index in twoDimensionArray[section].names.indices {
                 let indexPath = IndexPath(row: index, section: section)
                 indexPathsToReload.append(indexPath)
             }
@@ -72,6 +72,22 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         return twoDimensionArray.count
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !twoDimensionArray[section].isExpanded {
+            return 0
+        }
+        return twoDimensionArray[section].names.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        var name = self.names[indexPath.row]
+        name = twoDimensionArray[indexPath.section].names[indexPath.row]
+        let nameShow = showIndexPath ? name : "\(name) Section: \(indexPath.section)"
+        cell.textLabel?.text = nameShow
+        return cell
+    }
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let button = UIButton (type: .system)
         button.backgroundColor = .yellow
@@ -89,26 +105,17 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         var indexPaths = [IndexPath]()
 
         // mãng indexPaths theo section
-        for row in twoDimensionArray[section].indices {
+        for row in twoDimensionArray[section].names.indices {
             let indexPath = IndexPath(row: row, section: section)
             indexPaths.append(indexPath)
         }
 
         // delete section
-        twoDimensionArray[section].removeAll()
-        tableView.deleteRows(at: indexPaths, with: .fade)
-    }
+        let isExpanded = twoDimensionArray[section].isExpanded
+        twoDimensionArray[section].isExpanded = !isExpanded
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return twoDimensionArray[section].count
-    }
+        // nếu isExpaned là true thì delete còn false thì insert vào
+        isExpanded ? tableView.deleteRows(at: indexPaths, with: .fade) : tableView.insertRows(at: indexPaths, with: .fade)
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        var name = self.names[indexPath.row]
-        name = twoDimensionArray[indexPath.section][indexPath.row]
-        let nameShow = showIndexPath ? name : "\(name) Section: \(indexPath.section)"
-        cell.textLabel?.text = nameShow
-        return cell
     }
 }

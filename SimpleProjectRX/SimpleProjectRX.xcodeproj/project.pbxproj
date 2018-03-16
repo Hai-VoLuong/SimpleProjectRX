@@ -146,6 +146,7 @@
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
 		9CD2115E205B5E69000DBBE8 /* SectionsIntelligentlyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */; };
 		9CD2115F205B5E69000DBBE8 /* SectionsIntelligentlyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */; };
+		9CD21161205BA8D4000DBBE8 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */; };
 		9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */; };
 		9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -348,6 +349,7 @@
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
 		9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsIntelligentlyController.swift; sourceTree = "<group>"; };
 		9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsIntelligentlyController.xib; sourceTree = "<group>"; };
+		9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
 		9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffeeViewController.swift; sourceTree = "<group>"; };
 		9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCoffeeViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1113,6 +1115,7 @@
 			children = (
 				9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */,
 				9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */,
+				9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */,
 			);
 			name = UITableViewSectionsIntelligently;
 			sourceTree = "<group>";
@@ -1622,6 +1625,7 @@
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9C04C072203185AE00905B43 /* FavoriteViewModel.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
+				9CD21161205BA8D4000DBBE8 /* ExpandableNames.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */,
 				9C6AA3F82016DCE9002F681A /* PhotoWriter.swift in Sources */,
