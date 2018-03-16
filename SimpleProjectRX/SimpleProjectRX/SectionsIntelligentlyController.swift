@@ -91,7 +91,7 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let button = UIButton (type: .system)
         button.backgroundColor = .yellow
-        button.setTitle("show", for: .normal)
+        button.setTitle("Close", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
@@ -113,6 +113,10 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         // delete section
         let isExpanded = twoDimensionArray[section].isExpanded
         twoDimensionArray[section].isExpanded = !isExpanded
+
+        button.setTitle(isExpanded ? "Open" : "Close", for: .normal)
+        button.setTitleColor(isExpanded ? .white : .black, for: .normal)
+        button.backgroundColor = isExpanded ? .blue : .yellow
 
         // nếu isExpaned là true thì delete còn false thì insert vào
         isExpanded ? tableView.deleteRows(at: indexPaths, with: .fade) : tableView.insertRows(at: indexPaths, with: .fade)
