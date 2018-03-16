@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ContactCellDelegate: class {
-    func needToAction(cell: UITableViewCell)
+    func someMethodWantToCall(cell: UITableViewCell)
 }
 
 class ContactCell: UITableViewCell {
@@ -24,7 +24,7 @@ class ContactCell: UITableViewCell {
     }()
 
     @objc private func handleMarkAsFavorite() {
-        link?.needToAction(cell: self)
+        link?.someMethodWantToCall(cell: self)
     }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {

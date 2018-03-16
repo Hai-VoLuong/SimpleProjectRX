@@ -14,9 +14,11 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
     fileprivate var showIndexPath = false
 
     fileprivate var twoDimensionArray = [
-        ExpandableNames(isExpanded: true, names: ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]),
-        ExpandableNames(isExpanded: true, names: ["Bary", "Bary", "Bary", "Bary"]),
-        ExpandableNames(isExpanded: true, names: ["What"])
+        ExpandableNames(isExpanded: true, names: [
+        "army", "tryky" ,"Bill"].map({
+           Contact(name: $0, hasFavorite: false)
+        })),
+        ExpandableNames(isExpanded: true, names: [Contact(name: "Patrick", hasFavorite: false)])
     ]
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -62,10 +64,14 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
         tableView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
     }
 
-    func needToAction(cell: UITableViewCell) {
-        let indexPathTap = tableView.indexPath(for: cell)
-       let name = twoDimensionArray[indexPathTap!.section].names[indexPathTap!.row]
-        print(name)
+    // delegate
+    func someMethodWantToCall(cell: UITableViewCell) {
+        guard let indexPathTap = tableView.indexPath(for: cell) else { return }
+        let contact = twoDimensionArray[indexPathTap.section].names[indexPathTap.row]
+        let hasFavorited = contact.hasFavorite
+        twoDimensionArray[indexPathTap.section].names[indexPathTap.row].hasFavorite = !hasFavorited
+        print(contact)
+        cell.accessoryView?.tintColor = hasFavorited ? .lightGray : .red
     }
 }
 
@@ -89,9 +95,10 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ContactCell
         cell.link = self
-        let name = twoDimensionArray[indexPath.section].names[indexPath.row]
-        let nameShow = showIndexPath ? name : "\(name) Section: \(indexPath.section)"
+        let contact = twoDimensionArray[indexPath.section].names[indexPath.row]
+        let nameShow = showIndexPath ? contact.name : "\(contact.name) Section: \(indexPath.section)"
         cell.textLabel?.text = nameShow
+        cell.accessoryView?.tintColor = contact.hasFavorite ? .red : .lightGray
         return cell
     }
 
