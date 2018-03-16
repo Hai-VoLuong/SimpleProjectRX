@@ -11,6 +11,7 @@ import UIKit
 class SectionsIntelligentlyController: UIViewController {
 
     fileprivate let cellId = "cell"
+    fileprivate var showIndexPath = false
 
     fileprivate let names = ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]
     fileprivate let anotherListNames = ["Bary", "Bary", "Bary", "Bary"]
@@ -41,6 +42,21 @@ class SectionsIntelligentlyController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Show IndexPath", style: .plain, target: self, action: #selector(handleShowIndexPath))
+    }
+
+    @objc private func handleShowIndexPath() {
+        var indexPathsToReload = [IndexPath]()
+        for section in twoDimensionArray.indices {
+            for index in twoDimensionArray[section].indices {
+                let indexPath = IndexPath(row: index, section: section)
+                indexPathsToReload.append(indexPath)
+            }
+        }
+        showIndexPath = !showIndexPath
+        let animationStyle = showIndexPath ? UITableViewRowAnimation.right : .left
+        tableView.reloadRows(at: indexPathsToReload, with: animationStyle)
     }
 
     private func setupUITableView() {
@@ -71,7 +87,8 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         var name = self.names[indexPath.row]
         name = twoDimensionArray[indexPath.section][indexPath.row]
-        cell.textLabel?.text = name
+        let nameShow = showIndexPath ? name : "\(name) Section: \(indexPath.section)"
+        cell.textLabel?.text = nameShow
         return cell
     }
 }
