@@ -8,18 +8,15 @@
 
 import UIKit
 
-class SectionsIntelligentlyController: UIViewController {
+class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
 
     fileprivate let cellId = "cell"
     fileprivate var showIndexPath = false
 
-    fileprivate let names = ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]
-    fileprivate let anotherListNames = ["Bary", "Bary", "Bary", "Bary"]
-
     fileprivate var twoDimensionArray = [
         ExpandableNames(isExpanded: true, names: ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]),
         ExpandableNames(isExpanded: true, names: ["Bary", "Bary", "Bary", "Bary"]),
-        ExpandableNames(isExpanded: true, names: ["What", "What"])
+        ExpandableNames(isExpanded: true, names: ["What"])
     ]
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -60,9 +57,15 @@ class SectionsIntelligentlyController: UIViewController {
     }
 
     private func setupUITableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(ContactCell.self, forCellReuseIdentifier: cellId)
         view.addSubview(tableView)
         tableView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+    }
+
+    func needToAction(cell: UITableViewCell) {
+        let indexPathTap = tableView.indexPath(for: cell)
+       let name = twoDimensionArray[indexPathTap!.section].names[indexPathTap!.row]
+        print(name)
     }
 }
 
@@ -84,9 +87,9 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        var name = self.names[indexPath.row]
-        name = twoDimensionArray[indexPath.section].names[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ContactCell
+        cell.link = self
+        let name = twoDimensionArray[indexPath.section].names[indexPath.row]
         let nameShow = showIndexPath ? name : "\(name) Section: \(indexPath.section)"
         cell.textLabel?.text = nameShow
         return cell
