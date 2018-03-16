@@ -24,6 +24,7 @@ final class RaywenderViewController: UIViewController {
         case parsingJSONWithDecodable
         case loginSDK
         case loginWalkthrough
+        case tableViewSectionsIntelligently
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -35,7 +36,8 @@ final class RaywenderViewController: UIViewController {
         "AutoLayoutThroughExtensions",
         "ParsingJSON With Decodable",
         "Login SDK",
-        "Login Walk through"
+        "Login Walk through",
+        "UITableView Sections Intelligently"
         ]
 
     // MARK: - private func
@@ -68,6 +70,9 @@ final class RaywenderViewController: UIViewController {
             return vc
         case .loginWalkthrough:
             vc = LoginWalkthroughController()
+            return vc
+        case .tableViewSectionsIntelligently:
+            vc = SectionsIntelligentlyController()
             return vc
         }
     }
