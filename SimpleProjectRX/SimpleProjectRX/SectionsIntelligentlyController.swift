@@ -15,6 +15,11 @@ class SectionsIntelligentlyController: UIViewController {
     fileprivate let names = ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"]
     fileprivate let anotherListNames = ["Bary", "Bary", "Bary", "Bary"]
 
+    fileprivate let twoDimensionArray = [
+        ["Army", "Army", "Army", "Army", "Army", "Army", "Army", "Army"],
+        ["Bary", "Bary", "Bary", "Bary"],
+        ["What", "What"]
+    ]
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
@@ -48,7 +53,7 @@ class SectionsIntelligentlyController: UIViewController {
 extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return twoDimensionArray.count
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -59,13 +64,13 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? names.count : anotherListNames.count
+        return twoDimensionArray[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         var name = self.names[indexPath.row]
-        name = indexPath.section == 0 ? names[indexPath.row] : anotherListNames[indexPath.row]
+        name = twoDimensionArray[indexPath.section][indexPath.row]
         cell.textLabel?.text = name
         return cell
     }
