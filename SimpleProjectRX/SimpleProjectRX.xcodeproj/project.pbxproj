@@ -144,6 +144,10 @@
 		9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9280320182EC000A9C055 /* CarTableViewCell.xib */; };
 		9CCE900C1FFE121900B30561 /* VibloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE900A1FFE121900B30561 /* VibloViewController.swift */; };
 		9CCE900D1FFE121900B30561 /* VibloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCE900B1FFE121900B30561 /* VibloViewController.xib */; };
+		9CD2115E205B5E69000DBBE8 /* SectionsIntelligentlyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */; };
+		9CD2115F205B5E69000DBBE8 /* SectionsIntelligentlyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */; };
+		9CD21161205BA8D4000DBBE8 /* ExpandableNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */; };
+		9CD21163205BBE54000DBBE8 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD21162205BBE54000DBBE8 /* ContactCell.swift */; };
 		9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */; };
 		9CD4F4F82019973E00A0F6A1 /* DrinkCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */; };
 		9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD681461FFB1E080077729C /* AppDelegate.swift */; };
@@ -344,6 +348,10 @@
 		9CC9280320182EC000A9C055 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		9CCE900A1FFE121900B30561 /* VibloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibloViewController.swift; sourceTree = "<group>"; };
 		9CCE900B1FFE121900B30561 /* VibloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VibloViewController.xib; sourceTree = "<group>"; };
+		9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsIntelligentlyController.swift; sourceTree = "<group>"; };
+		9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsIntelligentlyController.xib; sourceTree = "<group>"; };
+		9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableNames.swift; sourceTree = "<group>"; };
+		9CD21162205BBE54000DBBE8 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		9CD4F4F52019973E00A0F6A1 /* DrinkCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffeeViewController.swift; sourceTree = "<group>"; };
 		9CD4F4F62019973E00A0F6A1 /* DrinkCoffeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCoffeeViewController.xib; sourceTree = "<group>"; };
 		9CD681431FFB1E080077729C /* SimpleProjectRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProjectRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -695,6 +703,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9CD2115B205B5E23000DBBE8 /* UITableViewSectionsIntelligently */,
 				9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */,
 				9C3076C42052283900CF39AA /* LoginSDK */,
 				9C553D72204FEB0F00A9A986 /* ParsingJSONWithDecodable */,
@@ -1103,6 +1112,17 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		9CD2115B205B5E23000DBBE8 /* UITableViewSectionsIntelligently */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2115C205B5E69000DBBE8 /* SectionsIntelligentlyController.swift */,
+				9CD2115D205B5E69000DBBE8 /* SectionsIntelligentlyController.xib */,
+				9CD21160205BA8D4000DBBE8 /* ExpandableNames.swift */,
+				9CD21162205BBE54000DBBE8 /* ContactCell.swift */,
+			);
+			name = UITableViewSectionsIntelligently;
+			sourceTree = "<group>";
+		};
 		9CD4F4F3201996D800A0F6A1 /* ProjectDrinkCoffee */ = {
 			isa = PBXGroup;
 			children = (
@@ -1368,6 +1388,7 @@
 				9CAEE041201AC5FD001FEAFB /* VenueCell.xib in Resources */,
 				9CC9280520182EC000A9C055 /* CarTableViewCell.xib in Resources */,
 				9C55D8BD1FFB6FCD00F29453 /* FetchingDataViewController.xib in Resources */,
+				9CD2115F205B5E69000DBBE8 /* SectionsIntelligentlyController.xib in Resources */,
 				9C24BC982004B0D000374517 /* RepoCell.xib in Resources */,
 				9C55D8B51FFB6F4F00F29453 /* MultipleCellViewController.xib in Resources */,
 				9C8D136F2007090400C1BE5E /* DesignPatternViewController.xib in Resources */,
@@ -1607,6 +1628,7 @@
 				9C4F69E720047F1C00BDE993 /* APIInputBase.swift in Sources */,
 				9C04C072203185AE00905B43 /* FavoriteViewModel.swift in Sources */,
 				9CD681471FFB1E080077729C /* AppDelegate.swift in Sources */,
+				9CD21161205BA8D4000DBBE8 /* ExpandableNames.swift in Sources */,
 				9C4F69EF20047F7800BDE993 /* APIService.swift in Sources */,
 				9C727A6C2011A34E006CFB25 /* MoVieCell.swift in Sources */,
 				9C6AA3F82016DCE9002F681A /* PhotoWriter.swift in Sources */,
@@ -1627,6 +1649,7 @@
 				9C4F69F42004801B00BDE993 /* EventList.swift in Sources */,
 				9CC927FD2018201400A9C055 /* Car.swift in Sources */,
 				9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */,
+				9CD21163205BBE54000DBBE8 /* ContactCell.swift in Sources */,
 				9C0BD0CD1FFF662400335F3A /* OneViewController.swift in Sources */,
 				9C2C6A002043FC89009C02FE /* APIBase+Search.swift in Sources */,
 				9C4F69EB20047F4100BDE993 /* URLs.swift in Sources */,
@@ -1634,6 +1657,7 @@
 				9C727A642011A09C006CFB25 /* ClosuresGenericsPOPViewController.swift in Sources */,
 				9CE9FEFA200DE1BB006766A3 /* GithubService.swift in Sources */,
 				9C8D137F2007120D00C1BE5E /* LibraryAPI.swift in Sources */,
+				9CD2115E205B5E69000DBBE8 /* SectionsIntelligentlyController.swift in Sources */,
 				9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */,
 				9C2C3638204EA16B00808E42 /* AutoLayoutThroughExtensions.swift in Sources */,
 				9CE9FF05200DF64A006766A3 /* DetailViewCell.swift in Sources */,
