@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Contacts
 
 class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
 
@@ -30,8 +31,34 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchContacts()
         setupNavigations()
         setupUITableView()
+    }
+
+    private func fetchContacts() {
+        let store = CNContactStore()
+        store.requestAccess(for: .contacts) { (granted, error) in
+            if let error = error {
+                print("Failed to request access: ", error)
+                return
+            }
+            if granted {
+                print("Access granted")
+                let keys = [CNContactGivenNameKey]
+                let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+
+                do {
+                   try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointerIfYouWantToStopEnumrating) in
+                        print(contact.givenName)
+                    })
+                } catch let err {
+                    print("Failed to enumerate contacts: ",err)
+                }
+            } else {
+                print("Access denied...")
+            }
+        }
     }
 
     private func setupNavigations() {
