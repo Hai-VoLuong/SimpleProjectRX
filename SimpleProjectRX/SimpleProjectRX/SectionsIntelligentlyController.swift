@@ -17,9 +17,9 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
     fileprivate var twoDimensionArray = [
         ExpandableNames(isExpanded: true, names: [
         "army", "tryky" ,"Bill"].map({
-           Contact(name: $0, hasFavorite: false)
+           FavoritableContact(name: $0, hasFavorite: false)
         })),
-        ExpandableNames(isExpanded: true, names: [Contact(name: "Patrick", hasFavorite: false)])
+        ExpandableNames(isExpanded: true, names: [FavoritableContact(name: "Patrick", hasFavorite: false)])
     ]
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -45,13 +45,23 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
             }
             if granted {
                 print("Access granted")
-                let keys = [CNContactGivenNameKey]
+                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
 
                 do {
+                    var favoritableContacts = [FavoritableContact]()
+
                    try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointerIfYouWantToStopEnumrating) in
                         print(contact.givenName)
+                        print(contact.familyName)
+                        print(contact.phoneNumbers.first?.value.stringValue ?? "")
+
+                        favoritableContacts.append(FavoritableContact(name: contact.givenName + " " + contact.familyName, hasFavorite: false))
                     })
+
+                    let names = ExpandableNames(isExpanded: true, names: favoritableContacts)
+                    self.twoDimensionArray = [names]
+
                 } catch let err {
                     print("Failed to enumerate contacts: ",err)
                 }
