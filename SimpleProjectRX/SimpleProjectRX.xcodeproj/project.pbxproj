@@ -166,6 +166,8 @@
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
+		9CE48D242061139B00074F4E /* AutoLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE48D222061139B00074F4E /* AutoLayoutController.swift */; };
+		9CE48D252061139B00074F4E /* AutoLayoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE48D232061139B00074F4E /* AutoLayoutController.xib */; };
 		9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */; };
 		9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */; };
 		9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */; };
@@ -372,6 +374,8 @@
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		9CE48D222061139B00074F4E /* AutoLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutController.swift; sourceTree = "<group>"; };
+		9CE48D232061139B00074F4E /* AutoLayoutController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutController.xib; sourceTree = "<group>"; };
 		9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListMVCViewController.swift; sourceTree = "<group>"; };
 		9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageListMVCViewController.xib; sourceTree = "<group>"; };
 		9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMedium.swift; sourceTree = "<group>"; };
@@ -703,6 +707,7 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9CE48D212061138200074F4E /* AutoLayout */,
 				9CD2115B205B5E23000DBBE8 /* UITableViewContacts */,
 				9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */,
 				9C3076C42052283900CF39AA /* LoginSDK */,
@@ -1200,6 +1205,15 @@
 			name = "Circle View";
 			sourceTree = "<group>";
 		};
+		9CE48D212061138200074F4E /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9CE48D222061139B00074F4E /* AutoLayoutController.swift */,
+				9CE48D232061139B00074F4E /* AutoLayoutController.xib */,
+			);
+			name = AutoLayout;
+			sourceTree = "<group>";
+		};
 		9CE9FEEE200DDD9E006766A3 /* LanguageListMVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1421,6 +1435,7 @@
 				9C1B9652202ADB03000A5544 /* LiveStreamController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
+				9CE48D252061139B00074F4E /* AutoLayoutController.xib in Resources */,
 				9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */,
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
@@ -1600,6 +1615,7 @@
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9CB34CB8204565B5004E0A37 /* MagicalGridController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9CE48D242061139B00074F4E /* AutoLayoutController.swift in Sources */,
 				9CDB7449202D898200819FC6 /* MyLibrary.swift in Sources */,
 				9CD943C7201F176B001349AB /* APIBase.swift in Sources */,
 				9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */,
