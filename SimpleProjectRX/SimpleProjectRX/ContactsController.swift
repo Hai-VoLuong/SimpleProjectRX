@@ -1,5 +1,5 @@
 //
-//  SectionsIntelligentlyController.swift
+//  ContactsController.swift
 //  SimpleProjectRX
 //
 //  Created by Hai Vo L. on 3/16/18.
@@ -9,7 +9,7 @@
 import UIKit
 import Contacts
 
-class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
+class ContactsController: UIViewController, ContactCellDelegate {
 
     fileprivate let cellId = "cell"
     fileprivate var showIndexPath = false
@@ -107,7 +107,7 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
     }
 }
 
-extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDelegate {
+extension ContactsController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
