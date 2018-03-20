@@ -14,13 +14,8 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
     fileprivate let cellId = "cell"
     fileprivate var showIndexPath = false
 
-    fileprivate var twoDimensionArray = [
-        ExpandableNames(isExpanded: true, names: [
-        "army", "tryky" ,"Bill"].map({
-           FavoritableContact(name: $0, hasFavorite: false)
-        })),
-        ExpandableNames(isExpanded: true, names: [FavoritableContact(name: "Patrick", hasFavorite: false)])
-    ]
+    fileprivate var twoDimensionArray = [ExpandableNames]()
+
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
@@ -56,7 +51,7 @@ class SectionsIntelligentlyController: UIViewController, ContactCellDelegate {
                         print(contact.familyName)
                         print(contact.phoneNumbers.first?.value.stringValue ?? "")
 
-                        favoritableContacts.append(FavoritableContact(name: contact.givenName + " " + contact.familyName, hasFavorite: false))
+                    favoritableContacts.append(FavoritableContact(contact: contact, hasFavorite: false))
                     })
 
                     let names = ExpandableNames(isExpanded: true, names: favoritableContacts)
@@ -130,12 +125,14 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ContactCell
+        let cell = ContactCell(style: .subtitle, reuseIdentifier: cellId)
         cell.link = self
-        let contact = twoDimensionArray[indexPath.section].names[indexPath.row]
-        let nameShow = showIndexPath ? contact.name : "\(contact.name) Section: \(indexPath.section)"
+        let favoritableContact = twoDimensionArray[indexPath.section].names[indexPath.row]
+        let nameShow = showIndexPath ? favoritableContact.contact.givenName : "\(favoritableContact.contact.givenName) \(favoritableContact.contact.familyName)"
         cell.textLabel?.text = nameShow
-        cell.accessoryView?.tintColor = contact.hasFavorite ? .red : .lightGray
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        cell.detailTextLabel?.text = favoritableContact.contact.phoneNumbers.first?.value.stringValue
+        cell.accessoryView?.tintColor = favoritableContact.hasFavorite ? .red : .lightGray
         return cell
     }
 
@@ -154,7 +151,8 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
 
         let nameLabel: UILabel = {
             let lb = UILabel()
-            lb.text = "title"
+            lb.text = "Contacts"
+            lb.font = UIFont.boldSystemFont(ofSize: 15)
             return lb
         }()
 
@@ -164,7 +162,7 @@ extension SectionsIntelligentlyController: UITableViewDataSource, UITableViewDel
             v.addSubview(buttonHeader)
             v.addSubview(nameLabel)
             buttonHeader.anchor(top: v.topAnchor, leading: nil, bottom: v.bottomAnchor, trailing: v.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 8) , size: .init(width: 50, height: 0))
-            nameLabel.anchor(top: v.topAnchor, leading: v.leadingAnchor, bottom: v.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 50, height: 0))
+            nameLabel.anchor(top: v.topAnchor, leading: v.leadingAnchor, bottom: v.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 100, height: 0))
             return v
         }()
 
