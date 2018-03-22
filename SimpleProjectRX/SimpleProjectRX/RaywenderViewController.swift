@@ -25,6 +25,8 @@ final class RaywenderViewController: UIViewController {
         case loginSDK
         case loginWalkthrough
         case contactsController
+        case autoLayout
+        case chatFirebase
     }
 
     fileprivate let dummyDatas: [String] = [
@@ -37,7 +39,9 @@ final class RaywenderViewController: UIViewController {
         "ParsingJSON With Decodable",
         "Login SDK",
         "Login Walk through",
-        "Contacts"
+        "Contacts",
+        "Auto Layout",
+        "Chat Firebase"
         ]
 
     // MARK: - private func
@@ -73,6 +77,12 @@ final class RaywenderViewController: UIViewController {
             return vc
         case .contactsController:
             vc = ContactsController()
+            return vc
+        case .autoLayout:
+            vc = AutoLayoutController()
+            return vc
+        case .chatFirebase:
+            vc = ChatFirebaseController()
             return vc
         }
     }

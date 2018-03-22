@@ -44,6 +44,8 @@
 		9C37E6161FFF29F500D9A7E6 /* DetailA_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */; };
 		9C37E6171FFF29F500D9A7E6 /* DetailA_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */; };
 		9C3D08EB20202ACE0085E1F0 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */; };
+		9C3EA95920620A2000158B2F /* ChatFirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3EA95720620A2000158B2F /* ChatFirebaseController.swift */; };
+		9C3EA95A20620A2000158B2F /* ChatFirebaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3EA95820620A2000158B2F /* ChatFirebaseController.xib */; };
 		9C4B0DEA1FFF8363007F0817 /* SearchViblo_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */; };
 		9C4B0DEB1FFF8363007F0817 /* SearchViblo_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */; };
 		9C4CEAA01FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */; };
@@ -166,6 +168,8 @@
 		9CDE9ADD20031D1E001E3FCE /* CircleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */; };
 		9CDE9ADE20031D1E001E3FCE /* CircleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */; };
 		9CDE9AE0200322FE001E3FCE /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */; };
+		9CE48D242061139B00074F4E /* AutoLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE48D222061139B00074F4E /* AutoLayoutController.swift */; };
+		9CE48D252061139B00074F4E /* AutoLayoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE48D232061139B00074F4E /* AutoLayoutController.xib */; };
 		9CE9FEF1200DDDDB006766A3 /* LanguageListMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */; };
 		9CE9FEF2200DDDDB006766A3 /* LanguageListMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */; };
 		9CE9FEF8200DE122006766A3 /* RepositoryMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */; };
@@ -244,6 +248,8 @@
 		9C37E6141FFF29F500D9A7E6 /* DetailA_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailA_ViewController.swift; sourceTree = "<group>"; };
 		9C37E6151FFF29F500D9A7E6 /* DetailA_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailA_ViewController.xib; sourceTree = "<group>"; };
 		9C3D08EA20202ACE0085E1F0 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		9C3EA95720620A2000158B2F /* ChatFirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatFirebaseController.swift; sourceTree = "<group>"; };
+		9C3EA95820620A2000158B2F /* ChatFirebaseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatFirebaseController.xib; sourceTree = "<group>"; };
 		9C4B0DE81FFF8363007F0817 /* SearchViblo_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViblo_ViewController.swift; sourceTree = "<group>"; };
 		9C4B0DE91FFF8363007F0817 /* SearchViblo_ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViblo_ViewController.xib; sourceTree = "<group>"; };
 		9C4CEA9E1FFE0939004F6E74 /* SwitchEnumsAndTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchEnumsAndTableViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +378,8 @@
 		9CDE9ADB20031D1E001E3FCE /* CircleViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewViewController.swift; sourceTree = "<group>"; };
 		9CDE9ADC20031D1E001E3FCE /* CircleViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleViewViewController.xib; sourceTree = "<group>"; };
 		9CDE9ADF200322FE001E3FCE /* CircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
+		9CE48D222061139B00074F4E /* AutoLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutController.swift; sourceTree = "<group>"; };
+		9CE48D232061139B00074F4E /* AutoLayoutController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutController.xib; sourceTree = "<group>"; };
 		9CE9FEEF200DDDDB006766A3 /* LanguageListMVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListMVCViewController.swift; sourceTree = "<group>"; };
 		9CE9FEF0200DDDDB006766A3 /* LanguageListMVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageListMVCViewController.xib; sourceTree = "<group>"; };
 		9CE9FEF7200DE122006766A3 /* RepositoryMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMedium.swift; sourceTree = "<group>"; };
@@ -558,6 +566,15 @@
 			name = "Resoure+Extension";
 			sourceTree = "<group>";
 		};
+		9C3EA956206209F200158B2F /* GameOfChats */ = {
+			isa = PBXGroup;
+			children = (
+				9C3EA95720620A2000158B2F /* ChatFirebaseController.swift */,
+				9C3EA95820620A2000158B2F /* ChatFirebaseController.xib */,
+			);
+			name = GameOfChats;
+			sourceTree = "<group>";
+		};
 		9C4B0DE71FFF825D007F0817 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,6 +720,8 @@
 		9C55D88A1FFB435900F29453 /* Raywender */ = {
 			isa = PBXGroup;
 			children = (
+				9C3EA956206209F200158B2F /* GameOfChats */,
+				9CE48D212061138200074F4E /* AutoLayout */,
 				9CD2115B205B5E23000DBBE8 /* UITableViewContacts */,
 				9C2C4EE0205679B8008FACA6 /* LoginWalkthrough */,
 				9C3076C42052283900CF39AA /* LoginSDK */,
@@ -1200,6 +1219,15 @@
 			name = "Circle View";
 			sourceTree = "<group>";
 		};
+		9CE48D212061138200074F4E /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9CE48D222061139B00074F4E /* AutoLayoutController.swift */,
+				9CE48D232061139B00074F4E /* AutoLayoutController.xib */,
+			);
+			name = AutoLayout;
+			sourceTree = "<group>";
+		};
 		9CE9FEEE200DDD9E006766A3 /* LanguageListMVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1397,6 +1425,7 @@
 				9CFC18C92021C92F00CD0BFE /* VenueDetailViewController.xib in Resources */,
 				9C5846F5204D4D59008FC2C0 /* Header.xib in Resources */,
 				9C55D8A91FFB6E3800F29453 /* ValidateLoginViewController.xib in Resources */,
+				9C3EA95A20620A2000158B2F /* ChatFirebaseController.xib in Resources */,
 				9C2C4EE4205679E3008FACA6 /* LoginWalkthroughController.xib in Resources */,
 				9CAEE03C201ABD92001FEAFB /* SearchDrinkViewController.xib in Resources */,
 				9CE9FEFE200DF5A5006766A3 /* RepositoryListViewController.xib in Resources */,
@@ -1421,6 +1450,7 @@
 				9C1B9652202ADB03000A5544 /* LiveStreamController.xib in Resources */,
 				9C0EB79D2005B26500721A06 /* LazyClosureViewController.xib in Resources */,
 				9C0BD0C51FFF3AED00335F3A /* DetailB_ViewController.xib in Resources */,
+				9CE48D252061139B00074F4E /* AutoLayoutController.xib in Resources */,
 				9C80F24A20231B3400A405A1 /* InformationCell.xib in Resources */,
 				9C0BD0CE1FFF662400335F3A /* OneViewController.xib in Resources */,
 				9C55D8A51FFB6DFD00F29453 /* CalculatorViewController.xib in Resources */,
@@ -1469,6 +1499,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1501,6 +1532,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1600,6 +1632,7 @@
 				9C5B4D8A2003609700C0514C /* Event.swift in Sources */,
 				9CB34CB8204565B5004E0A37 /* MagicalGridController.swift in Sources */,
 				9C55D8931FFB43C200F29453 /* MediumViewController.swift in Sources */,
+				9CE48D242061139B00074F4E /* AutoLayoutController.swift in Sources */,
 				9CDB7449202D898200819FC6 /* MyLibrary.swift in Sources */,
 				9CD943C7201F176B001349AB /* APIBase.swift in Sources */,
 				9CD4F4F72019973E00A0F6A1 /* DrinkCoffeeViewController.swift in Sources */,
@@ -1641,6 +1674,7 @@
 				9C4F69F220047FF200BDE993 /* RepoList.swift in Sources */,
 				9C3076C72052286F00CF39AA /* LoginSDKController.swift in Sources */,
 				9C55D8C01FFB6FF900F29453 /* MVVMViewController.swift in Sources */,
+				9C3EA95920620A2000158B2F /* ChatFirebaseController.swift in Sources */,
 				9C4DB97B2016F78400B4023E /* Events.swift in Sources */,
 				9CFC18C02021C51000CD0BFE /* Reactive+Extension.swift in Sources */,
 				9CAEE037201ABD1D001FEAFB /* FavoriteViewController.swift in Sources */,
