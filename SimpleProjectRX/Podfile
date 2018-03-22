@@ -34,11 +34,13 @@ target 'SimpleProjectRX' do
 
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'SwinjectStoryboard', '1.0.0'
-  pod 'Action'
+  pod 'Action' 
   pod 'Moya', '~> 10.0'
   pod 'LGSideMenuController', '~> 2.1'
 
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'

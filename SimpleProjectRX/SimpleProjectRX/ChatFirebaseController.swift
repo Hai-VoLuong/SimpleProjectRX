@@ -84,6 +84,7 @@ class ChatFirebaseController: UIViewController {
         setupLoginRegisterButton()
     }
 
+    // ep2: 11'13
     fileprivate func setupProfileImageview() {
         profileImageView.anchor(top: view.centerYAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: -250, left: 12, bottom: 0, right: 12), size: .init(width: 150, height: 150))
         profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
