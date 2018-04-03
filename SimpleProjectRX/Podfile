@@ -47,5 +47,6 @@ target 'SimpleProjectRX' do
   pod 'FBSDKLoginKit'
 
   pod 'GoogleSignIn'
+  pod 'LineSDK', '~> 4.1.0'
 
 end
