@@ -12,6 +12,7 @@ import SVProgressHUD
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
+import LineSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -61,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // google quay lại ứng dụng
         GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
 
+        LineSDKLogin.sharedInstance().handleOpen(url)
         return handled
     }
 
