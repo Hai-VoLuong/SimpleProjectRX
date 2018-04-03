@@ -117,6 +117,9 @@ PODS:
   - Swinject (2.0.0)
   - SwinjectStoryboard (1.0.0):
     - Swinject (= 2.0.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Action
@@ -145,6 +148,7 @@ DEPENDENCIES:
   - SVProgressHUD (= 2.2.2)
   - SwiftLint (~> 0.16.1)
   - SwinjectStoryboard (= 1.0.0)
+  - TwitterKit
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -196,7 +200,9 @@ SPEC CHECKSUMS:
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 30965658f787e4edbaf9f7647be3c1125b31149d
+PODFILE CHECKSUM: 6b42b042c91a999528779ca43361e6c36914af81
 
 COCOAPODS: 1.4.0
