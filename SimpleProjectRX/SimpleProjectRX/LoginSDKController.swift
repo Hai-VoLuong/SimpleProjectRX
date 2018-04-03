@@ -10,14 +10,17 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
+import LineSDK
 
 final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
+    var apiClient: LineSDKAPI?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupFacebookButton()
-        setupGoogleButton()
-        
+        //setupFacebookButton()
+        //setupGoogleButton()
+        setupLineButton()
     }
 
     fileprivate func setupGoogleButton() {
@@ -46,6 +49,44 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         view.addSubview(customGoogleButtonLogout)
 
         GIDSignIn.sharedInstance().uiDelegate = self
+    }
+
+    fileprivate func setupLineButton() {
+
+        let LineButtonLogin = UIButton(type: .system)
+        LineButtonLogin.frame = CGRect(x: 16, y: 110, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogin.backgroundColor = UIColor(r: 0, g: 195, b: 0)
+        LineButtonLogin.setTitle("Log in with LINE", for: .normal)
+        LineButtonLogin.setTitleColor(.white, for: .normal)
+        LineButtonLogin.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        LineButtonLogin.addTarget(self, action: #selector(handleLoginLine), for: .touchUpInside)
+        view.addSubview(LineButtonLogin)
+
+        let LineButtonLogout = UIButton(type: .system)
+        LineButtonLogout.frame = CGRect(x: 16, y: 170, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogout.backgroundColor = UIColor(r: 198, g: 198, b: 198)
+        LineButtonLogout.setTitle("Logout with LINE", for: .normal)
+        LineButtonLogout.setTitleColor(.white, for: .normal)
+        LineButtonLogout.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        LineButtonLogout.addTarget(self, action: #selector(handleLogoutLine), for: .touchUpInside)
+        view.addSubview(LineButtonLogout)
+
+        LineSDKLogin.sharedInstance().delegate = self
+        self.apiClient = LineSDKAPI(configuration: LineSDKConfiguration.defaultConfig())
+    }
+
+    @objc private func handleLogoutLine() {
+        self.apiClient?.logout(queue: .main, completion: { (success, error) in
+            if success {
+                self.presentAlert(message: "You have successfully logged out")
+            } else {
+                self.presentAlert(message: "The LINE Logout Failed \n \(error?.localizedDescription)")
+            }
+        })
+    }
+
+    @objc private func handleLoginLine() {
+        LineSDKLogin.sharedInstance().start()
     }
 
     @objc private func logoutGoogle() {
@@ -79,6 +120,20 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         let alertController = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alertController, animated: true)
+    }
+}
+
+extension LoginSDKController: LineSDKLoginDelegate {
+
+    func didLogin(_ login: LineSDKLogin, credential: LineSDKCredential?, profile: LineSDKProfile?, error: Error?) {
+        if error != nil {
+            print("Error login Line" , error?.localizedDescription)
+        } else {
+            guard let profile = profile else { return }
+            let accessToken = credential?.accessToken?.accessToken
+            print(profile.pictureURL)
+            presentAlert(message: "\(profile.displayName) \n useID:\(profile.userID) \n accessToken: \(accessToken)")
+        }
     }
 }
 
