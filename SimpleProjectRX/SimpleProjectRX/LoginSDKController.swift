@@ -36,16 +36,17 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
                 return
             }
 
-            print(session?.userName)
+            print(session?.userName ?? "")
             guard let token = session?.authToken else { return }
             guard let secret = session?.authTokenSecret else { return }
             let credentials = TwitterAuthProvider.credential(withToken: token, secret: secret)
             Auth.auth().signIn(with: credentials, completion: { (user, error) in
                 if let err = error {
-                    print("Failed to login to Firebase with Twitter: ",err.localizedDescription)
+                    self.presentAlert(message: "Failed to login to Firebase with Twitter: \(err.localizedDescription)")
                     return
                 }
-                print("Successfully created a Firebase Twitter user: ", user?.uid ?? "")
+                self.presentAlert(message: "Successfully created a Firebase Twitter user:  \(user?.uid ?? "")")
+
             })
         })
 
@@ -110,7 +111,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
             if success {
                 self.presentAlert(message: "You have successfully logged out")
             } else {
-                self.presentAlert(message: "The LINE Logout Failed \n \(error?.localizedDescription)")
+                self.presentAlert(message: "The LINE Logout Failed \n \(String(describing: error?.localizedDescription))")
             }
         })
     }
@@ -157,12 +158,12 @@ extension LoginSDKController: LineSDKLoginDelegate {
 
     func didLogin(_ login: LineSDKLogin, credential: LineSDKCredential?, profile: LineSDKProfile?, error: Error?) {
         if error != nil {
-            print("Error login Line" , error?.localizedDescription)
+            print("Error login Line" , error?.localizedDescription ?? "")
         } else {
             guard let profile = profile else { return }
             let accessToken = credential?.accessToken?.accessToken
-            print(profile.pictureURL)
-            presentAlert(message: "\(profile.displayName) \n useID:\(profile.userID) \n accessToken: \(accessToken)")
+            print(profile.pictureURL ?? "")
+            presentAlert(message: "\(profile.displayName) \n useID:\(profile.userID) \n accessToken: \(String(describing: accessToken))")
         }
     }
 }
