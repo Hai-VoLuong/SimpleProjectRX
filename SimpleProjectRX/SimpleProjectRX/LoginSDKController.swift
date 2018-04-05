@@ -11,16 +11,75 @@ import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 import LineSDK
+import TwitterKit
+
 
 final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
     var apiClient: LineSDKAPI?
+    var apiClientTwitter: TWTRAPIClient?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupFacebookButton()
-        //setupGoogleButton()
+//        setupFacebookButton()
+//        setupGoogleButton()
         setupLineButton()
+        setupTwitterButton()
+    }
+
+    fileprivate func setupTwitterButton() {
+        var logInButton = TWTRLogInButton()
+
+        logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if let err = error {
+                print("Failed to login via Twitter: ", err)
+                return
+            }
+
+            self.apiClientTwitter = TWTRAPIClient.withCurrentUser()
+            self.apiClientTwitter?.requestEmail(forCurrentUser: { (email, error) in
+                if email != nil {
+                    print("sign in as \(String(describing: session?.userName))")
+                } else {
+                    print("Error: ", error?.localizedDescription ?? "")
+                }
+            })
+
+            print(session?.userName ?? "")
+            guard let token = session?.authToken else { return }
+            guard let secret = session?.authTokenSecret else { return }
+            let credentials = TwitterAuthProvider.credential(withToken: token, secret: secret)
+            Auth.auth().signIn(with: credentials, completion: { (user, error) in
+                if let err = error {
+                    self.presentAlert(message: "Failed to login to Firebase with Twitter: \(err.localizedDescription)")
+                    return
+                }
+                self.presentAlert(message: "Successfully created a Firebase Twitter user:  \(user?.uid ?? "")")
+
+            })
+        })
+
+        logInButton.frame = CGRect(x: 16, y: 550, width: view.frame.width / 2 + 50, height: 50)
+        view.addSubview(logInButton)
+
+        let LogoutButton = UIButton(type: .system)
+        LogoutButton.frame = CGRect(x: 16, y: 610, width: view.frame.width / 2 + 50 , height: 50)
+        LogoutButton.backgroundColor = .lightGray
+        LogoutButton.setTitle("Logout Twitter", for: .normal)
+        LogoutButton.addTarget(self, action: #selector(logoutTwitter), for: .touchUpInside)
+        LogoutButton.setTitleColor(.white, for: .normal)
+        LogoutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        view.addSubview(LogoutButton)
+    }
+
+    @objc fileprivate func logoutTwitter() {
+        let store = TWTRTwitter.sharedInstance().sessionStore
+
+        if let userID = store.session()?.userID {
+            store.logOutUserID(userID)
+            self.presentAlert(message: "Logout Successfully")
+        }
+        self.presentAlert(message: "Failed Logout")
     }
 
     fileprivate func setupGoogleButton() {
@@ -54,7 +113,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
     fileprivate func setupLineButton() {
 
         let LineButtonLogin = UIButton(type: .system)
-        LineButtonLogin.frame = CGRect(x: 16, y: 110, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogin.frame = CGRect(x: 16, y: 420, width: view.frame.width / 2 + 50 , height: 50)
         LineButtonLogin.backgroundColor = UIColor(r: 0, g: 195, b: 0)
         LineButtonLogin.setTitle("Log in with LINE", for: .normal)
         LineButtonLogin.setTitleColor(.white, for: .normal)
@@ -63,7 +122,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         view.addSubview(LineButtonLogin)
 
         let LineButtonLogout = UIButton(type: .system)
-        LineButtonLogout.frame = CGRect(x: 16, y: 170, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogout.frame = CGRect(x: 16, y: 480, width: view.frame.width / 2 + 50 , height: 50)
         LineButtonLogout.backgroundColor = UIColor(r: 198, g: 198, b: 198)
         LineButtonLogout.setTitle("Logout with LINE", for: .normal)
         LineButtonLogout.setTitleColor(.white, for: .normal)
@@ -80,7 +139,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
             if success {
                 self.presentAlert(message: "You have successfully logged out")
             } else {
-                self.presentAlert(message: "The LINE Logout Failed \n \(error?.localizedDescription)")
+                self.presentAlert(message: "The LINE Logout Failed \n \(String(describing: error?.localizedDescription))")
             }
         })
     }
@@ -127,12 +186,12 @@ extension LoginSDKController: LineSDKLoginDelegate {
 
     func didLogin(_ login: LineSDKLogin, credential: LineSDKCredential?, profile: LineSDKProfile?, error: Error?) {
         if error != nil {
-            print("Error login Line" , error?.localizedDescription)
+            print("Error login Line" , error?.localizedDescription ?? "")
         } else {
             guard let profile = profile else { return }
             let accessToken = credential?.accessToken?.accessToken
-            print(profile.pictureURL)
-            presentAlert(message: "\(profile.displayName) \n useID:\(profile.userID) \n accessToken: \(accessToken)")
+            print(profile.pictureURL ?? "")
+            presentAlert(message: "\(profile.displayName) \n useID:\(profile.userID) \n accessToken: \(String(describing: accessToken))")
         }
     }
 }

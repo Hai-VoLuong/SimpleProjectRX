@@ -48,5 +48,6 @@ target 'SimpleProjectRX' do
 
   pod 'GoogleSignIn'
   pod 'LineSDK', '~> 4.1.0'
+  pod 'TwitterKit'
 
 end
