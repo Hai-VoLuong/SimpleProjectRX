@@ -17,6 +17,7 @@ import TwitterKit
 final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
     var apiClient: LineSDKAPI?
+    var apiClientTwitter: TWTRAPIClient?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,20 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
     fileprivate func setupTwitterButton() {
         var logInButton = TWTRLogInButton()
 
-
         logInButton = TWTRLogInButton(logInCompletion: { session, error in
             if let err = error {
                 print("Failed to login via Twitter: ", err)
                 return
             }
+
+            self.apiClientTwitter = TWTRAPIClient.withCurrentUser()
+            self.apiClientTwitter?.requestEmail(forCurrentUser: { (email, error) in
+                if email != nil {
+                    print("sign in as \(String(describing: session?.userName))")
+                } else {
+                    print("Error: ", error?.localizedDescription ?? "")
+                }
+            })
 
             print(session?.userName ?? "")
             guard let token = session?.authToken else { return }
@@ -52,6 +61,25 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
         logInButton.frame = CGRect(x: 16, y: 550, width: view.frame.width / 2 + 50, height: 50)
         view.addSubview(logInButton)
+
+        let LogoutButton = UIButton(type: .system)
+        LogoutButton.frame = CGRect(x: 16, y: 610, width: view.frame.width / 2 + 50 , height: 50)
+        LogoutButton.backgroundColor = .lightGray
+        LogoutButton.setTitle("Logout Twitter", for: .normal)
+        LogoutButton.addTarget(self, action: #selector(logoutTwitter), for: .touchUpInside)
+        LogoutButton.setTitleColor(.white, for: .normal)
+        LogoutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        view.addSubview(LogoutButton)
+    }
+
+    @objc fileprivate func logoutTwitter() {
+        let store = TWTRTwitter.sharedInstance().sessionStore
+
+        if let userID = store.session()?.userID {
+            store.logOutUserID(userID)
+            self.presentAlert(message: "Logout Successfully")
+        }
+        self.presentAlert(message: "Failed Logout")
     }
 
     fileprivate func setupGoogleButton() {
