@@ -13,6 +13,7 @@ import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
 import LineSDK
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -32,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         //setupGoogle
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+
+        //setup Twitter
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"yhbcNDS4EbdPYMQLLcliFl4LB", consumerSecret:"ALsZWTObXp76kMOxNhutguP0Oo94bXbCLwFdilXScfugPFZiiX")
 
         window?.rootViewController = TabbarController()
        // window?.rootViewController = MainNaviController()
@@ -63,6 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
 
         LineSDKLogin.sharedInstance().handleOpen(url)
+
+        TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+
         return handled
     }
 

@@ -11,6 +11,8 @@ import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 import LineSDK
+import TwitterKit
+
 
 final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
@@ -18,9 +20,37 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupFacebookButton()
-        //setupGoogleButton()
+//        setupFacebookButton()
+//        setupGoogleButton()
         setupLineButton()
+        setupTwitterButton()
+    }
+
+    fileprivate func setupTwitterButton() {
+        var logInButton = TWTRLogInButton()
+
+
+        logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if let err = error {
+                print("Failed to login via Twitter: ", err)
+                return
+            }
+
+            print(session?.userName)
+            guard let token = session?.authToken else { return }
+            guard let secret = session?.authTokenSecret else { return }
+            let credentials = TwitterAuthProvider.credential(withToken: token, secret: secret)
+            Auth.auth().signIn(with: credentials, completion: { (user, error) in
+                if let err = error {
+                    print("Failed to login to Firebase with Twitter: ",err.localizedDescription)
+                    return
+                }
+                print("Successfully created a Firebase Twitter user: ", user?.uid ?? "")
+            })
+        })
+
+        logInButton.frame = CGRect(x: 16, y: 550, width: view.frame.width / 2 + 50, height: 50)
+        view.addSubview(logInButton)
     }
 
     fileprivate func setupGoogleButton() {
@@ -54,7 +84,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
     fileprivate func setupLineButton() {
 
         let LineButtonLogin = UIButton(type: .system)
-        LineButtonLogin.frame = CGRect(x: 16, y: 110, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogin.frame = CGRect(x: 16, y: 420, width: view.frame.width / 2 + 50 , height: 50)
         LineButtonLogin.backgroundColor = UIColor(r: 0, g: 195, b: 0)
         LineButtonLogin.setTitle("Log in with LINE", for: .normal)
         LineButtonLogin.setTitleColor(.white, for: .normal)
@@ -63,7 +93,7 @@ final class LoginSDKController: UIViewController, GIDSignInUIDelegate {
         view.addSubview(LineButtonLogin)
 
         let LineButtonLogout = UIButton(type: .system)
-        LineButtonLogout.frame = CGRect(x: 16, y: 170, width: view.frame.width / 2 + 50 , height: 50)
+        LineButtonLogout.frame = CGRect(x: 16, y: 480, width: view.frame.width / 2 + 50 , height: 50)
         LineButtonLogout.backgroundColor = UIColor(r: 198, g: 198, b: 198)
         LineButtonLogout.setTitle("Logout with LINE", for: .normal)
         LineButtonLogout.setTitleColor(.white, for: .normal)
